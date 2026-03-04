@@ -1,0 +1,273 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================================
+   THE DYNASTY FORGE — DESIGN SYSTEM
+   Deep walnut + amber warmth. Discreet, grounded, built to last.
+   ============================================================================ */
+
+:root {
+  --color-bg: #181512;
+  --color-bg-elevated: #201D19;
+  --color-bg-recessed: #131109;
+  --color-surface: #231F1B;
+  --color-ink: #F2EDE5;
+  --color-ink-light: #D5CEC4;
+  --color-ink-muted: #968D82;
+  --color-amber: #C4873C;
+  --color-amber-light: #D4984D;
+  --color-amber-dark: #A06A28;
+  --color-walnut: #8B6B4A;
+  --color-walnut-light: #A07D5C;
+  --color-border: #2A2420;
+  --color-border-strong: #38322C;
+  --color-selection-bg: rgba(196, 135, 60, 0.18);
+  --color-maxim-bg: rgba(35, 31, 27, 0.8);
+  --color-scrollbar-track: #181512;
+  --color-scrollbar-thumb: #2A2420;
+  --color-scrollbar-hover: #38322C;
+
+  /* shadcn/ui variable mappings */
+  --background: #181512;
+  --foreground: #F2EDE5;
+  --card: #201D19;
+  --card-foreground: #F2EDE5;
+  --popover: #201D19;
+  --popover-foreground: #F2EDE5;
+  --primary: #C4873C;
+  --primary-foreground: #181512;
+  --secondary: #231F1B;
+  --secondary-foreground: #D5CEC4;
+  --muted: #231F1B;
+  --muted-foreground: #968D82;
+  --accent: #231F1B;
+  --accent-foreground: #F2EDE5;
+  --destructive: #9B3B3B;
+  --destructive-foreground: #F2EDE5;
+  --border: #2A2420;
+  --input: #2A2420;
+  --ring: #C4873C;
+  --radius: 0.125rem;
+}
+
+.light {
+  --color-bg: #F5F0E8;
+  --color-bg-elevated: #FFFFFF;
+  --color-bg-recessed: #EBE5D9;
+  --color-surface: #EDE7DC;
+  --color-ink: #1C1812;
+  --color-ink-light: #2E2820;
+  --color-ink-muted: #6E6458;
+  --color-amber: #A06A28;
+  --color-amber-light: #B87B38;
+  --color-amber-dark: #7A4E18;
+  --color-walnut: #6B4F32;
+  --color-walnut-light: #7D6040;
+  --color-border: #E0D8CC;
+  --color-border-strong: #CEBFB0;
+  --color-selection-bg: rgba(160, 106, 40, 0.15);
+  --color-maxim-bg: rgba(237, 231, 220, 0.6);
+  --color-scrollbar-track: #F5F0E8;
+  --color-scrollbar-thumb: #E0D8CC;
+  --color-scrollbar-hover: #CEBFB0;
+
+  /* shadcn/ui light mappings */
+  --background: #F5F0E8;
+  --foreground: #1C1812;
+  --card: #FFFFFF;
+  --card-foreground: #1C1812;
+  --popover: #FFFFFF;
+  --popover-foreground: #1C1812;
+  --primary: #A06A28;
+  --primary-foreground: #FFFFFF;
+  --secondary: #EDE7DC;
+  --secondary-foreground: #2E2820;
+  --muted: #EDE7DC;
+  --muted-foreground: #6E6458;
+  --accent: #EDE7DC;
+  --accent-foreground: #1C1812;
+  --destructive: #9B3B3B;
+  --destructive-foreground: #FFFFFF;
+  --border: #E0D8CC;
+  --input: #E0D8CC;
+  --ring: #A06A28;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-dynasty-bg text-dynasty-ink-light font-body;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display text-dynasty-ink;
+  }
+
+  ::selection {
+    background: var(--color-selection-bg);
+    color: var(--color-ink);
+  }
+}
+
+@layer components {
+  .prose-content h2 {
+    @apply font-display text-display-sm font-semibold text-dynasty-ink mt-14 mb-5;
+  }
+
+  .prose-content h3 {
+    @apply font-display text-xl font-semibold text-dynasty-ink mt-10 mb-4;
+  }
+
+  .prose-content p {
+    @apply text-base leading-7 text-dynasty-ink-light mb-5;
+  }
+
+  .prose-content strong {
+    @apply font-semibold text-dynasty-ink;
+  }
+
+  .prose-content em {
+    @apply font-display italic;
+  }
+
+  .prose-content ul {
+    @apply my-5 space-y-2;
+  }
+
+  .prose-content ul li {
+    @apply text-base leading-7 text-dynasty-ink-light pl-5 relative;
+  }
+
+  .prose-content ul li::before {
+    content: '—';
+    @apply absolute left-0 text-dynasty-amber;
+  }
+
+  .prose-content ol {
+    @apply my-5 space-y-2 list-decimal pl-6;
+  }
+
+  .prose-content ol li {
+    @apply text-base leading-7 text-dynasty-ink-light;
+  }
+
+  .prose-content blockquote {
+    @apply border-l-2 border-dynasty-amber pl-5 my-8 italic;
+  }
+
+  .prose-content hr {
+    @apply border-dynasty-border my-12;
+  }
+
+  .prose-content a {
+    @apply text-dynasty-amber underline underline-offset-2 decoration-dynasty-amber hover:decoration-dynasty-amber-light transition-colors;
+    text-decoration-color: color-mix(in srgb, var(--color-amber) 40%, transparent);
+  }
+
+  .maxim {
+    @apply font-mono text-sm tracking-wide text-dynasty-amber border border-dynasty-border rounded-sm px-5 py-4 my-8;
+    background: var(--color-maxim-bg);
+  }
+
+  .prose-content input[type="checkbox"] {
+    @apply mr-2 accent-dynasty-amber;
+  }
+
+  .prose-content table {
+    @apply w-full my-8 text-sm;
+  }
+
+  .prose-content thead th {
+    @apply font-body font-semibold text-left text-dynasty-ink pb-3 border-b-2 border-dynasty-border;
+  }
+
+  .prose-content tbody td {
+    @apply py-3 pr-4 border-b border-dynasty-border text-dynasty-ink-light;
+  }
+
+  .prose-content tbody tr:last-child td {
+    @apply border-b-0;
+  }
+
+  .reading-content {
+    @apply font-reading text-dynasty-ink-light;
+    font-size: 1.125rem;
+    line-height: 1.85;
+  }
+
+  .reading-content p {
+    font-size: 1.125rem;
+    line-height: 1.85;
+  }
+}
+
+/* Page transitions */
+@media (prefers-reduced-motion: no-preference) {
+  .page-enter {
+    animation: fadeIn 0.4s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--color-scrollbar-track); }
+::-webkit-scrollbar-thumb { background: var(--color-scrollbar-thumb); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-scrollbar-hover); }
+
+/* ============================================================================
+   ACCESSIBILITY
+   ============================================================================ */
+
+.skip-nav {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.5rem 1rem;
+  background: var(--color-ink);
+  color: var(--color-bg);
+  font-family: var(--font-ibm-plex-mono), monospace;
+  font-size: 0.75rem;
+  text-decoration: none;
+  border-radius: 0 0 0.25rem 0.25rem;
+  transition: top 0.1s;
+}
+.skip-nav:focus {
+  top: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-amber);
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (prefers-contrast: more) {
+  * {
+    opacity: 1 !important;
+  }
+}
