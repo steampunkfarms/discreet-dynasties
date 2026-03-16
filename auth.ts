@@ -9,7 +9,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   providers: [
     Resend({
       apiKey: process.env.RESEND_API_KEY,
-      from: 'The Discreet Dynasty <dynasty@stoic.tronboll.us>',
+      from: 'The Discreet Dynasty <noreply-discreet@tronboll.us>',
     }),
     GitHub({
       clientId: process.env.GITHUB_ID,
@@ -17,12 +17,35 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     }),
   ],
   callbacks: {
-    session({ session, user }) {
+    async session({ session, user }) {
       if (session.user) {
-        const u = user as { id: string; role?: string; isPaid?: boolean; username?: string; avatar?: string }
+        const u = user as {
+          id: string
+          role?: string
+          isPaid?: boolean
+          username?: string
+          avatar?: string
+          ddAccessExpiresAt?: Date | null
+        }
+
+        let role = u.role ?? 'free'
+
+        // Downgrade expired gift access
+        if (
+          u.ddAccessExpiresAt &&
+          new Date(u.ddAccessExpiresAt) < new Date() &&
+          role !== 'admin'
+        ) {
+          await prisma.user.update({
+            where: { id: u.id },
+            data: { role: 'free', isPaid: false },
+          })
+          role = 'free'
+        }
+
         session.user.id = u.id
-        session.user.role = u.role ?? 'free'
-        session.user.isPaid = u.isPaid ?? false
+        session.user.role = role
+        session.user.isPaid = role !== 'free'
         session.user.username = u.username ?? null
         session.user.avatar = u.avatar ?? null
       }
