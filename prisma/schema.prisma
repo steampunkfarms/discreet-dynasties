@@ -88,6 +88,11 @@ model User {
   ddHallPosts        DDHallPost[]
   ddHallComments     DDHallComment[]
   ddHallLikes        DDHallLike[]
+
+  // Gift access
+  ddAccessExpiresAt  DateTime?
+  ddGiftCodes        DDGiftCode[] @relation("RedeemedCodes")
+  ddGiftsSent        DDGiftCode[] @relation("GrantedCodes")
 }
 
 model Account {
@@ -916,4 +921,28 @@ model DDHallLike {
   user User       @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([postId, userId])
+}
+
+// ============================================================================
+// GIFT ACCESS CODES
+// ============================================================================
+
+model DDGiftCode {
+  id               String    @id @default(cuid())
+  code             String    @unique
+  type             String    // "1_week" | "1_month" | "3_months" | "walking_pass"
+  recipientEmail   String?
+  note             String?
+  grantedByAdminId String
+  redeemedByUserId String?
+  redeemedAt       DateTime?
+  sentAt           DateTime?
+  createdAt        DateTime  @default(now())
+
+  grantedBy  User  @relation("GrantedCodes", fields: [grantedByAdminId], references: [id])
+  redeemedBy User? @relation("RedeemedCodes", fields: [redeemedByUserId], references: [id])
+
+  @@index([code])
+  @@index([grantedByAdminId])
+  @@index([redeemedByUserId])
 }

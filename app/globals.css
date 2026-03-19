@@ -8,50 +8,6 @@
    ============================================================================ */
 
 :root {
-  --color-bg: #181512;
-  --color-bg-elevated: #201D19;
-  --color-bg-recessed: #131109;
-  --color-surface: #231F1B;
-  --color-ink: #F2EDE5;
-  --color-ink-light: #D5CEC4;
-  --color-ink-muted: #968D82;
-  --color-amber: #C4873C;
-  --color-amber-light: #D4984D;
-  --color-amber-dark: #A06A28;
-  --color-walnut: #8B6B4A;
-  --color-walnut-light: #A07D5C;
-  --color-border: #2A2420;
-  --color-border-strong: #38322C;
-  --color-selection-bg: rgba(196, 135, 60, 0.18);
-  --color-maxim-bg: rgba(35, 31, 27, 0.8);
-  --color-scrollbar-track: #181512;
-  --color-scrollbar-thumb: #2A2420;
-  --color-scrollbar-hover: #38322C;
-
-  /* shadcn/ui variable mappings */
-  --background: #181512;
-  --foreground: #F2EDE5;
-  --card: #201D19;
-  --card-foreground: #F2EDE5;
-  --popover: #201D19;
-  --popover-foreground: #F2EDE5;
-  --primary: #C4873C;
-  --primary-foreground: #181512;
-  --secondary: #231F1B;
-  --secondary-foreground: #D5CEC4;
-  --muted: #231F1B;
-  --muted-foreground: #968D82;
-  --accent: #231F1B;
-  --accent-foreground: #F2EDE5;
-  --destructive: #9B3B3B;
-  --destructive-foreground: #F2EDE5;
-  --border: #2A2420;
-  --input: #2A2420;
-  --ring: #C4873C;
-  --radius: 0.125rem;
-}
-
-.light {
   --color-bg: #F5F0E8;
   --color-bg-elevated: #FFFFFF;
   --color-bg-recessed: #EBE5D9;
@@ -72,7 +28,7 @@
   --color-scrollbar-thumb: #E0D8CC;
   --color-scrollbar-hover: #CEBFB0;
 
-  /* shadcn/ui light mappings */
+  /* shadcn/ui variable mappings */
   --background: #F5F0E8;
   --foreground: #1C1812;
   --card: #FFFFFF;
@@ -92,6 +48,50 @@
   --border: #E0D8CC;
   --input: #E0D8CC;
   --ring: #A06A28;
+  --radius: 0.125rem;
+}
+
+.dark {
+  --color-bg: #181512;
+  --color-bg-elevated: #201D19;
+  --color-bg-recessed: #131109;
+  --color-surface: #231F1B;
+  --color-ink: #F2EDE5;
+  --color-ink-light: #D5CEC4;
+  --color-ink-muted: #968D82;
+  --color-amber: #C4873C;
+  --color-amber-light: #D4984D;
+  --color-amber-dark: #A06A28;
+  --color-walnut: #8B6B4A;
+  --color-walnut-light: #A07D5C;
+  --color-border: #2A2420;
+  --color-border-strong: #38322C;
+  --color-selection-bg: rgba(196, 135, 60, 0.18);
+  --color-maxim-bg: rgba(35, 31, 27, 0.8);
+  --color-scrollbar-track: #181512;
+  --color-scrollbar-thumb: #2A2420;
+  --color-scrollbar-hover: #38322C;
+
+  /* shadcn/ui dark mappings */
+  --background: #181512;
+  --foreground: #F2EDE5;
+  --card: #201D19;
+  --card-foreground: #F2EDE5;
+  --popover: #201D19;
+  --popover-foreground: #F2EDE5;
+  --primary: #C4873C;
+  --primary-foreground: #181512;
+  --secondary: #231F1B;
+  --secondary-foreground: #D5CEC4;
+  --muted: #231F1B;
+  --muted-foreground: #968D82;
+  --accent: #231F1B;
+  --accent-foreground: #F2EDE5;
+  --destructive: #9B3B3B;
+  --destructive-foreground: #F2EDE5;
+  --border: #2A2420;
+  --input: #2A2420;
+  --ring: #C4873C;
 }
 
 @layer base {

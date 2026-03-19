@@ -145,6 +145,7 @@ export default async function ForgePage() {
               { href: '/companion', label: 'Open Dynasty Companion', locked: !isPaid },
               { href: '/armory', label: 'Open The Armory', locked: !isPaid },
               { href: '/hall', label: 'Visit The Hall', locked: !isPaid },
+              { href: '/journal', label: 'Dynasty Journal', locked: !isPaid },
               { href: '/book', label: 'Continue Reading', locked: false },
               { href: '/account', label: 'Account Settings', locked: false },
             ].map(item => (

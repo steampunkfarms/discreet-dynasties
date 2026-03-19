@@ -1,5 +1,7 @@
 import { notFound, redirect } from 'next/navigation'
 import Link from 'next/link'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 import { auth } from '@/auth'
 import { getChapterBySlug, getAdjacentChapters } from '@/lib/dd/book'
 import { prisma } from '@/lib/db'
@@ -53,7 +55,7 @@ export default async function ChapterPage({ params }: Props) {
 
         <div className="prose-content reading-content">
           {fullContent ? (
-            <div dangerouslySetInnerHTML={{ __html: fullContent.replace(/\n/g, '<br />') }} />
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{fullContent}</ReactMarkdown>
           ) : (
             <div className="py-20 text-center">
               <p className="text-dynasty-ink-muted font-mono text-xs uppercase tracking-widest mb-4">Chapter Coming Soon</p>

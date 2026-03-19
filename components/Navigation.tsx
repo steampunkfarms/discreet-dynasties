@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useSession, signOut } from 'next-auth/react'
 import { useState } from 'react'
 import { Menu, X, ChevronDown } from 'lucide-react'
+import ThemeToggle from './ThemeToggle'
 
 const NAV_LINKS = [
   { href: '/book', label: 'The Book' },
@@ -46,6 +47,7 @@ export default function Navigation() {
 
         {/* Desktop auth */}
         <div className="hidden md:flex items-center gap-4">
+          <ThemeToggle />
           {session ? (
             <div className="relative">
               <button
@@ -106,6 +108,11 @@ export default function Navigation() {
                 {link.label}
               </Link>
             ))}
+            <hr className="border-dynasty-border my-3" />
+            <div className="flex items-center gap-2 py-2">
+              <ThemeToggle />
+              <span className="font-body text-xs text-dynasty-ink-muted">Toggle theme</span>
+            </div>
             <hr className="border-dynasty-border my-3" />
             {session ? (
               <>

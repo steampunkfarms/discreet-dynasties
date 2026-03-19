@@ -1,7 +1,8 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, Suspense } from 'react'
 import { useSession } from 'next-auth/react'
+import { useSearchParams } from 'next/navigation'
 import { ChevronDown } from 'lucide-react'
 import Link from 'next/link'
 import { ADVISORS, ARCHETYPES, type AdvisorKey } from '@/lib/ai/prompts'
@@ -13,14 +14,18 @@ interface Message {
 
 type Mode = 'archetype' | 'advisor' | 'council'
 
-export default function CompanionPage() {
+function CompanionInner() {
   const { data: session } = useSession()
+  const searchParams = useSearchParams()
+  const urlAdvisor = searchParams.get('advisor') as AdvisorKey | null
+  const urlMode = searchParams.get('mode') as Mode | null
+
   const [messages, setMessages] = useState<Message[]>([])
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
-  const [mode, setMode] = useState<Mode>('archetype')
+  const [mode, setMode] = useState<Mode>(urlMode || (urlAdvisor ? 'advisor' : 'archetype'))
   const [selectedArchetype, setSelectedArchetype] = useState<string>('steward')
-  const [selectedAdvisor, setSelectedAdvisor] = useState<AdvisorKey>('washington')
+  const [selectedAdvisor, setSelectedAdvisor] = useState<AdvisorKey>(urlAdvisor || 'washington')
   const [selectedAdvisor2, setSelectedAdvisor2] = useState<AdvisorKey>('franklin')
   const [showSettings, setShowSettings] = useState(false)
   const bottomRef = useRef<HTMLDivElement>(null)
@@ -234,5 +239,13 @@ export default function CompanionPage() {
         </div>
       )}
     </div>
+  )
+}
+
+export default function CompanionPage() {
+  return (
+    <Suspense fallback={<div className="flex items-center justify-center h-[calc(100vh-3.5rem)]"><p className="font-mono text-xs text-dynasty-ink-muted">Loading…</p></div>}>
+      <CompanionInner />
+    </Suspense>
   )
 }
