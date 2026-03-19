@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 import { randomBytes } from 'crypto'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+const resend = new Resend(process.env.RESEND_API_KEY?.trim())
 
 const GIFT_LABELS: Record<string, string> = {
   '1_week': '1-Week Access',
@@ -49,7 +49,7 @@ export async function POST(req: NextRequest) {
     const redeemUrl = `${process.env.NEXTAUTH_URL ?? 'https://discreet.tronboll.us'}/gift/${code}`
 
     await resend.emails.send({
-      from: 'Discreet Dynasties <noreply-discreet@tronboll.us>',
+      from: 'Discreet Dynasties <discreet@tronboll.us>',
       to: recipientEmail,
       subject: `Your gift: ${giftLabel} to Discreet Dynasties`,
       html: `

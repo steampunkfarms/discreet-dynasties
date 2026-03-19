@@ -3,7 +3,7 @@ import { prisma } from '@/lib/db'
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+const resend = new Resend(process.env.RESEND_API_KEY?.trim())
 
 export async function POST(req: NextRequest) {
   const session = await auth()
@@ -54,7 +54,7 @@ export async function POST(req: NextRequest) {
       batch.map(async u => {
         try {
           await resend.emails.send({
-            from: 'Discreet Dynasties <noreply-discreet@tronboll.us>',
+            from: 'Discreet Dynasties <discreet@tronboll.us>',
             to: u.email!,
             subject,
             html: body,

@@ -8,12 +8,12 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   adapter: PrismaAdapter(prisma),
   providers: [
     Resend({
-      apiKey: process.env.RESEND_API_KEY,
-      from: 'The Discreet Dynasty <noreply-discreet@tronboll.us>',
+      apiKey: process.env.RESEND_API_KEY?.trim(),
+      from: 'The Discreet Dynasty <discreet@tronboll.us>',
     }),
     GitHub({
-      clientId: process.env.GITHUB_ID,
-      clientSecret: process.env.GITHUB_SECRET,
+      clientId: process.env.GITHUB_ID?.trim(),
+      clientSecret: process.env.GITHUB_SECRET?.trim(),
     }),
   ],
   callbacks: {

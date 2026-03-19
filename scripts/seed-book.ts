@@ -18,9 +18,9 @@ import * as dotenv from 'dotenv'
 
 dotenv.config({ path: path.join(__dirname, '../.env') })
 
-const adapter = new PrismaNeon({ connectionString: process.env.DATABASE_URL! })
+const adapter = new PrismaNeon({ connectionString: process.env.DATABASE_URL!.trim() })
 const prisma = new PrismaClient({ adapter })
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY?.trim() })
 
 // Update this to your actual book file path
 const BOOK_PATHS = [

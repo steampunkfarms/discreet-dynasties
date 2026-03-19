@@ -5,7 +5,7 @@ import { buildDDCompanionPrompt, type AdvisorKey } from '@/lib/ai/prompts'
 import { searchDDBook } from '@/lib/ai/rag'
 import { prisma } from '@/lib/db'
 
-const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
+const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY?.trim() })
 
 export async function POST(req: NextRequest) {
   const session = await auth()

@@ -4,16 +4,16 @@ let _stripe: Stripe | null = null
 
 export function getStripe() {
   if (!_stripe) {
-    _stripe = new Stripe(process.env.STRIPE_SECRET_KEY!)
+    _stripe = new Stripe(process.env.STRIPE_SECRET_KEY!.trim())
   }
   return _stripe
 }
 
 export const PRICE_IDS = {
-  dd_basic: process.env.STRIPE_PRICE_DD_BUILDER_MONTHLY || '',
-  dd_premium: process.env.STRIPE_PRICE_DD_STEWARD_ANNUAL || '',
-  dd_dynast: process.env.STRIPE_PRICE_DD_DYNAST_LIFETIME || '',
-  forge_bundle: process.env.STRIPE_PRICE_FORGE_BUNDLE || '',
+  dd_basic: process.env.STRIPE_PRICE_DD_BUILDER_MONTHLY?.trim() || '',
+  dd_premium: process.env.STRIPE_PRICE_DD_STEWARD_ANNUAL?.trim() || '',
+  dd_dynast: process.env.STRIPE_PRICE_DD_DYNAST_LIFETIME?.trim() || '',
+  forge_bundle: process.env.STRIPE_PRICE_FORGE_BUNDLE?.trim() || '',
 } as const
 
 export function priceIdToRole(priceId: string): string {
