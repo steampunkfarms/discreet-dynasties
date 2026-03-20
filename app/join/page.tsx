@@ -1,93 +1,100 @@
 import Link from 'next/link'
-import { PLAN_DETAILS } from '@/lib/stripe'
+import { auth } from '@/auth'
+import { getTierLabel } from '@/lib/auth-helpers'
+import { Metadata } from 'next'
 
-export const metadata = { title: 'Join the Forge' }
+export const metadata: Metadata = {
+  title: 'Subscribe — Discreet Dynasties',
+  description: 'Subscriptions are managed through Stoic Preparedness.',
+}
 
-export default function JoinPage() {
-  const plans = Object.entries(PLAN_DETAILS) as [string, typeof PLAN_DETAILS[keyof typeof PLAN_DETAILS]][]
+export default async function JoinPage() {
+  const session = await auth()
+  const userRole = session?.user?.role || 'free'
+  const hasPaidAccess = userRole !== 'free' && userRole !== 'admin'
 
   return (
-    <div className="page-enter max-w-wide mx-auto px-6 py-12">
-      <div className="text-center mb-16">
-        <p className="font-mono text-xs uppercase tracking-[0.2em] text-dynasty-amber mb-4">Join the Forge</p>
-        <h1 className="font-display text-display-lg font-light text-dynasty-ink mb-4">
-          Choose Your Level
-        </h1>
-        <p className="text-sm text-dynasty-ink-muted max-w-lg mx-auto leading-relaxed">
-          Every tier gives you access to the Living Book and the Dynasty Companion. Build deeper as you go.
-        </p>
-      </div>
+    <div className="page-enter max-w-content mx-auto px-6 py-12 text-center">
+      <p className="font-mono text-xs uppercase tracking-[0.2em] text-dynasty-amber mb-4">
+        Subscribe
+      </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-        {plans.map(([key, plan]) => (
-          <div key={key} className={`border rounded-sm p-6 flex flex-col ${
-            key === 'dd_dynast' ? 'border-dynasty-amber' : 'border-dynasty-border'
-          }`}>
-            {key === 'dd_dynast' && (
-              <p className="font-mono text-xs uppercase tracking-widest text-dynasty-amber mb-3">Most Popular</p>
-            )}
-            <h2 className="font-display text-display-sm font-semibold text-dynasty-ink mb-1">{plan.name}</h2>
-            <p className="font-body text-xl font-medium text-dynasty-amber mb-2">{plan.price}</p>
-            <p className="text-xs text-dynasty-ink-muted mb-4 capitalize">{plan.interval}</p>
-            <p className="text-sm text-dynasty-ink-muted leading-relaxed mb-6">{plan.description}</p>
-            <ul className="space-y-2 mb-8 flex-1">
-              {plan.features.map((feature, i) => (
-                <li key={i} className="flex items-start gap-2 text-sm text-dynasty-ink-light">
-                  <span className="text-dynasty-amber mt-0.5 flex-shrink-0" aria-hidden="true">—</span>
-                  {feature}
-                </li>
-              ))}
-            </ul>
-            <form action="/api/checkout" method="POST">
-              <input type="hidden" name="tier" value={key} />
-              <button
-                type="submit"
-                className={`w-full font-body text-sm font-medium py-3 px-4 rounded-sm transition-colors ${
-                  key === 'dd_dynast'
-                    ? 'text-dynasty-bg bg-dynasty-amber hover:bg-dynasty-amber-light'
-                    : 'text-dynasty-ink border border-dynasty-border hover:border-dynasty-amber/30'
-                }`}
-              >
-                Get {plan.name}
-              </button>
-            </form>
+      {hasPaidAccess ? (
+        <>
+          <h1 className="font-display text-display-md font-light text-dynasty-ink mb-4">
+            You&apos;re a {getTierLabel(userRole)}
+          </h1>
+          <p className="text-sm text-dynasty-ink-muted max-w-lg mx-auto leading-relaxed mb-8">
+            You already have access to Discreet Dynasties. Continue to your dashboard
+            or manage your subscription through Stoic Preparedness.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/forge"
+              className="font-body text-sm font-medium text-dynasty-bg bg-dynasty-amber py-3 px-6 rounded-sm hover:bg-dynasty-amber-light transition-colors"
+            >
+              Continue to Your Dashboard
+            </Link>
+            <a
+              href="https://stoic.tronboll.us/account?tab=billing"
+              className="font-body text-sm font-medium text-dynasty-ink border border-dynasty-border py-3 px-6 rounded-sm hover:border-dynasty-amber/30 transition-colors"
+            >
+              Manage Subscription
+            </a>
           </div>
-        ))}
-      </div>
+        </>
+      ) : (
+        <>
+          <h1 className="font-display text-display-md font-light text-dynasty-ink mb-4">
+            Subscriptions are managed through Stoic Preparedness
+          </h1>
+          <p className="text-sm text-dynasty-ink-muted max-w-lg mx-auto leading-relaxed mb-4">
+            Discreet Dynasties is part of the Tronboll Family of Sites. All subscriptions — including
+            Builder, Steward, Dynast, and the Forge Bundle — are managed through Stoic Preparedness,
+            the foundation everything is built on.
+          </p>
+          <p className="text-sm text-dynasty-ink-muted max-w-lg mx-auto leading-relaxed mb-8">
+            Quiet wealth. Enduring households. Building multi-generational resilience through
+            financial stewardship, estate planning, and discreet preparation.
+          </p>
+          <a
+            href="https://stoic.tronboll.us/join"
+            className="inline-block font-body text-sm font-medium text-dynasty-bg bg-dynasty-amber py-3 px-6 rounded-sm hover:bg-dynasty-amber-light transition-colors"
+          >
+            Subscribe at stoic.tronboll.us/join &rarr;
+          </a>
 
-      {/* FAQ */}
-      <div className="max-w-content mx-auto">
-        <h2 className="font-display text-display-sm font-light text-dynasty-ink mb-8 text-center">Common Questions</h2>
-        <div className="space-y-6">
-          {[
-            {
-              q: 'Can I use the same account as Stoic Preparedness?',
-              a: 'Yes. Use the same email address to sign in. Your account is unified across both sites.',
-            },
-            {
-              q: 'What is the difference between Builder and Steward?',
-              a: 'Builder gives you the full book, FATE Audit, 3 pathways, and the Companion. Steward unlocks the full Armory, all 6 pathways, all 4 companion archetypes, and the historical/biblical advisor system.',
-            },
-            {
-              q: 'What does the Dynast tier include?',
-              a: 'Lifetime access to everything, plus Forging Fathers, The Vow ceremony, the Long Table Civic Framework, Council Mode (two advisors), and early access to all future content.',
-            },
-            {
-              q: 'What is the Forge Bundle?',
-              a: 'Both Stoic Preparedness and Discreet Dynasties at the Dynast/lifetime level. One payment, both forges, forever.',
-            },
-            {
-              q: 'Can I cancel?',
-              a: 'Builder (monthly) and Steward (annual) can be cancelled anytime. Dynast and Bundle are one-time payments with no renewals.',
-            },
-          ].map((item, i) => (
-            <div key={i} className="border-b border-dynasty-border pb-6">
-              <h3 className="font-display text-base font-semibold text-dynasty-ink mb-2">{item.q}</h3>
-              <p className="text-sm text-dynasty-ink-muted leading-relaxed">{item.a}</p>
+          {/* FAQ */}
+          <div className="max-w-content mx-auto mt-16 text-left">
+            <h2 className="font-display text-display-sm font-light text-dynasty-ink mb-8 text-center">Common Questions</h2>
+            <div className="space-y-6">
+              {[
+                {
+                  q: 'Where do I subscribe?',
+                  a: 'All subscriptions are managed at stoic.tronboll.us/join. Once subscribed, your access is unified across all Tronboll sites.',
+                },
+                {
+                  q: 'Can I use the same account?',
+                  a: 'Yes. Use the same email address to sign in to both Stoic Preparedness and Discreet Dynasties. Your account is unified.',
+                },
+                {
+                  q: 'What tiers give me DD access?',
+                  a: 'Builder ($7/mo), Steward ($69/yr), Dynast ($199 lifetime), and Forge Bundle ($249 lifetime) all include Discreet Dynasties access.',
+                },
+                {
+                  q: 'I already subscribed through this site. Is my subscription still active?',
+                  a: 'Yes. All existing subscriptions remain active. You can manage billing at stoic.tronboll.us or through your account page here.',
+                },
+              ].map((item, i) => (
+                <div key={i} className="border-b border-dynasty-border pb-6">
+                  <h3 className="font-display text-base font-semibold text-dynasty-ink mb-2">{item.q}</h3>
+                  <p className="text-sm text-dynasty-ink-muted leading-relaxed">{item.a}</p>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </div>
+          </div>
+        </>
+      )}
     </div>
   )
 }

@@ -25,7 +25,7 @@ export default auth((req) => {
   }
 
   // Paid DD tier required for premium routes
-  const paidRoles = ['dd_basic', 'dd_premium', 'dd_dynast', 'forge_bundle', 'admin']
+  const paidRoles = ['dd_basic', 'dd_premium', 'dd_dynast', 'forge_bundle', 'full_arsenal', 'admin']
   if (DD_PAID_ROUTES.some(p => pathname.startsWith(p)) && !paidRoles.includes(role)) {
     return NextResponse.redirect(new URL('/join', req.url))
   }

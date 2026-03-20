@@ -1,10 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/auth'
-import { getStripe, PRICE_IDS } from '@/lib/stripe'
+import { getStripe, getOrCreateStripeCustomer, PRICE_IDS } from '@/lib/stripe'
 
 export async function POST(req: NextRequest) {
   const session = await auth()
-  if (!session?.user?.id) {
+  if (!session?.user?.id || !session.user.email) {
     return NextResponse.redirect(new URL('/auth/signin', req.url))
   }
 
@@ -17,18 +17,17 @@ export async function POST(req: NextRequest) {
   }
 
   const stripe = getStripe()
+  const customerId = await getOrCreateStripeCustomer(session.user.email, session.user.name || undefined)
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://discreet.tronboll.us'
 
-  // Determine mode based on tier
   const isLifetime = tier === 'dd_dynast' || tier === 'forge_bundle'
 
   const checkoutSession = await stripe.checkout.sessions.create({
+    customer: customerId,
     mode: isLifetime ? 'payment' : 'subscription',
-    payment_method_types: ['card'],
     line_items: [{ price: priceId, quantity: 1 }],
     success_url: `${siteUrl}/forge?checkout=success`,
     cancel_url: `${siteUrl}/join`,
-    customer_email: session.user.email || undefined,
     metadata: {
       userId: session.user.id,
       tier,

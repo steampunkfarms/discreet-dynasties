@@ -1,4 +1,5 @@
 import Stripe from 'stripe'
+import { prisma } from '@/lib/db'
 
 let _stripe: Stripe | null = null
 
@@ -21,6 +22,26 @@ export function priceIdToRole(priceId: string): string {
     if (id && id === priceId) return role
   }
   return 'free'
+}
+
+export async function getOrCreateStripeCustomer(email: string, name?: string): Promise<string> {
+  const user = await prisma.user.findUnique({
+    where: { email },
+    select: { stripeCustomerId: true },
+  })
+  if (user?.stripeCustomerId) return user.stripeCustomerId
+
+  const stripe = getStripe()
+  const existing = await stripe.customers.list({ email, limit: 1 })
+  if (existing.data.length > 0) {
+    const customerId = existing.data[0].id
+    await prisma.user.update({ where: { email }, data: { stripeCustomerId: customerId } })
+    return customerId
+  }
+
+  const customer = await stripe.customers.create({ email, name: name || undefined })
+  await prisma.user.update({ where: { email }, data: { stripeCustomerId: customer.id } })
+  return customer.id
 }
 
 export const PLAN_DETAILS = {
