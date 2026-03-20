@@ -1,0 +1,18 @@
+# Notify Orchestrator of deploys for Enterprise Command Deck
+# see steampunk-strategy/docs/handoffs/20260319-enterprise-unification-sfos.md
+name: Notify Deploy
+on:
+  push:
+    branches: [main]
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Notify Orchestrator
+        run: |
+          curl -sf -X POST \
+            -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" \
+            -H "Content-Type: application/json" \
+            -d "{\"app\":\"discreet\",\"repo\":\"${{ github.repository }}\",\"branch\":\"main\",\"commitSha\":\"${{ github.sha }}\",\"commitMsg\":$(echo '${{ github.event.head_commit.message }}' | head -1 | jq -Rs .),\"pushedBy\":\"${{ github.actor }}\",\"githubRunId\":\"${{ github.run_id }}\"}" \
+            https://orchestrator.steampunkstudiolo.org/api/webhooks/deploy
