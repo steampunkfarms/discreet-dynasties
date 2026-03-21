@@ -1,10 +1,27 @@
+import type { Metadata } from 'next'
 import { notFound, redirect } from 'next/navigation'
 import Link from 'next/link'
 import { auth } from '@/auth'
 import { getPathwayBySlug } from '@/lib/dd/pathways'
 import { prisma } from '@/lib/db'
+import { courseJsonLd, breadcrumbJsonLd, JsonLdScript } from '@/lib/json-ld'
+
+const BASE_URL = 'https://discreet.tronboll.us'
 
 interface Props { params: { slug: string } }
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const pathway = getPathwayBySlug(params.slug)
+  if (!pathway) return { title: 'Pathway' }
+  const description = pathway.description.length > 160
+    ? pathway.description.slice(0, 157) + '...'
+    : pathway.description
+  return {
+    title: pathway.title,
+    description,
+    openGraph: { title: pathway.title, description },
+  }
+}
 
 export default async function PathwayPage({ params }: Props) {
   const pathway = getPathwayBySlug(params.slug)
@@ -33,6 +50,18 @@ export default async function PathwayPage({ params }: Props) {
 
   return (
     <div className="page-enter max-w-content mx-auto px-6 py-12">
+      <JsonLdScript data={courseJsonLd({
+        name: pathway.title,
+        description: pathway.description,
+        url: `${BASE_URL}/pathways/${pathway.slug}`,
+        numberOfWeeks: pathway.weekCount,
+      })} />
+      <JsonLdScript data={breadcrumbJsonLd([
+        { name: 'Home', url: BASE_URL },
+        { name: 'Pathways', url: `${BASE_URL}/pathways` },
+        { name: pathway.title, url: `${BASE_URL}/pathways/${pathway.slug}` },
+      ])} />
+
       <div className="mb-4">
         <Link href="/pathways" className="font-mono text-xs text-dynasty-amber hover:text-dynasty-amber-light transition-colors">
           ← All Pathways

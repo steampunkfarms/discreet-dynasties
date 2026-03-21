@@ -1,6 +1,10 @@
+import type { Metadata } from 'next'
 import { notFound, redirect } from 'next/navigation'
 import { auth } from '@/auth'
 import ArmoryGenerator from './ArmoryGenerator'
+import { howToJsonLd, breadcrumbJsonLd, JsonLdScript } from '@/lib/json-ld'
+
+const BASE_URL = 'https://discreet.tronboll.us'
 
 const GENERATORS: Record<string, {
   title: string
@@ -124,6 +128,16 @@ const GENERATORS: Record<string, {
 
 interface Props { params: { slug: string } }
 
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const generator = GENERATORS[params.slug]
+  if (!generator) return { title: 'Armory' }
+  return {
+    title: generator.title,
+    description: generator.desc,
+    openGraph: { title: generator.title, description: generator.desc },
+  }
+}
+
 export default async function ArmorySlugPage({ params }: Props) {
   const generator = GENERATORS[params.slug]
   if (!generator) notFound()
@@ -139,11 +153,24 @@ export default async function ArmorySlugPage({ params }: Props) {
   if (generator.tier === 'steward' && !isSteward) redirect('/join')
 
   return (
-    <ArmoryGenerator
-      slug={params.slug}
-      title={generator.title}
-      desc={generator.desc}
-      fields={generator.fields}
-    />
+    <>
+      <JsonLdScript data={howToJsonLd({
+        name: generator.title,
+        description: generator.desc,
+        url: `${BASE_URL}/armory/${params.slug}`,
+        steps: generator.fields.map(f => ({ name: f.label, text: f.placeholder || f.label })),
+      })} />
+      <JsonLdScript data={breadcrumbJsonLd([
+        { name: 'Home', url: BASE_URL },
+        { name: 'Armory', url: `${BASE_URL}/armory` },
+        { name: generator.title, url: `${BASE_URL}/armory/${params.slug}` },
+      ])} />
+      <ArmoryGenerator
+        slug={params.slug}
+        title={generator.title}
+        desc={generator.desc}
+        fields={generator.fields}
+      />
+    </>
   )
 }

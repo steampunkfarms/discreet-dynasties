@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import { notFound, redirect } from 'next/navigation'
 import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
@@ -5,8 +6,21 @@ import remarkGfm from 'remark-gfm'
 import { auth } from '@/auth'
 import { getChapterBySlug, getAdjacentChapters } from '@/lib/dd/book'
 import { prisma } from '@/lib/db'
+import { bookJsonLd, breadcrumbJsonLd, JsonLdScript } from '@/lib/json-ld'
 
-export const metadata = { title: 'Chapter' }
+const BASE_URL = 'https://discreet.tronboll.us'
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const chapter = getChapterBySlug(params.slug)
+  if (!chapter) return { title: 'Chapter' }
+  const title = `Chapter ${chapter.number}: ${chapter.title}`
+  const description = `${chapter.subtitle || chapter.title} — ${chapter.title} from the Discreet Dynasties Living Book.`
+  return {
+    title,
+    description,
+    openGraph: { title, description },
+  }
+}
 
 interface Props {
   params: { slug: string }
@@ -36,6 +50,17 @@ export default async function ChapterPage({ params }: Props) {
 
   return (
     <div className="page-enter max-w-prose mx-auto px-6 py-12">
+      <JsonLdScript data={bookJsonLd({
+        name: `Chapter ${chapter.number}: ${chapter.title}`,
+        description: `${chapter.subtitle || chapter.title} — ${chapter.title} from the Discreet Dynasties Living Book.`,
+        url: `${BASE_URL}/book/${chapter.slug}`,
+      })} />
+      <JsonLdScript data={breadcrumbJsonLd([
+        { name: 'Home', url: BASE_URL },
+        { name: 'Book', url: `${BASE_URL}/book` },
+        { name: chapter.title, url: `${BASE_URL}/book/${chapter.slug}` },
+      ])} />
+
       <div className="mb-10">
         <Link href="/book" className="font-mono text-xs text-dynasty-amber hover:text-dynasty-amber-light transition-colors">
           ← All Chapters
