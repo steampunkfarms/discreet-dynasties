@@ -1,7 +1,2 @@
 {
-  "crons": [
-    { "path": "/api/cron/publish", "schedule": "* * * * *" },
-    { "path": "/api/cron/social", "schedule": "0 */4 * * *" },
-    { "path": "/api/cron/evergreen", "schedule": "0 8,20 * * *" }
-  ]
 }
