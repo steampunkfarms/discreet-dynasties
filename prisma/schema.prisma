@@ -946,3 +946,90 @@ model DDGiftCode {
   @@index([grantedByAdminId])
   @@index([redeemedByUserId])
 }
+
+// ============================================================================
+// SOCIAL DISPATCH & CRON INFRASTRUCTURE
+// ============================================================================
+
+model SocialPost {
+  id          String    @id @default(cuid())
+  platform    String
+  content     String    @db.Text
+  postSlug    String
+  platformId  String?
+  status      String
+  postedAt    DateTime?
+  scheduledAt DateTime?
+  threadArc   String?   @db.Text
+  error       String?   @db.Text
+  createdAt   DateTime  @default(now())
+
+  metrics SocialMetric[]
+
+  @@index([postSlug])
+  @@index([status])
+  @@index([createdAt])
+}
+
+model SocialMetric {
+  id           String   @id @default(cuid())
+  socialPostId String
+  impressions  Int      @default(0)
+  engagements  Int      @default(0)
+  clicks       Int      @default(0)
+  likes        Int      @default(0)
+  retweets     Int      @default(0)
+  replies      Int      @default(0)
+  createdAt    DateTime @default(now())
+
+  socialPost SocialPost @relation(fields: [socialPostId], references: [id])
+
+  @@index([socialPostId])
+}
+
+model CronLog {
+  id              String   @id @default(cuid())
+  cronName        String
+  status          String   @default("success")
+  durationMs      Int      @default(0)
+  recordsAffected Int      @default(0)
+  phases          String?
+  errors          String?
+  gitSHA          String?
+  executedAt      DateTime @default(now())
+
+  @@index([cronName])
+  @@index([executedAt])
+  @@index([status])
+}
+
+model EvergreenCursor {
+  id              String   @id @default(cuid())
+  currentPostSlug String
+  currentLine     Int      @default(0)
+  completedPosts  String   @default("[]")
+  cycleNumber     Int      @default(1)
+  lastModelIndex  Int      @default(-1)
+  updatedAt       DateTime @updatedAt
+}
+
+model EvergreenQuote {
+  id               String    @id @default(cuid())
+  postSlug         String
+  startLine        Int
+  endLine          Int
+  extractedPassage String
+  passageHash      String    @unique
+  model            String
+  cycleNumber      Int
+  facebookCopy     String?
+  xCopy            String?
+  instagramCopy    String?
+  dispatchStatus   String    @default("extracted")
+  dispatchedAt     DateTime?
+  createdAt        DateTime  @default(now())
+
+  @@index([postSlug])
+  @@index([dispatchStatus])
+  @@index([createdAt])
+}
