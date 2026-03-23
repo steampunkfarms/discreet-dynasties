@@ -1,0 +1,142 @@
+{
+  "version": "1.0.0",
+  "analyzedAt": "2026-03-23T10:46:04.936Z",
+  "gitCommitHash": "a77a7fdeb268f4c6ae0497e3bb98652eea4e3db3",
+  "analyzedFiles": [
+    "app/account/AccountBillingButton.tsx",
+    "app/account/AccountUsernameForm.tsx",
+    "app/account/page.tsx",
+    "app/admin/blasts/EmailBlastForm.tsx",
+    "app/admin/blasts/page.tsx",
+    "app/admin/gifts/GiftCreator.tsx",
+    "app/admin/gifts/page.tsx",
+    "app/admin/layout.tsx",
+    "app/admin/page.tsx",
+    "app/admin/users/UserRoleSelect.tsx",
+    "app/admin/users/page.tsx",
+    "app/api/account/username/route.ts",
+    "app/api/admin/blast/route.ts",
+    "app/api/admin/gift/route.ts",
+    "app/api/admin/users/[id]/route.ts",
+    "app/api/armory/generate/route.ts",
+    "app/api/billing/portal/route.ts",
+    "app/api/checkout/route.ts",
+    "app/api/companion/route.ts",
+    "app/api/cron/evergreen/route.ts",
+    "app/api/cron/publish/route.ts",
+    "app/api/cron/social/route.ts",
+    "app/api/fate-audit/route.ts",
+    "app/api/gift/[code]/route.ts",
+    "app/api/hall/comments/route.ts",
+    "app/api/hall/likes/route.ts",
+    "app/api/hall/posts/route.ts",
+    "app/api/health/route.ts",
+    "app/api/long-table/advance/route.ts",
+    "app/api/pathways/[slug]/complete/route.ts",
+    "app/api/vow/take/route.ts",
+    "app/api/webhook/route.ts",
+    "app/armory/[slug]/ArmoryGenerator.tsx",
+    "app/armory/[slug]/page.tsx",
+    "app/armory/page.tsx",
+    "app/assessments/fate/page.tsx",
+    "app/auth/signin/page.tsx",
+    "app/auth/verify/page.tsx",
+    "app/book/[slug]/page.tsx",
+    "app/book/page.tsx",
+    "app/companion/page.tsx",
+    "app/forge/page.tsx",
+    "app/forging-fathers/page.tsx",
+    "app/gift/[code]/GiftRedemptionClient.tsx",
+    "app/gift/[code]/page.tsx",
+    "app/hall/[id]/HallCommentForm.tsx",
+    "app/hall/[id]/HallLikeButton.tsx",
+    "app/hall/[id]/page.tsx",
+    "app/hall/create/page.tsx",
+    "app/hall/page.tsx",
+    "app/join/page.tsx",
+    "app/journal/page.tsx",
+    "app/layout.tsx",
+    "app/long-table/LongTableProgressForm.tsx",
+    "app/long-table/page.tsx",
+    "app/page.tsx",
+    "app/pathways/[slug]/page.tsx",
+    "app/pathways/page.tsx",
+    "app/robots.ts",
+    "app/sitemap.ts",
+    "app/the-vow/page.tsx",
+    "app/the-vow/take/page.tsx",
+    "auth.ts",
+    "components/Footer.tsx",
+    "components/Navigation.tsx",
+    "components/Providers.tsx",
+    "components/ThemeToggle.tsx",
+    "lib/ai-models.ts",
+    "lib/ai/prompts.ts",
+    "lib/ai/rag.ts",
+    "lib/auth-helpers.ts",
+    "lib/config.ts",
+    "lib/cron-auth.ts",
+    "lib/db.ts",
+    "lib/dd/book.ts",
+    "lib/dd/fate.ts",
+    "lib/dd/pathways.ts",
+    "lib/evergreen.ts",
+    "lib/json-ld.tsx",
+    "lib/social/facebook.ts",
+    "lib/social/index.ts",
+    "lib/social/instagram.ts",
+    "lib/social/metrics.ts",
+    "lib/social/x.ts",
+    "lib/story-arc.ts",
+    "lib/stripe.ts",
+    "middleware.ts",
+    "scripts/seed-book.ts"
+  ],
+  "totalFiles": 88,
+  "languages": {
+    "typescriptreact": {
+      "files": 44,
+      "lines": 4683,
+      "bytes": 203207
+    },
+    "typescript": {
+      "files": 44,
+      "lines": 3441,
+      "bytes": 134543
+    }
+  },
+  "frameworks": [
+    {
+      "name": "Next.js",
+      "version": "^14.2.0"
+    },
+    {
+      "name": "React",
+      "version": "^18.2.0"
+    },
+    {
+      "name": "Tailwind CSS",
+      "version": "^3.4.0"
+    },
+    {
+      "name": "Prisma",
+      "version": "^7.4.2"
+    },
+    {
+      "name": "Stripe",
+      "version": "^20.4.0"
+    },
+    {
+      "name": "Resend",
+      "version": "^6.9.3"
+    },
+    {
+      "name": "NextAuth",
+      "version": "^5.0.0-beta.30"
+    },
+    {
+      "name": "shadcn/ui",
+      "version": "various"
+    }
+  ]
+}
