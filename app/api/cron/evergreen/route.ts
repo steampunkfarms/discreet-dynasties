@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/db'
+import { verifyCronAuth } from '@/lib/cron-auth'
 import { dispatchToAll, type PlatformContent } from '@/lib/social'
 import {
   getOrCreateCursor,
@@ -16,11 +17,8 @@ import {
 export const dynamic = 'force-dynamic'
 
 export async function GET(request: Request) {
-  // Dispatch routes: orchestrator-only (INTERNAL_SECRET)
-  const authHeader = request.headers.get('authorization')
-  const expected = `Bearer ${process.env.INTERNAL_SECRET?.trim()}`
-  if (!process.env.INTERNAL_SECRET || authHeader !== expected) {
-    console.warn(`[dispatch-auth] Rejected non-orchestrator call to ${request.url}`)
+  if (!verifyCronAuth(request.headers.get('authorization'))) {
+    console.warn(`[evergreen-auth] Rejected unauthorized call to ${request.url}`)
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 

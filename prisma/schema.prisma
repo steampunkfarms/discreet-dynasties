@@ -1038,6 +1038,119 @@ model EvergreenQuote {
 }
 
 // ============================================================================
+// CONTENT GENERATION PIPELINE
+// ============================================================================
+
+// Shared with stoic-preparedness (same Neon DB)
+model ContentGenCursor {
+  id              String   @id @default(cuid())
+  lastModelIndex  Int      @default(-1)
+  lastContentType String   @default("hearth_post")
+  lastDoctrineIdx Int      @default(-1)
+  lastPracticeIdx Int      @default(-1)
+  lastMentorIdx   Int      @default(-1)
+  generationCount Int      @default(0)
+  updatedAt       DateTime @updatedAt
+}
+
+// Shared models with stoic-preparedness (same Neon DB — DO NOT remove)
+
+model ContentQueueItem {
+  id               String    @id @default(cuid())
+  contentType      String
+  status           String    @default("pending")
+  model            String
+  modelId          String
+  systemPrompt     String    @db.Text
+  userPrompt       String    @db.Text
+  sourceRefs       Json?
+  generatedContent String    @db.Text
+  generatedTitle   String?
+  editedContent    String?   @db.Text
+  editedTitle      String?
+  hearthCategory   String?
+  hearthMentorKey  String?
+  emailSegment     String?
+  emailSubject     String?
+  replyToPostId    String?
+  replyToCommentId String?
+  triggerContent   String?   @db.Text
+  triggerAuthorName String?
+  autoApproved     Boolean   @default(false)
+  escalated        Boolean   @default(false)
+  escalationReason String?
+  publishedPostId  String?
+  publishedBlastId String?
+  publishedCommentId String?
+  inputTokens      Int       @default(0)
+  outputTokens     Int       @default(0)
+  costCents        Int       @default(0)
+  reviewedAt       DateTime?
+  reviewedBy       String?
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+  editAnalysis     EditAnalysis?
+
+  @@index([status])
+  @@index([contentType])
+  @@index([createdAt])
+}
+
+model EditAnalysis {
+  id              String   @id @default(cuid())
+  queueItemId     String   @unique
+  originalContent String   @db.Text
+  editedContent   String   @db.Text
+  diffSummary     String   @db.Text
+  inferredIntent  String   @db.Text
+  guidelinesProposed Json?
+  guidelinesAccepted Boolean @default(false)
+  model           String
+  inputTokens     Int      @default(0)
+  outputTokens    Int      @default(0)
+  costCents       Int      @default(0)
+  createdAt       DateTime @default(now())
+  queueItem       ContentQueueItem @relation(fields: [queueItemId], references: [id], onDelete: Cascade)
+}
+
+model GenerationGuideline {
+  id         String   @id @default(cuid())
+  category   String
+  guideline  String   @db.Text
+  source     String   @default("seed")
+  sourceId   String?
+  confidence Float    @default(1.0)
+  isActive   Boolean  @default(true)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([isActive])
+  @@index([category])
+}
+
+model ImagePool {
+  id         String    @id @default(cuid())
+  blobUrl    String    @unique
+  filename   String
+  tags       String[]  @default([])
+  site       String    @default("stoic")
+  usedCount  Int       @default(0)
+  lastUsedAt DateTime?
+  createdAt  DateTime  @default(now())
+
+  @@index([site])
+  @@index([lastUsedAt])
+}
+
+model EngagementConfig {
+  id                   String   @id @default(cuid())
+  autoApproveEnabled   Boolean  @default(false)
+  autoApproveThreshold Int      @default(20)
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+}
+
+// ============================================================================
 // TRONBOLL HOUSE — shared DB models (retained to prevent table drops)
 // ============================================================================
 

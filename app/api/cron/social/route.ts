@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/db'
+import { verifyCronAuth } from '@/lib/cron-auth'
 import { callModel } from '@/lib/ai-models'
 import { dispatchToAll, type PlatformContent } from '@/lib/social'
 import { fetchPlatformMetrics } from '@/lib/social/metrics'
@@ -8,11 +9,8 @@ import { detectActiveArcs, generateArcSocialCopy } from '@/lib/story-arc'
 export const dynamic = 'force-dynamic'
 
 export async function GET(request: Request) {
-  // Dispatch routes: orchestrator-only (INTERNAL_SECRET)
-  const authHeader = request.headers.get('authorization')
-  const expected = `Bearer ${process.env.INTERNAL_SECRET?.trim()}`
-  if (!process.env.INTERNAL_SECRET || authHeader !== expected) {
-    console.warn(`[dispatch-auth] Rejected non-orchestrator call to ${request.url}`)
+  if (!verifyCronAuth(request.headers.get('authorization'))) {
+    console.warn(`[social-auth] Rejected unauthorized call to ${request.url}`)
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 
