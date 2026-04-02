@@ -963,9 +963,11 @@ model SocialPost {
   status      String
   postedAt    DateTime?
   scheduledAt DateTime?
-  threadArc   String?   @db.Text
-  error       String?   @db.Text
-  createdAt   DateTime  @default(now())
+  threadArc       String?   @db.Text
+  error           String?   @db.Text
+  firstCommentId  String?
+  firstCommentAt  DateTime?
+  createdAt       DateTime  @default(now())
 
   metrics SocialMetric[]
 

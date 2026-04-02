@@ -226,7 +226,7 @@ Link: https://discreet.tronboll.us/dispatches/${postSlug}
 
 Generate:
 - Facebook: Expand the thought into 2-3 reflective paragraphs. Do NOT include any links or URLs — Facebook throttles pages that post links. Do NOT add any author attribution line — the Page name and collaborator tag handle that.
-- X/Twitter: 500-2000 chars. Premium+ account — use the space. Punchy hook, then expand. Include the link.
+- X/Twitter: 1000-4000 chars. Premium+ account (25k char limit) — use the space generously. Punchy hook, then expand with substance. Include the link.
 - Instagram: Contemplative tone. 3-5 relevant hashtags. Include the link.
 
 Return JSON only (no markdown fences):

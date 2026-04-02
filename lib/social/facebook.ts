@@ -60,6 +60,29 @@ export async function postToFacebook(content: string): Promise<FacebookPostResul
   return { id: data.id }
 }
 
+export interface FacebookCommentResult {
+  id: string
+}
+
+export async function commentOnFacebook(postId: string, message: string): Promise<FacebookCommentResult> {
+  const token = process.env.META_PAGE_ACCESS_TOKEN?.trim()
+  if (!token) throw new Error('META_PAGE_ACCESS_TOKEN not set')
+
+  const res = await fetch(`https://graph.facebook.com/v19.0/${postId}/comments`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ message, access_token: token }),
+  })
+
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}))
+    throw new Error(`Facebook comment error: ${res.status} ${JSON.stringify(err)}`)
+  }
+
+  const data = await res.json()
+  return { id: data.id }
+}
+
 export function isFacebookEnabled(): boolean {
   return !!(process.env.META_PAGE_ID?.trim() && process.env.META_PAGE_ACCESS_TOKEN?.trim())
 }

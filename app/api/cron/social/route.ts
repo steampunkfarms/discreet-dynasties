@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/db'
 import { verifyCronAuth } from '@/lib/cron-auth'
 import { callModel } from '@/lib/ai-models'
-import { dispatchToAll, type PlatformContent } from '@/lib/social'
+import { dispatchToAll, postFirstComments, type PlatformContent } from '@/lib/social'
 import { fetchPlatformMetrics } from '@/lib/social/metrics'
 import { detectActiveArcs, generateArcSocialCopy } from '@/lib/story-arc'
 
@@ -90,7 +90,7 @@ Link: https://discreet.tronboll.us/dispatches/${dispatch.slug}
 Generate platform-native copy:
 - Facebook: 2-3 reflective paragraphs. Do NOT include any links or URLs — Facebook throttles pages that post links. Do NOT add any author attribution line — the Page name and collaborator tag handle that.
 - Instagram: Shorter, contemplative. 3-5 hashtags. Include the link.
-- X/Twitter: 500-2000 chars. Premium+ account — use the space. Punchy hook, then expand. Include link.
+- X/Twitter: 1000-4000 chars. Premium+ account (25k char limit) — use the space generously. Punchy hook, then expand with substance. Include link.
 
 Return JSON only (no markdown fences):
 { "facebook": "...", "instagram": "...", "x": "..." }`
@@ -104,11 +104,11 @@ Return JSON only (no markdown fences):
 
         const copy = JSON.parse(result.text) as PlatformContent
 
-        // Optionally refine X copy through Grok
+        // Optionally refine X copy through Grok (Premium+ — no 280 char limit)
         if (process.env.GROK_WIT_REFINEMENT?.trim() === 'true' && process.env.XAI_API_KEY?.trim() && copy.x) {
           try {
-            const grokResult = await callModel('grok', `Make this tweet wittier, keep the stewardship edge, under 280 chars. Return only the tweet:\n\n"${copy.x}"`)
-            if (grokResult.status === 'success' && grokResult.text.length <= 280) {
+            const grokResult = await callModel('grok', `Refine this X post — make it wittier and sharper while keeping the stewardship edge and substance. Premium account, so length is fine. Return only the post:\n\n"${copy.x}"`)
+            if (grokResult.status === 'success' && grokResult.text.length > 0) {
               copy.x = grokResult.text.replace(/^["']|["']$/g, '').trim()
             }
           } catch { /* keep original */ }
@@ -131,6 +131,19 @@ Return JSON only (no markdown fences):
               error: r.error || null,
             },
           })
+        }
+
+        // First comment: AI-generated reply with article link
+        const fcResults = await postFirstComments(results, dispatch.slug, dispatch.title, dispatch.excerpt || undefined)
+        for (const fc of fcResults) {
+          if (fc.status === 'posted' && fc.commentId) {
+            await prisma.socialPost.updateMany({
+              where: { postSlug: dispatch.slug, platform: fc.platform, status: 'posted' },
+              data: { firstCommentId: fc.commentId, firstCommentAt: now },
+            })
+          } else if (fc.status === 'failed') {
+            summary.errors.push(`First comment ${fc.platform}: ${fc.error}`)
+          }
         }
 
         summary.standalone++

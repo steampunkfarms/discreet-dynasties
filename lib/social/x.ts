@@ -25,6 +25,31 @@ export async function postToX(content: string): Promise<XPostResult> {
   return { id: tweet.data.id }
 }
 
+export interface XReplyResult {
+  id: string
+}
+
+export async function replyOnX(tweetId: string, content: string): Promise<XReplyResult> {
+  const apiKey = process.env.TWITTER_API_KEY?.trim()
+  const apiSecret = process.env.TWITTER_API_SECRET?.trim()
+  const accessToken = process.env.TWITTER_ACCESS_TOKEN?.trim()
+  const accessSecret = process.env.TWITTER_ACCESS_SECRET?.trim()
+
+  if (!apiKey || !apiSecret || !accessToken || !accessSecret) {
+    throw new Error('Twitter API credentials not set')
+  }
+
+  const client = new TwitterApi({
+    appKey: apiKey,
+    appSecret: apiSecret,
+    accessToken,
+    accessSecret,
+  })
+
+  const reply = await client.v2.reply(content, tweetId)
+  return { id: reply.data.id }
+}
+
 export function isXEnabled(): boolean {
   return process.env.TWITTER_ENABLED?.trim() !== 'false'
     && !!(process.env.TWITTER_API_KEY?.trim())
