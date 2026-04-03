@@ -16,9 +16,9 @@
       "NextAuth",
       "shadcn/ui"
     ],
-    "description": "Wealth preservation and dynasty planning content site with membership tiers, AI advisors, FATE assessment, and community features.",
-    "analyzedAt": "2026-03-23T10:46:04.936Z",
-    "gitCommitHash": "a77a7fdeb268f4c6ae0497e3bb98652eea4e3db3"
+    "description": "Wealth preservation and dynasty planning content site with membership tiers, AI advisors, FATE assessment, community features, automated content generation pipeline, and multi-platform social dispatch.",
+    "analyzedAt": "2026-04-02T00:00:00.000Z",
+    "gitCommitHash": "89678f15616cd424aa4e18015d01f7181856097d"
   },
   "nodes": [
     {
@@ -31,9 +31,7 @@
       "importCount": 1,
       "name": "AccountBillingButton.tsx",
       "complexity": "moderate",
-      "tags": [
-        "file"
-      ],
+      "tags": ["file"],
       "summary": "file: AccountBillingButton.tsx"
     },
     {
@@ -46,9 +44,7 @@
       "importCount": 2,
       "name": "AccountUsernameForm.tsx",
       "complexity": "moderate",
-      "tags": [
-        "file"
-      ],
+      "tags": ["file"],
       "summary": "file: AccountUsernameForm.tsx"
     },
     {
@@ -61,9 +57,7 @@
       "importCount": 7,
       "name": "page.tsx",
       "complexity": "moderate",
-      "tags": [
-        "page"
-      ],
+      "tags": ["page"],
       "summary": "file: page.tsx"
     },
     {
@@ -76,9 +70,7 @@
       "importCount": 1,
       "name": "EmailBlastForm.tsx",
       "complexity": "moderate",
-      "tags": [
-        "admin"
-      ],
+      "tags": ["admin"],
       "summary": "file: EmailBlastForm.tsx"
     },
     {
@@ -91,9 +83,7 @@
       "importCount": 2,
       "name": "page.tsx",
       "complexity": "moderate",
-      "tags": [
-        "admin"
-      ],
+      "tags": ["admin"],
       "summary": "file: page.tsx"
     },
     {
@@ -106,9 +96,7 @@
       "importCount": 1,
       "name": "GiftCreator.tsx",
       "complexity": "moderate",
-      "tags": [
-        "admin"
-      ],
+      "tags": ["admin"],
       "summary": "file: GiftCreator.tsx"
     },
     {
@@ -121,9 +109,7 @@
       "importCount": 2,
       "name": "page.tsx",
       "complexity": "moderate",
-      "tags": [
-        "admin"
-      ],
+      "tags": ["admin"],
       "summary": "file: page.tsx"
     },
     {
@@ -136,9 +122,7 @@
       "importCount": 4,
       "name": "layout.tsx",
       "complexity": "moderate",
-      "tags": [
-        "admin"
-      ],
+      "tags": ["admin"],
       "summary": "file: layout.tsx"
     },
     {
@@ -151,9 +135,7 @@
       "importCount": 2,
       "name": "page.tsx",
       "complexity": "moderate",
-      "tags": [
-        "admin"
-      ],
+      "tags": ["admin"],
       "summary": "file: page.tsx"
     },
     {
@@ -166,9 +148,7 @@
       "importCount": 1,
       "name": "UserRoleSelect.tsx",
       "complexity": "moderate",
-      "tags": [
-        "admin"
-      ],
+      "tags": ["admin"],
       "summary": "file: UserRoleSelect.tsx"
     },
     {
@@ -181,9 +161,7 @@
       "importCount": 2,
       "name": "page.tsx",
       "complexity": "moderate",
-      "tags": [
-        "admin"
-      ],
+      "tags": ["admin"],
       "summary": "file: page.tsx"
     },
     {
@@ -196,9 +174,7 @@
       "importCount": 3,
       "name": "route.ts",
       "complexity": "moderate",
-      "tags": [
-        "api"
-      ],
+      "tags": ["api"],
       "summary": "file: route.ts"
     },
     {
@@ -207,14 +183,10 @@
       "filePath": "app/api/account/username/route.ts",
       "startLine": 5,
       "endLine": 28,
-      "params": [
-        "req"
-      ],
+      "params": ["req"],
       "name": "POST",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in app/api/account/username/route.ts"
     },
     {
@@ -227,9 +199,7 @@
       "importCount": 4,
       "name": "route.ts",
       "complexity": "moderate",
-      "tags": [
-        "api"
-      ],
+      "tags": ["api"],
       "summary": "file: route.ts"
     },
     {
@@ -238,14 +208,10 @@
       "filePath": "app/api/admin/blast/route.ts",
       "startLine": 8,
       "endLine": 82,
-      "params": [
-        "req"
-      ],
+      "params": ["req"],
       "name": "POST",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in app/api/admin/blast/route.ts"
     },
     {
@@ -258,9 +224,7 @@
       "importCount": 5,
       "name": "route.ts",
       "complexity": "moderate",
-      "tags": [
-        "api"
-      ],
+      "tags": ["api"],
       "summary": "file: route.ts"
     },
     {
@@ -269,14 +233,10 @@
       "filePath": "app/api/admin/gift/route.ts",
       "startLine": 20,
       "endLine": 85,
-      "params": [
-        "req"
-      ],
+      "params": ["req"],
       "name": "POST",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in app/api/admin/gift/route.ts"
     },
     {
@@ -288,9 +248,7 @@
       "params": [],
       "name": "GET",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in app/api/admin/gift/route.ts"
     },
     {
@@ -303,9 +261,7 @@
       "importCount": 3,
       "name": "route.ts",
       "complexity": "moderate",
-      "tags": [
-        "api"
-      ],
+      "tags": ["api"],
       "summary": "file: route.ts"
     },
     {
@@ -318,9 +274,7 @@
       "importCount": 5,
       "name": "route.ts",
       "complexity": "moderate",
-      "tags": [
-        "api"
-      ],
+      "tags": ["api"],
       "summary": "file: route.ts"
     },
     {
@@ -329,14 +283,10 @@
       "filePath": "app/api/armory/generate/route.ts",
       "startLine": 103,
       "endLine": 174,
-      "params": [
-        "req"
-      ],
+      "params": ["req"],
       "name": "POST",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in app/api/armory/generate/route.ts"
     },
     {
@@ -349,9 +299,7 @@
       "importCount": 5,
       "name": "route.ts",
       "complexity": "moderate",
-      "tags": [
-        "api"
-      ],
+      "tags": ["api"],
       "summary": "file: route.ts"
     },
     {
@@ -363,9 +311,7 @@
       "params": [],
       "name": "POST",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in app/api/billing/portal/route.ts"
     },
     {
@@ -378,9 +324,7 @@
       "importCount": 3,
       "name": "route.ts",
       "complexity": "moderate",
-      "tags": [
-        "api"
-      ],
+      "tags": ["api"],
       "summary": "file: route.ts"
     },
     {
@@ -389,14 +333,10 @@
       "filePath": "app/api/checkout/route.ts",
       "startLine": 5,
       "endLine": 38,
-      "params": [
-        "req"
-      ],
+      "params": ["req"],
       "name": "POST",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in app/api/checkout/route.ts"
     },
     {
@@ -409,9 +349,7 @@
       "importCount": 6,
       "name": "route.ts",
       "complexity": "moderate",
-      "tags": [
-        "api"
-      ],
+      "tags": ["api"],
       "summary": "file: route.ts"
     },
     {
@@ -420,46 +358,61 @@
       "filePath": "app/api/companion/route.ts",
       "startLine": 10,
       "endLine": 76,
-      "params": [
-        "req"
-      ],
+      "params": ["req"],
       "name": "POST",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in app/api/companion/route.ts"
+    },
+    {
+      "id": "file::app/api/cron/content-gen/route.ts",
+      "type": "file",
+      "filePath": "app/api/cron/content-gen/route.ts",
+      "language": "typescript",
+      "totalLines": 58,
+      "exportCount": 2,
+      "importCount": 4,
+      "name": "route.ts",
+      "complexity": "moderate",
+      "tags": ["api", "cron"],
+      "summary": "Cron route for automated content generation. Calls lib/content-pipeline generateAndPublish() to create Hall posts or email dispatches from DD book chapters, with kill switch, CronLog tracking, and owner notification."
+    },
+    {
+      "id": "func::app/api/cron/content-gen/route.ts::GET",
+      "type": "function",
+      "filePath": "app/api/cron/content-gen/route.ts",
+      "startLine": 8,
+      "endLine": 58,
+      "params": ["req"],
+      "name": "GET",
+      "complexity": "moderate",
+      "tags": ["function"],
+      "summary": "GET handler for content-gen cron. Auth via verifyCronAuth, kill switch via CONTENT_GEN_ENABLED, delegates to generateAndPublish() then notifyOwner()."
     },
     {
       "id": "file::app/api/cron/evergreen/route.ts",
       "type": "file",
       "filePath": "app/api/cron/evergreen/route.ts",
       "language": "typescript",
-      "totalLines": 261,
+      "totalLines": 259,
       "exportCount": 2,
       "importCount": 3,
       "name": "route.ts",
       "complexity": "moderate",
-      "tags": [
-        "api"
-      ],
-      "summary": "file: route.ts"
+      "tags": ["api", "cron"],
+      "summary": "Evergreen cron route: extracts quotable passages from dispatches using multi-model rotation, generates social copy, dispatches to platforms with image picking, dedup via passage hash, cursor-based cycling through all published dispatches."
     },
     {
       "id": "func::app/api/cron/evergreen/route.ts::GET",
       "type": "function",
       "filePath": "app/api/cron/evergreen/route.ts",
-      "startLine": 18,
-      "endLine": 260,
-      "params": [
-        "request"
-      ],
+      "startLine": 19,
+      "endLine": 259,
+      "params": ["request"],
       "name": "GET",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
-      "summary": "Internal function in app/api/cron/evergreen/route.ts"
+      "tags": ["function"],
+      "summary": "GET handler for evergreen cron. Uses lib/evergreen for cursor management, chunk reading, passage extraction, social copy generation, dedup. Dispatches via lib/social with image picking."
     },
     {
       "id": "file::app/api/cron/publish/route.ts",
@@ -471,9 +424,7 @@
       "importCount": 3,
       "name": "route.ts",
       "complexity": "moderate",
-      "tags": [
-        "api"
-      ],
+      "tags": ["api", "cron"],
       "summary": "file: route.ts"
     },
     {
@@ -482,14 +433,10 @@
       "filePath": "app/api/cron/publish/route.ts",
       "startLine": 7,
       "endLine": 60,
-      "params": [
-        "request"
-      ],
+      "params": ["request"],
       "name": "GET",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in app/api/cron/publish/route.ts"
     },
     {
@@ -497,31 +444,25 @@
       "type": "file",
       "filePath": "app/api/cron/social/route.ts",
       "language": "typescript",
-      "totalLines": 237,
+      "totalLines": 251,
       "exportCount": 2,
-      "importCount": 6,
+      "importCount": 7,
       "name": "route.ts",
       "complexity": "moderate",
-      "tags": [
-        "api"
-      ],
-      "summary": "file: route.ts"
+      "tags": ["api", "cron"],
+      "summary": "Social dispatch cron: handles scheduled posts, generates social copy for new dispatches (Claude + optional Grok wit refinement for X), picks images, dispatches to Facebook/Instagram/X, posts AI-generated first-comments, detects story arcs, fetches platform metrics for analytics."
     },
     {
       "id": "func::app/api/cron/social/route.ts::GET",
       "type": "function",
       "filePath": "app/api/cron/social/route.ts",
-      "startLine": 10,
-      "endLine": 236,
-      "params": [
-        "request"
-      ],
+      "startLine": 11,
+      "endLine": 251,
+      "params": ["request"],
       "name": "GET",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
-      "summary": "Internal function in app/api/cron/social/route.ts"
+      "tags": ["function"],
+      "summary": "GET handler for social cron. 4-phase: (1) dispatch scheduled posts, (2) generate+post social for new dispatches with first-comments, (3) story-arc detection, (4) metrics collection."
     },
     {
       "id": "file::app/api/fate-audit/route.ts",
@@ -533,9 +474,7 @@
       "importCount": 3,
       "name": "route.ts",
       "complexity": "moderate",
-      "tags": [
-        "api"
-      ],
+      "tags": ["api"],
       "summary": "file: route.ts"
     },
     {
@@ -544,14 +483,10 @@
       "filePath": "app/api/fate-audit/route.ts",
       "startLine": 5,
       "endLine": 38,
-      "params": [
-        "req"
-      ],
+      "params": ["req"],
       "name": "POST",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in app/api/fate-audit/route.ts"
     },
     {
@@ -564,9 +499,7 @@
       "importCount": 3,
       "name": "route.ts",
       "complexity": "moderate",
-      "tags": [
-        "api"
-      ],
+      "tags": ["api"],
       "summary": "file: route.ts"
     },
     {
@@ -579,9 +512,7 @@
       "importCount": 3,
       "name": "route.ts",
       "complexity": "moderate",
-      "tags": [
-        "api"
-      ],
+      "tags": ["api"],
       "summary": "file: route.ts"
     },
     {
@@ -590,14 +521,10 @@
       "filePath": "app/api/hall/comments/route.ts",
       "startLine": 5,
       "endLine": 37,
-      "params": [
-        "req"
-      ],
+      "params": ["req"],
       "name": "POST",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in app/api/hall/comments/route.ts"
     },
     {
@@ -610,9 +537,7 @@
       "importCount": 3,
       "name": "route.ts",
       "complexity": "moderate",
-      "tags": [
-        "api"
-      ],
+      "tags": ["api"],
       "summary": "file: route.ts"
     },
     {
@@ -621,14 +546,10 @@
       "filePath": "app/api/hall/likes/route.ts",
       "startLine": 5,
       "endLine": 25,
-      "params": [
-        "req"
-      ],
+      "params": ["req"],
       "name": "POST",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in app/api/hall/likes/route.ts"
     },
     {
@@ -641,9 +562,7 @@
       "importCount": 3,
       "name": "route.ts",
       "complexity": "moderate",
-      "tags": [
-        "api"
-      ],
+      "tags": ["api"],
       "summary": "file: route.ts"
     },
     {
@@ -652,14 +571,10 @@
       "filePath": "app/api/hall/posts/route.ts",
       "startLine": 5,
       "endLine": 37,
-      "params": [
-        "req"
-      ],
+      "params": ["req"],
       "name": "POST",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in app/api/hall/posts/route.ts"
     },
     {
@@ -672,9 +587,7 @@
       "importCount": 3,
       "name": "route.ts",
       "complexity": "moderate",
-      "tags": [
-        "api"
-      ],
+      "tags": ["api"],
       "summary": "file: route.ts"
     },
     {
@@ -686,9 +599,7 @@
       "params": [],
       "name": "GET",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in app/api/health/route.ts"
     },
     {
@@ -701,9 +612,7 @@
       "importCount": 3,
       "name": "route.ts",
       "complexity": "moderate",
-      "tags": [
-        "api"
-      ],
+      "tags": ["api"],
       "summary": "file: route.ts"
     },
     {
@@ -715,9 +624,7 @@
       "params": [],
       "name": "POST",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in app/api/long-table/advance/route.ts"
     },
     {
@@ -730,9 +637,7 @@
       "importCount": 4,
       "name": "route.ts",
       "complexity": "moderate",
-      "tags": [
-        "api"
-      ],
+      "tags": ["api"],
       "summary": "file: route.ts"
     },
     {
@@ -741,15 +646,10 @@
       "filePath": "app/api/pathways/[slug]/complete/route.ts",
       "startLine": 8,
       "endLine": 75,
-      "params": [
-        "req",
-        "{ params }"
-      ],
+      "params": ["req", "{ params }"],
       "name": "POST",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in app/api/pathways/[slug]/complete/route.ts"
     },
     {
@@ -762,9 +662,7 @@
       "importCount": 3,
       "name": "route.ts",
       "complexity": "moderate",
-      "tags": [
-        "api"
-      ],
+      "tags": ["api"],
       "summary": "file: route.ts"
     },
     {
@@ -773,14 +671,10 @@
       "filePath": "app/api/vow/take/route.ts",
       "startLine": 5,
       "endLine": 37,
-      "params": [
-        "req"
-      ],
+      "params": ["req"],
       "name": "POST",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in app/api/vow/take/route.ts"
     },
     {
@@ -788,31 +682,25 @@
       "type": "file",
       "filePath": "app/api/webhook/route.ts",
       "language": "typescript",
-      "totalLines": 52,
+      "totalLines": 57,
       "exportCount": 1,
       "importCount": 4,
       "name": "route.ts",
       "complexity": "moderate",
-      "tags": [
-        "api"
-      ],
-      "summary": "file: route.ts"
+      "tags": ["api", "webhook"],
+      "summary": "Stripe webhook handler. Follows 200-only pattern (always returns 200 to prevent webhook suspension). Handles checkout.session.completed (role upgrade) and customer.subscription.deleted (reset to free)."
     },
     {
       "id": "func::app/api/webhook/route.ts::POST",
       "type": "function",
       "filePath": "app/api/webhook/route.ts",
-      "startLine": 6,
-      "endLine": 51,
-      "params": [
-        "req"
-      ],
+      "startLine": 7,
+      "endLine": 57,
+      "params": ["req"],
       "name": "POST",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
-      "summary": "Internal function in app/api/webhook/route.ts"
+      "tags": ["function"],
+      "summary": "POST handler for Stripe webhook. Verifies signature, processes checkout and subscription events, always returns 200."
     },
     {
       "id": "file::app/armory/[slug]/ArmoryGenerator.tsx",
@@ -824,9 +712,7 @@
       "importCount": 2,
       "name": "ArmoryGenerator.tsx",
       "complexity": "moderate",
-      "tags": [
-        "file"
-      ],
+      "tags": ["file"],
       "summary": "file: ArmoryGenerator.tsx"
     },
     {
@@ -839,9 +725,7 @@
       "importCount": 5,
       "name": "page.tsx",
       "complexity": "moderate",
-      "tags": [
-        "page"
-      ],
+      "tags": ["page"],
       "summary": "file: page.tsx"
     },
     {
@@ -850,14 +734,10 @@
       "filePath": "app/armory/[slug]/page.tsx",
       "startLine": 131,
       "endLine": 139,
-      "params": [
-        "{ params }"
-      ],
+      "params": ["{ params }"],
       "name": "generateMetadata",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in app/armory/[slug]/page.tsx"
     },
     {
@@ -870,9 +750,7 @@
       "importCount": 2,
       "name": "page.tsx",
       "complexity": "moderate",
-      "tags": [
-        "page"
-      ],
+      "tags": ["page"],
       "summary": "file: page.tsx"
     },
     {
@@ -885,9 +763,7 @@
       "importCount": 3,
       "name": "page.tsx",
       "complexity": "moderate",
-      "tags": [
-        "page"
-      ],
+      "tags": ["page"],
       "summary": "file: page.tsx"
     },
     {
@@ -900,9 +776,7 @@
       "importCount": 1,
       "name": "page.tsx",
       "complexity": "moderate",
-      "tags": [
-        "page"
-      ],
+      "tags": ["page"],
       "summary": "file: page.tsx"
     },
     {
@@ -915,9 +789,7 @@
       "importCount": 0,
       "name": "page.tsx",
       "complexity": "moderate",
-      "tags": [
-        "page"
-      ],
+      "tags": ["page"],
       "summary": "file: page.tsx"
     },
     {
@@ -930,9 +802,7 @@
       "importCount": 9,
       "name": "page.tsx",
       "complexity": "moderate",
-      "tags": [
-        "page"
-      ],
+      "tags": ["page"],
       "summary": "file: page.tsx"
     },
     {
@@ -941,14 +811,10 @@
       "filePath": "app/book/[slug]/page.tsx",
       "startLine": 13,
       "endLine": 23,
-      "params": [
-        "{ params }"
-      ],
+      "params": ["{ params }"],
       "name": "generateMetadata",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in app/book/[slug]/page.tsx"
     },
     {
@@ -961,9 +827,7 @@
       "importCount": 3,
       "name": "page.tsx",
       "complexity": "moderate",
-      "tags": [
-        "page"
-      ],
+      "tags": ["page"],
       "summary": "file: page.tsx"
     },
     {
@@ -976,9 +840,7 @@
       "importCount": 6,
       "name": "page.tsx",
       "complexity": "moderate",
-      "tags": [
-        "page"
-      ],
+      "tags": ["page"],
       "summary": "file: page.tsx"
     },
     {
@@ -991,9 +853,7 @@
       "importCount": 7,
       "name": "page.tsx",
       "complexity": "moderate",
-      "tags": [
-        "page"
-      ],
+      "tags": ["page"],
       "summary": "file: page.tsx"
     },
     {
@@ -1006,9 +866,7 @@
       "importCount": 4,
       "name": "page.tsx",
       "complexity": "moderate",
-      "tags": [
-        "page"
-      ],
+      "tags": ["page"],
       "summary": "file: page.tsx"
     },
     {
@@ -1021,9 +879,7 @@
       "importCount": 2,
       "name": "GiftRedemptionClient.tsx",
       "complexity": "moderate",
-      "tags": [
-        "file"
-      ],
+      "tags": ["file"],
       "summary": "file: GiftRedemptionClient.tsx"
     },
     {
@@ -1036,9 +892,7 @@
       "importCount": 5,
       "name": "page.tsx",
       "complexity": "moderate",
-      "tags": [
-        "page"
-      ],
+      "tags": ["page"],
       "summary": "file: page.tsx"
     },
     {
@@ -1051,9 +905,7 @@
       "importCount": 2,
       "name": "HallCommentForm.tsx",
       "complexity": "moderate",
-      "tags": [
-        "file"
-      ],
+      "tags": ["file"],
       "summary": "file: HallCommentForm.tsx"
     },
     {
@@ -1066,9 +918,7 @@
       "importCount": 1,
       "name": "HallLikeButton.tsx",
       "complexity": "moderate",
-      "tags": [
-        "file"
-      ],
+      "tags": ["file"],
       "summary": "file: HallLikeButton.tsx"
     },
     {
@@ -1081,9 +931,7 @@
       "importCount": 7,
       "name": "page.tsx",
       "complexity": "moderate",
-      "tags": [
-        "page"
-      ],
+      "tags": ["page"],
       "summary": "file: page.tsx"
     },
     {
@@ -1092,14 +940,10 @@
       "filePath": "app/hall/[id]/page.tsx",
       "startLine": 45,
       "endLine": 46,
-      "params": [
-        "u"
-      ],
+      "params": ["u"],
       "name": "authorName",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in app/hall/[id]/page.tsx"
     },
     {
@@ -1112,9 +956,7 @@
       "importCount": 3,
       "name": "page.tsx",
       "complexity": "moderate",
-      "tags": [
-        "page"
-      ],
+      "tags": ["page"],
       "summary": "file: page.tsx"
     },
     {
@@ -1127,9 +969,7 @@
       "importCount": 4,
       "name": "page.tsx",
       "complexity": "moderate",
-      "tags": [
-        "page"
-      ],
+      "tags": ["page"],
       "summary": "file: page.tsx"
     },
     {
@@ -1142,9 +982,7 @@
       "importCount": 4,
       "name": "page.tsx",
       "complexity": "moderate",
-      "tags": [
-        "page"
-      ],
+      "tags": ["page"],
       "summary": "file: page.tsx"
     },
     {
@@ -1157,9 +995,7 @@
       "importCount": 5,
       "name": "page.tsx",
       "complexity": "moderate",
-      "tags": [
-        "page"
-      ],
+      "tags": ["page"],
       "summary": "file: page.tsx"
     },
     {
@@ -1172,9 +1008,7 @@
       "importCount": 7,
       "name": "layout.tsx",
       "complexity": "moderate",
-      "tags": [
-        "page"
-      ],
+      "tags": ["page"],
       "summary": "file: layout.tsx"
     },
     {
@@ -1187,9 +1021,7 @@
       "importCount": 2,
       "name": "LongTableProgressForm.tsx",
       "complexity": "moderate",
-      "tags": [
-        "file"
-      ],
+      "tags": ["file"],
       "summary": "file: LongTableProgressForm.tsx"
     },
     {
@@ -1202,9 +1034,7 @@
       "importCount": 5,
       "name": "page.tsx",
       "complexity": "moderate",
-      "tags": [
-        "page"
-      ],
+      "tags": ["page"],
       "summary": "file: page.tsx"
     },
     {
@@ -1217,9 +1047,7 @@
       "importCount": 1,
       "name": "page.tsx",
       "complexity": "moderate",
-      "tags": [
-        "page"
-      ],
+      "tags": ["page"],
       "summary": "file: page.tsx"
     },
     {
@@ -1232,9 +1060,7 @@
       "importCount": 7,
       "name": "page.tsx",
       "complexity": "moderate",
-      "tags": [
-        "page"
-      ],
+      "tags": ["page"],
       "summary": "file: page.tsx"
     },
     {
@@ -1243,14 +1069,10 @@
       "filePath": "app/pathways/[slug]/page.tsx",
       "startLine": 13,
       "endLine": 24,
-      "params": [
-        "{ params }"
-      ],
+      "params": ["{ params }"],
       "name": "generateMetadata",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in app/pathways/[slug]/page.tsx"
     },
     {
@@ -1263,9 +1085,7 @@
       "importCount": 3,
       "name": "page.tsx",
       "complexity": "moderate",
-      "tags": [
-        "page"
-      ],
+      "tags": ["page"],
       "summary": "file: page.tsx"
     },
     {
@@ -1278,9 +1098,7 @@
       "importCount": 1,
       "name": "robots.ts",
       "complexity": "moderate",
-      "tags": [
-        "file"
-      ],
+      "tags": ["file"],
       "summary": "file: robots.ts"
     },
     {
@@ -1293,9 +1111,7 @@
       "importCount": 3,
       "name": "sitemap.ts",
       "complexity": "moderate",
-      "tags": [
-        "file"
-      ],
+      "tags": ["file"],
       "summary": "file: sitemap.ts"
     },
     {
@@ -1308,9 +1124,7 @@
       "importCount": 4,
       "name": "page.tsx",
       "complexity": "moderate",
-      "tags": [
-        "page"
-      ],
+      "tags": ["page"],
       "summary": "file: page.tsx"
     },
     {
@@ -1323,9 +1137,7 @@
       "importCount": 3,
       "name": "page.tsx",
       "complexity": "moderate",
-      "tags": [
-        "page"
-      ],
+      "tags": ["page"],
       "summary": "file: page.tsx"
     },
     {
@@ -1338,9 +1150,7 @@
       "importCount": 5,
       "name": "auth.ts",
       "complexity": "moderate",
-      "tags": [
-        "file"
-      ],
+      "tags": ["file"],
       "summary": "file: auth.ts"
     },
     {
@@ -1353,9 +1163,7 @@
       "importCount": 2,
       "name": "Footer.tsx",
       "complexity": "moderate",
-      "tags": [
-        "component"
-      ],
+      "tags": ["component"],
       "summary": "file: Footer.tsx"
     },
     {
@@ -1368,9 +1176,7 @@
       "importCount": 5,
       "name": "Navigation.tsx",
       "complexity": "moderate",
-      "tags": [
-        "component"
-      ],
+      "tags": ["component"],
       "summary": "file: Navigation.tsx"
     },
     {
@@ -1383,9 +1189,7 @@
       "importCount": 2,
       "name": "Providers.tsx",
       "complexity": "moderate",
-      "tags": [
-        "component"
-      ],
+      "tags": ["component"],
       "summary": "file: Providers.tsx"
     },
     {
@@ -1394,14 +1198,10 @@
       "filePath": "components/Providers.tsx",
       "startLine": 6,
       "endLine": 19,
-      "params": [
-        "{ children }"
-      ],
+      "params": ["{ children }"],
       "name": "Providers",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in components/Providers.tsx"
     },
     {
@@ -1414,9 +1214,7 @@
       "importCount": 3,
       "name": "ThemeToggle.tsx",
       "complexity": "moderate",
-      "tags": [
-        "component"
-      ],
+      "tags": ["component"],
       "summary": "file: ThemeToggle.tsx"
     },
     {
@@ -1429,9 +1227,7 @@
       "importCount": 2,
       "name": "ai-models.ts",
       "complexity": "moderate",
-      "tags": [
-        "service"
-      ],
+      "tags": ["service"],
       "summary": "file: ai-models.ts"
     },
     {
@@ -1440,15 +1236,10 @@
       "filePath": "lib/ai-models.ts",
       "startLine": 29,
       "endLine": 54,
-      "params": [
-        "prompt",
-        "system?"
-      ],
+      "params": ["prompt", "system?"],
       "name": "callClaude",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/ai-models.ts"
     },
     {
@@ -1457,15 +1248,10 @@
       "filePath": "lib/ai-models.ts",
       "startLine": 56,
       "endLine": 83,
-      "params": [
-        "prompt",
-        "system?"
-      ],
+      "params": ["prompt", "system?"],
       "name": "callGPT4o",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/ai-models.ts"
     },
     {
@@ -1474,15 +1260,10 @@
       "filePath": "lib/ai-models.ts",
       "startLine": 85,
       "endLine": 112,
-      "params": [
-        "prompt",
-        "system?"
-      ],
+      "params": ["prompt", "system?"],
       "name": "callGrok",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/ai-models.ts"
     },
     {
@@ -1491,16 +1272,10 @@
       "filePath": "lib/ai-models.ts",
       "startLine": 116,
       "endLine": 136,
-      "params": [
-        "model",
-        "prompt",
-        "system?"
-      ],
+      "params": ["model", "prompt", "system?"],
       "name": "callModel",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/ai-models.ts"
     },
     {
@@ -1513,9 +1288,7 @@
       "importCount": 0,
       "name": "prompts.ts",
       "complexity": "moderate",
-      "tags": [
-        "service"
-      ],
+      "tags": ["service"],
       "summary": "file: prompts.ts"
     },
     {
@@ -1524,14 +1297,10 @@
       "filePath": "lib/ai/prompts.ts",
       "startLine": 83,
       "endLine": 89,
-      "params": [
-        "archetype"
-      ],
+      "params": ["archetype"],
       "name": "getArchetypePrompt",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/ai/prompts.ts"
     },
     {
@@ -1540,14 +1309,10 @@
       "filePath": "lib/ai/prompts.ts",
       "startLine": 194,
       "endLine": 203,
-      "params": [
-        "advisorKey"
-      ],
+      "params": ["advisorKey"],
       "name": "getAdvisorPrompt",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/ai/prompts.ts"
     },
     {
@@ -1556,15 +1321,10 @@
       "filePath": "lib/ai/prompts.ts",
       "startLine": 209,
       "endLine": 220,
-      "params": [
-        "advisor1",
-        "advisor2"
-      ],
+      "params": ["advisor1", "advisor2"],
       "name": "getCouncilPrompt",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/ai/prompts.ts"
     },
     {
@@ -1577,9 +1337,7 @@
       "importCount": 2,
       "name": "rag.ts",
       "complexity": "moderate",
-      "tags": [
-        "service"
-      ],
+      "tags": ["service"],
       "summary": "file: rag.ts"
     },
     {
@@ -1588,14 +1346,10 @@
       "filePath": "lib/ai/rag.ts",
       "startLine": 10,
       "endLine": 16,
-      "params": [
-        "text"
-      ],
+      "params": ["text"],
       "name": "embedQuery",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/ai/rag.ts"
     },
     {
@@ -1604,15 +1358,10 @@
       "filePath": "lib/ai/rag.ts",
       "startLine": 18,
       "endLine": 37,
-      "params": [
-        "query",
-        "topK"
-      ],
+      "params": ["query", "topK"],
       "name": "searchDDBook",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/ai/rag.ts"
     },
     {
@@ -1625,9 +1374,7 @@
       "importCount": 0,
       "name": "auth-helpers.ts",
       "complexity": "moderate",
-      "tags": [
-        "service"
-      ],
+      "tags": ["service"],
       "summary": "file: auth-helpers.ts"
     },
     {
@@ -1636,14 +1383,10 @@
       "filePath": "lib/auth-helpers.ts",
       "startLine": 18,
       "endLine": 20,
-      "params": [
-        "role"
-      ],
+      "params": ["role"],
       "name": "canAccessDD",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/auth-helpers.ts"
     },
     {
@@ -1652,14 +1395,10 @@
       "filePath": "lib/auth-helpers.ts",
       "startLine": 22,
       "endLine": 24,
-      "params": [
-        "role"
-      ],
+      "params": ["role"],
       "name": "canAccessDDPremium",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/auth-helpers.ts"
     },
     {
@@ -1668,14 +1407,10 @@
       "filePath": "lib/auth-helpers.ts",
       "startLine": 26,
       "endLine": 28,
-      "params": [
-        "role"
-      ],
+      "params": ["role"],
       "name": "isDDDynast",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/auth-helpers.ts"
     },
     {
@@ -1684,14 +1419,10 @@
       "filePath": "lib/auth-helpers.ts",
       "startLine": 30,
       "endLine": 46,
-      "params": [
-        "role"
-      ],
+      "params": ["role"],
       "name": "getTierLabel",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/auth-helpers.ts"
     },
     {
@@ -1700,14 +1431,10 @@
       "filePath": "lib/auth-helpers.ts",
       "startLine": 48,
       "endLine": 53,
-      "params": [
-        "role"
-      ],
+      "params": ["role"],
       "name": "getTierBadgeColor",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/auth-helpers.ts"
     },
     {
@@ -1720,10 +1447,45 @@
       "importCount": 0,
       "name": "config.ts",
       "complexity": "moderate",
-      "tags": [
-        "service"
-      ],
+      "tags": ["service"],
       "summary": "file: config.ts"
+    },
+    {
+      "id": "file::lib/content-pipeline.ts",
+      "type": "file",
+      "filePath": "lib/content-pipeline.ts",
+      "language": "typescript",
+      "totalLines": 341,
+      "exportCount": 2,
+      "importCount": 3,
+      "name": "content-pipeline.ts",
+      "complexity": "moderate",
+      "tags": ["service"],
+      "summary": "Automated content generation pipeline for DD. Alternates between Hall posts and email dispatches using DDBookContent chapters. Rotates through Claude/GPT-4o/Grok models. Creates Dispatch records (feeds social cron), DDHallPost records, and sends email via Resend. Includes owner notification."
+    },
+    {
+      "id": "func::lib/content-pipeline.ts::generateAndPublish",
+      "type": "function",
+      "filePath": "lib/content-pipeline.ts",
+      "startLine": 95,
+      "endLine": 217,
+      "params": [],
+      "name": "generateAndPublish",
+      "complexity": "moderate",
+      "tags": ["function"],
+      "summary": "Main content generation function. Reads DD book chapters via Prisma, alternates hall_post/email_dispatch types, generates via multi-model rotation, creates Dispatch + DDHallPost or sends email, advances cursor."
+    },
+    {
+      "id": "func::lib/content-pipeline.ts::notifyOwner",
+      "type": "function",
+      "filePath": "lib/content-pipeline.ts",
+      "startLine": 300,
+      "endLine": 341,
+      "params": ["contentType", "preview", "results"],
+      "name": "notifyOwner",
+      "complexity": "moderate",
+      "tags": ["function"],
+      "summary": "Sends FYI notification to owner via Resend after content auto-publishes."
     },
     {
       "id": "file::lib/cron-auth.ts",
@@ -1735,9 +1497,7 @@
       "importCount": 1,
       "name": "cron-auth.ts",
       "complexity": "moderate",
-      "tags": [
-        "service"
-      ],
+      "tags": ["service"],
       "summary": "file: cron-auth.ts"
     },
     {
@@ -1746,14 +1506,10 @@
       "filePath": "lib/cron-auth.ts",
       "startLine": 8,
       "endLine": 24,
-      "params": [
-        "authHeader"
-      ],
+      "params": ["authHeader"],
       "name": "verifyCronAuth",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/cron-auth.ts"
     },
     {
@@ -1766,9 +1522,7 @@
       "importCount": 2,
       "name": "db.ts",
       "complexity": "moderate",
-      "tags": [
-        "service"
-      ],
+      "tags": ["service"],
       "summary": "file: db.ts"
     },
     {
@@ -1781,9 +1535,7 @@
       "importCount": 0,
       "name": "book.ts",
       "complexity": "moderate",
-      "tags": [
-        "service"
-      ],
+      "tags": ["service"],
       "summary": "file: book.ts"
     },
     {
@@ -1792,14 +1544,10 @@
       "filePath": "lib/dd/book.ts",
       "startLine": 58,
       "endLine": 60,
-      "params": [
-        "slug"
-      ],
+      "params": ["slug"],
       "name": "getChapterBySlug",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/dd/book.ts"
     },
     {
@@ -1808,14 +1556,10 @@
       "filePath": "lib/dd/book.ts",
       "startLine": 62,
       "endLine": 64,
-      "params": [
-        "section"
-      ],
+      "params": ["section"],
       "name": "getChaptersBySection",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/dd/book.ts"
     },
     {
@@ -1824,14 +1568,10 @@
       "filePath": "lib/dd/book.ts",
       "startLine": 66,
       "endLine": 72,
-      "params": [
-        "slug"
-      ],
+      "params": ["slug"],
       "name": "getAdjacentChapters",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/dd/book.ts"
     },
     {
@@ -1844,9 +1584,7 @@
       "importCount": 0,
       "name": "fate.ts",
       "complexity": "moderate",
-      "tags": [
-        "service"
-      ],
+      "tags": ["service"],
       "summary": "file: fate.ts"
     },
     {
@@ -1855,15 +1593,10 @@
       "filePath": "lib/dd/fate.ts",
       "startLine": 77,
       "endLine": 98,
-      "params": [
-        "answers",
-        "boolean>"
-      ],
+      "params": ["answers", "boolean>"],
       "name": "scoreFateAudit",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/dd/fate.ts"
     },
     {
@@ -1872,14 +1605,10 @@
       "filePath": "lib/dd/fate.ts",
       "startLine": 100,
       "endLine": 102,
-      "params": [
-        "level"
-      ],
+      "params": ["level"],
       "name": "getFateLevelLabel",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/dd/fate.ts"
     },
     {
@@ -1888,14 +1617,10 @@
       "filePath": "lib/dd/fate.ts",
       "startLine": 104,
       "endLine": 109,
-      "params": [
-        "scores"
-      ],
+      "params": ["scores"],
       "name": "getWeakestDomain",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/dd/fate.ts"
     },
     {
@@ -1908,9 +1633,7 @@
       "importCount": 0,
       "name": "pathways.ts",
       "complexity": "moderate",
-      "tags": [
-        "service"
-      ],
+      "tags": ["service"],
       "summary": "file: pathways.ts"
     },
     {
@@ -1919,14 +1642,10 @@
       "filePath": "lib/dd/pathways.ts",
       "startLine": 129,
       "endLine": 131,
-      "params": [
-        "slug"
-      ],
+      "params": ["slug"],
       "name": "getPathwayBySlug",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/dd/pathways.ts"
     },
     {
@@ -1934,15 +1653,13 @@
       "type": "file",
       "filePath": "lib/evergreen.ts",
       "language": "typescript",
-      "totalLines": 303,
+      "totalLines": 302,
       "exportCount": 10,
       "importCount": 4,
       "name": "evergreen.ts",
       "complexity": "moderate",
-      "tags": [
-        "service"
-      ],
-      "summary": "file: evergreen.ts"
+      "tags": ["service"],
+      "summary": "Evergreen social engine. Manages cursor-based cycling through all published Dispatches, extracting quotable passages via AI (multi-model rotation), generating platform-native social copy, dedup via SHA-256 passage hash, and cadence control (launch mode vs cruise mode)."
     },
     {
       "id": "func::lib/evergreen.ts::getOrCreateCursor",
@@ -1953,10 +1670,20 @@
       "params": [],
       "name": "getOrCreateCursor",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
-      "summary": "Internal function in lib/evergreen.ts"
+      "tags": ["function"],
+      "summary": "Gets or creates EvergreenCursor. Seeds from oldest published Dispatch."
+    },
+    {
+      "id": "func::lib/evergreen.ts::getNextChunk",
+      "type": "function",
+      "filePath": "lib/evergreen.ts",
+      "startLine": 43,
+      "endLine": 153,
+      "params": ["cursor"],
+      "name": "getNextChunk",
+      "complexity": "moderate",
+      "tags": ["function"],
+      "summary": "Returns next 25-line chunk from current dispatch. Handles post exhaustion, cursor advancement, and cycle wrapping."
     },
     {
       "id": "func::lib/evergreen.ts::getNextModel",
@@ -1964,15 +1691,35 @@
       "filePath": "lib/evergreen.ts",
       "startLine": 170,
       "endLine": 173,
-      "params": [
-        "lastModelIndex"
-      ],
+      "params": ["lastModelIndex"],
       "name": "getNextModel",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
-      "summary": "Internal function in lib/evergreen.ts"
+      "tags": ["function"],
+      "summary": "Rotates through claude/gpt4o/grok model array."
+    },
+    {
+      "id": "func::lib/evergreen.ts::extractPassage",
+      "type": "function",
+      "filePath": "lib/evergreen.ts",
+      "startLine": 177,
+      "endLine": 210,
+      "params": ["chunk", "postTitle", "startLine", "endLine", "model"],
+      "name": "extractPassage",
+      "complexity": "moderate",
+      "tags": ["function"],
+      "summary": "Extracts the most quotable passage (50-300 words) from a dispatch chunk using AI. Returns NO_QUOTABLE_PASSAGE for non-quotable sections."
+    },
+    {
+      "id": "func::lib/evergreen.ts::generateSocialCopy",
+      "type": "function",
+      "filePath": "lib/evergreen.ts",
+      "startLine": 214,
+      "endLine": 244,
+      "params": ["passage", "postTitle", "postSlug", "model"],
+      "name": "generateSocialCopy",
+      "complexity": "moderate",
+      "tags": ["function"],
+      "summary": "Generates platform-native social posts (Facebook no-link, X Premium+, Instagram with hashtags) from an extracted passage."
     },
     {
       "id": "func::lib/evergreen.ts::computePassageHash",
@@ -1980,15 +1727,11 @@
       "filePath": "lib/evergreen.ts",
       "startLine": 248,
       "endLine": 251,
-      "params": [
-        "passage"
-      ],
+      "params": ["passage"],
       "name": "computePassageHash",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
-      "summary": "Internal function in lib/evergreen.ts"
+      "tags": ["function"],
+      "summary": "SHA-256 hash of normalized passage for dedup."
     },
     {
       "id": "func::lib/evergreen.ts::isDuplicate",
@@ -1996,15 +1739,11 @@
       "filePath": "lib/evergreen.ts",
       "startLine": 253,
       "endLine": 256,
-      "params": [
-        "passageHash"
-      ],
+      "params": ["passageHash"],
       "name": "isDuplicate",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
-      "summary": "Internal function in lib/evergreen.ts"
+      "tags": ["function"],
+      "summary": "Checks EvergreenQuote table for existing passage hash."
     },
     {
       "id": "func::lib/evergreen.ts::shouldRunNow",
@@ -2015,10 +1754,20 @@
       "params": [],
       "name": "shouldRunNow",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
-      "summary": "Internal function in lib/evergreen.ts"
+      "tags": ["function"],
+      "summary": "Cadence control: launch mode (first 14 days, both slots) vs cruise mode (morning only)."
+    },
+    {
+      "id": "func::lib/evergreen.ts::advanceCursor",
+      "type": "function",
+      "filePath": "lib/evergreen.ts",
+      "startLine": 290,
+      "endLine": 302,
+      "params": ["cursorId", "newLine", "newModelIndex"],
+      "name": "advanceCursor",
+      "complexity": "moderate",
+      "tags": ["function"],
+      "summary": "Advances EvergreenCursor line position and model index."
     },
     {
       "id": "file::lib/json-ld.tsx",
@@ -2030,9 +1779,7 @@
       "importCount": 0,
       "name": "json-ld.tsx",
       "complexity": "moderate",
-      "tags": [
-        "service"
-      ],
+      "tags": ["service"],
       "summary": "file: json-ld.tsx"
     },
     {
@@ -2041,16 +1788,10 @@
       "filePath": "lib/json-ld.tsx",
       "startLine": 21,
       "endLine": 31,
-      "params": [
-        "siteUrl",
-        "siteName",
-        "description"
-      ],
+      "params": ["siteUrl", "siteName", "description"],
       "name": "websiteJsonLd",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/json-ld.tsx"
     },
     {
@@ -2062,9 +1803,7 @@
       "params": [],
       "name": "personJsonLd",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/json-ld.tsx"
     },
     {
@@ -2073,14 +1812,10 @@
       "filePath": "lib/json-ld.tsx",
       "startLine": 76,
       "endLine": 87,
-      "params": [
-        "items"
-      ],
+      "params": ["items"],
       "name": "breadcrumbJsonLd",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/json-ld.tsx"
     },
     {
@@ -2089,14 +1824,10 @@
       "filePath": "lib/json-ld.tsx",
       "startLine": 139,
       "endLine": 152,
-      "params": [
-        "questions"
-      ],
+      "params": ["questions"],
       "name": "faqJsonLd",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/json-ld.tsx"
     },
     {
@@ -2105,16 +1836,10 @@
       "filePath": "lib/json-ld.tsx",
       "startLine": 179,
       "endLine": 186,
-      "params": [
-        "{ data }",
-        "unknown> | Array<Record<string",
-        "unknown>> }"
-      ],
+      "params": ["{ data }"],
       "name": "JsonLdScript",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/json-ld.tsx"
     },
     {
@@ -2122,15 +1847,13 @@
       "type": "file",
       "filePath": "lib/social/facebook.ts",
       "language": "typescript",
-      "totalLines": 66,
-      "exportCount": 3,
+      "totalLines": 88,
+      "exportCount": 4,
       "importCount": 0,
       "name": "facebook.ts",
       "complexity": "moderate",
-      "tags": [
-        "service"
-      ],
-      "summary": "file: facebook.ts"
+      "tags": ["service"],
+      "summary": "Facebook Graph API integration. Posts to page feed with URL stripping (throttle prevention), collaborator page tagging (with retry fallback), and first-comment support. Includes isFacebookEnabled check."
     },
     {
       "id": "func::lib/social/facebook.ts::postToFacebook",
@@ -2138,60 +1861,97 @@
       "filePath": "lib/social/facebook.ts",
       "startLine": 14,
       "endLine": 61,
-      "params": [
-        "content"
-      ],
+      "params": ["content"],
       "name": "postToFacebook",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
-      "summary": "Internal function in lib/social/facebook.ts"
+      "tags": ["function"],
+      "summary": "Posts to Facebook Page feed via Graph API. Strips URLs, adds collaborator tag, retries without tag on failure."
+    },
+    {
+      "id": "func::lib/social/facebook.ts::commentOnFacebook",
+      "type": "function",
+      "filePath": "lib/social/facebook.ts",
+      "startLine": 67,
+      "endLine": 84,
+      "params": ["postId", "message"],
+      "name": "commentOnFacebook",
+      "complexity": "moderate",
+      "tags": ["function"],
+      "summary": "Posts a comment on a Facebook post (used for first-comment pattern with article link)."
     },
     {
       "id": "func::lib/social/facebook.ts::isFacebookEnabled",
       "type": "function",
       "filePath": "lib/social/facebook.ts",
-      "startLine": 63,
-      "endLine": 65,
+      "startLine": 86,
+      "endLine": 88,
       "params": [],
       "name": "isFacebookEnabled",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
-      "summary": "Internal function in lib/social/facebook.ts"
+      "tags": ["function"],
+      "summary": "Checks META_PAGE_ID and META_PAGE_ACCESS_TOKEN are set."
+    },
+    {
+      "id": "file::lib/social/image-picker.ts",
+      "type": "file",
+      "filePath": "lib/social/image-picker.ts",
+      "language": "typescript",
+      "totalLines": 68,
+      "exportCount": 1,
+      "importCount": 1,
+      "name": "image-picker.ts",
+      "complexity": "moderate",
+      "tags": ["service"],
+      "summary": "Theme-aware image picker for social posts. Matches content against keyword themes (dynasty, fate), queries ImagePool for tagged images with least-recently-used ordering, falls back to any site/shared image."
+    },
+    {
+      "id": "func::lib/social/image-picker.ts::pickImage",
+      "type": "function",
+      "filePath": "lib/social/image-picker.ts",
+      "startLine": 32,
+      "endLine": 68,
+      "params": ["postContent", "site"],
+      "name": "pickImage",
+      "complexity": "moderate",
+      "tags": ["function"],
+      "summary": "Picks a themed image from ImagePool based on content keyword matching, using LRU ordering to rotate images."
     },
     {
       "id": "file::lib/social/index.ts",
       "type": "file",
       "filePath": "lib/social/index.ts",
       "language": "typescript",
-      "totalLines": 57,
-      "exportCount": 3,
-      "importCount": 3,
+      "totalLines": 140,
+      "exportCount": 7,
+      "importCount": 4,
       "name": "index.ts",
       "complexity": "moderate",
-      "tags": [
-        "service"
-      ],
-      "summary": "file: index.ts"
+      "tags": ["service"],
+      "summary": "Social dispatch orchestrator. Dispatches content to Facebook (text only, no links), Instagram (requires image), and X. Includes first-comment system: AI generates a brief reply with article link, posted as a reply on Facebook and X."
     },
     {
       "id": "func::lib/social/index.ts::dispatchToAll",
       "type": "function",
       "filePath": "lib/social/index.ts",
-      "startLine": 18,
-      "endLine": 54,
-      "params": [
-        "content"
-      ],
+      "startLine": 20,
+      "endLine": 62,
+      "params": ["content", "imageUrl?"],
       "name": "dispatchToAll",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
-      "summary": "Internal function in lib/social/index.ts"
+      "tags": ["function"],
+      "summary": "Dispatches content to all enabled platforms (Facebook, Instagram with image, X). Returns per-platform results with status and platformId."
+    },
+    {
+      "id": "func::lib/social/index.ts::postFirstComments",
+      "type": "function",
+      "filePath": "lib/social/index.ts",
+      "startLine": 72,
+      "endLine": 138,
+      "params": ["dispatchResults", "postSlug", "postTitle", "postExcerpt?"],
+      "name": "postFirstComments",
+      "complexity": "moderate",
+      "tags": ["function"],
+      "summary": "Posts AI-generated first-comments on successfully dispatched social posts. Uses Claude to generate a brief reflective reply with article link. Supports Facebook (commentOnFacebook) and X (replyOnX)."
     },
     {
       "id": "file::lib/social/instagram.ts",
@@ -2203,9 +1963,7 @@
       "importCount": 0,
       "name": "instagram.ts",
       "complexity": "moderate",
-      "tags": [
-        "service"
-      ],
+      "tags": ["service"],
       "summary": "file: instagram.ts"
     },
     {
@@ -2214,15 +1972,10 @@
       "filePath": "lib/social/instagram.ts",
       "startLine": 5,
       "endLine": 48,
-      "params": [
-        "content",
-        "imageUrl"
-      ],
+      "params": ["content", "imageUrl"],
       "name": "postToInstagram",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/social/instagram.ts"
     },
     {
@@ -2234,9 +1987,7 @@
       "params": [],
       "name": "isInstagramEnabled",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/social/instagram.ts"
     },
     {
@@ -2249,9 +2000,7 @@
       "importCount": 1,
       "name": "metrics.ts",
       "complexity": "moderate",
-      "tags": [
-        "service"
-      ],
+      "tags": ["service"],
       "summary": "file: metrics.ts"
     },
     {
@@ -2260,14 +2009,10 @@
       "filePath": "lib/social/metrics.ts",
       "startLine": 14,
       "endLine": 40,
-      "params": [
-        "platformId"
-      ],
+      "params": ["platformId"],
       "name": "fetchFacebookMetrics",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/social/metrics.ts"
     },
     {
@@ -2276,14 +2021,10 @@
       "filePath": "lib/social/metrics.ts",
       "startLine": 42,
       "endLine": 66,
-      "params": [
-        "platformId"
-      ],
+      "params": ["platformId"],
       "name": "fetchXMetrics",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/social/metrics.ts"
     },
     {
@@ -2292,15 +2033,10 @@
       "filePath": "lib/social/metrics.ts",
       "startLine": 68,
       "endLine": 74,
-      "params": [
-        "platform",
-        "platformId"
-      ],
+      "params": ["platform", "platformId"],
       "name": "fetchPlatformMetrics",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/social/metrics.ts"
     },
     {
@@ -2308,15 +2044,13 @@
       "type": "file",
       "filePath": "lib/social/x.ts",
       "language": "typescript",
-      "totalLines": 35,
-      "exportCount": 3,
+      "totalLines": 59,
+      "exportCount": 4,
       "importCount": 1,
       "name": "x.ts",
       "complexity": "moderate",
-      "tags": [
-        "service"
-      ],
-      "summary": "file: x.ts"
+      "tags": ["service"],
+      "summary": "X/Twitter integration via twitter-api-v2. Posts tweets, replies to tweets (for first-comment pattern), and checks enabled status."
     },
     {
       "id": "func::lib/social/x.ts::postToX",
@@ -2324,29 +2058,35 @@
       "filePath": "lib/social/x.ts",
       "startLine": 7,
       "endLine": 26,
-      "params": [
-        "content"
-      ],
+      "params": ["content"],
       "name": "postToX",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
-      "summary": "Internal function in lib/social/x.ts"
+      "tags": ["function"],
+      "summary": "Posts a tweet via Twitter API v2."
+    },
+    {
+      "id": "func::lib/social/x.ts::replyOnX",
+      "type": "function",
+      "filePath": "lib/social/x.ts",
+      "startLine": 32,
+      "endLine": 51,
+      "params": ["tweetId", "content"],
+      "name": "replyOnX",
+      "complexity": "moderate",
+      "tags": ["function"],
+      "summary": "Replies to a tweet (used for first-comment pattern with article link)."
     },
     {
       "id": "func::lib/social/x.ts::isXEnabled",
       "type": "function",
       "filePath": "lib/social/x.ts",
-      "startLine": 28,
-      "endLine": 34,
+      "startLine": 53,
+      "endLine": 59,
       "params": [],
       "name": "isXEnabled",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
-      "summary": "Internal function in lib/social/x.ts"
+      "tags": ["function"],
+      "summary": "Checks TWITTER_ENABLED flag and all 4 API credentials."
     },
     {
       "id": "file::lib/story-arc.ts",
@@ -2358,9 +2098,7 @@
       "importCount": 2,
       "name": "story-arc.ts",
       "complexity": "moderate",
-      "tags": [
-        "service"
-      ],
+      "tags": ["service"],
       "summary": "file: story-arc.ts"
     },
     {
@@ -2372,9 +2110,7 @@
       "params": [],
       "name": "detectActiveArcs",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/story-arc.ts"
     },
     {
@@ -2387,9 +2123,7 @@
       "importCount": 2,
       "name": "stripe.ts",
       "complexity": "moderate",
-      "tags": [
-        "service"
-      ],
+      "tags": ["service"],
       "summary": "file: stripe.ts"
     },
     {
@@ -2401,9 +2135,7 @@
       "params": [],
       "name": "getStripe",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/stripe.ts"
     },
     {
@@ -2412,14 +2144,10 @@
       "filePath": "lib/stripe.ts",
       "startLine": 20,
       "endLine": 25,
-      "params": [
-        "priceId"
-      ],
+      "params": ["priceId"],
       "name": "priceIdToRole",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/stripe.ts"
     },
     {
@@ -2428,15 +2156,10 @@
       "filePath": "lib/stripe.ts",
       "startLine": 27,
       "endLine": 45,
-      "params": [
-        "email",
-        "name?"
-      ],
+      "params": ["email", "name?"],
       "name": "getOrCreateStripeCustomer",
       "complexity": "moderate",
-      "tags": [
-        "function"
-      ],
+      "tags": ["function"],
       "summary": "Internal function in lib/stripe.ts"
     },
     {
@@ -2449,9 +2172,7 @@
       "importCount": 2,
       "name": "middleware.ts",
       "complexity": "moderate",
-      "tags": [
-        "file"
-      ],
+      "tags": ["file"],
       "summary": "file: middleware.ts"
     },
     {
@@ -2464,2261 +2185,354 @@
       "importCount": 3,
       "name": "seed-book.ts",
       "complexity": "moderate",
-      "tags": [
-        "file"
-      ],
+      "tags": ["file"],
       "summary": "file: seed-book.ts"
     }
   ],
   "edges": [
-    {
-      "source": "file::app/account/page.tsx",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "auth",
-        "signOut"
-      ]
-    },
-    {
-      "source": "file::app/account/page.tsx",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::app/account/page.tsx",
-      "target": "file::lib/auth-helpers.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "getTierLabel",
-        "getTierBadgeColor",
-        "isDDDynast"
-      ]
-    },
-    {
-      "source": "file::app/account/page.tsx",
-      "target": "file::app/account/AccountUsernameForm.tsx",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "default"
-      ]
-    },
-    {
-      "source": "file::app/account/page.tsx",
-      "target": "file::app/account/AccountBillingButton.tsx",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "default"
-      ]
-    },
-    {
-      "source": "file::app/admin/blasts/page.tsx",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::app/admin/blasts/page.tsx",
-      "target": "file::app/admin/blasts/EmailBlastForm.tsx",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "default"
-      ]
-    },
-    {
-      "source": "file::app/admin/gifts/page.tsx",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::app/admin/gifts/page.tsx",
-      "target": "file::app/admin/gifts/GiftCreator.tsx",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "default"
-      ]
-    },
-    {
-      "source": "file::app/admin/layout.tsx",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "auth"
-      ]
-    },
-    {
-      "source": "file::app/admin/page.tsx",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::app/admin/users/page.tsx",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::app/admin/users/page.tsx",
-      "target": "file::app/admin/users/UserRoleSelect.tsx",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "default"
-      ]
-    },
-    {
-      "source": "file::app/api/account/username/route.ts",
-      "target": "func::app/api/account/username/route.ts::POST",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/api/account/username/route.ts",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "auth"
-      ]
-    },
-    {
-      "source": "file::app/api/account/username/route.ts",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::app/api/admin/blast/route.ts",
-      "target": "func::app/api/admin/blast/route.ts::POST",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/api/admin/blast/route.ts",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "auth"
-      ]
-    },
-    {
-      "source": "file::app/api/admin/blast/route.ts",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::app/api/admin/gift/route.ts",
-      "target": "func::app/api/admin/gift/route.ts::POST",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/api/admin/gift/route.ts",
-      "target": "func::app/api/admin/gift/route.ts::GET",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/api/admin/gift/route.ts",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "auth"
-      ]
-    },
-    {
-      "source": "file::app/api/admin/gift/route.ts",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::app/api/admin/users/[id]/route.ts",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "auth"
-      ]
-    },
-    {
-      "source": "file::app/api/admin/users/[id]/route.ts",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::app/api/armory/generate/route.ts",
-      "target": "func::app/api/armory/generate/route.ts::POST",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/api/armory/generate/route.ts",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "auth"
-      ]
-    },
-    {
-      "source": "file::app/api/armory/generate/route.ts",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::app/api/armory/generate/route.ts",
-      "target": "file::lib/ai/prompts.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "DD_SYSTEM_IDENTITY"
-      ]
-    },
-    {
-      "source": "file::app/api/billing/portal/route.ts",
-      "target": "func::app/api/billing/portal/route.ts::POST",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/api/billing/portal/route.ts",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "auth"
-      ]
-    },
-    {
-      "source": "file::app/api/billing/portal/route.ts",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::app/api/billing/portal/route.ts",
-      "target": "file::lib/stripe.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "getStripe"
-      ]
-    },
-    {
-      "source": "file::app/api/billing/portal/route.ts",
-      "target": "file::lib/config.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "SITE_URL"
-      ]
-    },
-    {
-      "source": "file::app/api/checkout/route.ts",
-      "target": "func::app/api/checkout/route.ts::POST",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/api/checkout/route.ts",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "auth"
-      ]
-    },
-    {
-      "source": "file::app/api/checkout/route.ts",
-      "target": "file::lib/stripe.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "getStripe",
-        "getOrCreateStripeCustomer",
-        "PRICE_IDS"
-      ]
-    },
-    {
-      "source": "file::app/api/companion/route.ts",
-      "target": "func::app/api/companion/route.ts::POST",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/api/companion/route.ts",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "auth"
-      ]
-    },
-    {
-      "source": "file::app/api/companion/route.ts",
-      "target": "file::lib/ai/prompts.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "buildDDCompanionPrompt",
-        "type AdvisorKey"
-      ]
-    },
-    {
-      "source": "file::app/api/companion/route.ts",
-      "target": "file::lib/ai/rag.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "searchDDBook"
-      ]
-    },
-    {
-      "source": "file::app/api/companion/route.ts",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::app/api/cron/evergreen/route.ts",
-      "target": "func::app/api/cron/evergreen/route.ts::GET",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/api/cron/evergreen/route.ts",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::app/api/cron/evergreen/route.ts",
-      "target": "file::lib/social/index.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "dispatchToAll",
-        "type PlatformContent"
-      ]
-    },
-    {
-      "source": "file::app/api/cron/publish/route.ts",
-      "target": "func::app/api/cron/publish/route.ts::GET",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/api/cron/publish/route.ts",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::app/api/cron/publish/route.ts",
-      "target": "file::lib/cron-auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "verifyCronAuth"
-      ]
-    },
-    {
-      "source": "file::app/api/cron/social/route.ts",
-      "target": "func::app/api/cron/social/route.ts::GET",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/api/cron/social/route.ts",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::app/api/cron/social/route.ts",
-      "target": "file::lib/ai-models.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "callModel"
-      ]
-    },
-    {
-      "source": "file::app/api/cron/social/route.ts",
-      "target": "file::lib/social/index.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "dispatchToAll",
-        "type PlatformContent"
-      ]
-    },
-    {
-      "source": "file::app/api/cron/social/route.ts",
-      "target": "file::lib/social/metrics.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "fetchPlatformMetrics"
-      ]
-    },
-    {
-      "source": "file::app/api/cron/social/route.ts",
-      "target": "file::lib/story-arc.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "detectActiveArcs",
-        "generateArcSocialCopy"
-      ]
-    },
-    {
-      "source": "file::app/api/fate-audit/route.ts",
-      "target": "func::app/api/fate-audit/route.ts::POST",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/api/fate-audit/route.ts",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "auth"
-      ]
-    },
-    {
-      "source": "file::app/api/fate-audit/route.ts",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::app/api/gift/[code]/route.ts",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "auth"
-      ]
-    },
-    {
-      "source": "file::app/api/gift/[code]/route.ts",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::app/api/hall/comments/route.ts",
-      "target": "func::app/api/hall/comments/route.ts::POST",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/api/hall/comments/route.ts",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "auth"
-      ]
-    },
-    {
-      "source": "file::app/api/hall/comments/route.ts",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::app/api/hall/likes/route.ts",
-      "target": "func::app/api/hall/likes/route.ts::POST",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/api/hall/likes/route.ts",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "auth"
-      ]
-    },
-    {
-      "source": "file::app/api/hall/likes/route.ts",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::app/api/hall/posts/route.ts",
-      "target": "func::app/api/hall/posts/route.ts::POST",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/api/hall/posts/route.ts",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "auth"
-      ]
-    },
-    {
-      "source": "file::app/api/hall/posts/route.ts",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::app/api/health/route.ts",
-      "target": "func::app/api/health/route.ts::GET",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/api/health/route.ts",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::app/api/health/route.ts",
-      "target": "file::lib/stripe.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "getStripe"
-      ]
-    },
-    {
-      "source": "file::app/api/long-table/advance/route.ts",
-      "target": "func::app/api/long-table/advance/route.ts::POST",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/api/long-table/advance/route.ts",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "auth"
-      ]
-    },
-    {
-      "source": "file::app/api/long-table/advance/route.ts",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::app/api/pathways/[slug]/complete/route.ts",
-      "target": "func::app/api/pathways/[slug]/complete/route.ts::POST",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/api/pathways/[slug]/complete/route.ts",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "auth"
-      ]
-    },
-    {
-      "source": "file::app/api/pathways/[slug]/complete/route.ts",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::app/api/pathways/[slug]/complete/route.ts",
-      "target": "file::lib/dd/pathways.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "getPathwayBySlug"
-      ]
-    },
-    {
-      "source": "file::app/api/vow/take/route.ts",
-      "target": "func::app/api/vow/take/route.ts::POST",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/api/vow/take/route.ts",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "auth"
-      ]
-    },
-    {
-      "source": "file::app/api/vow/take/route.ts",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::app/api/webhook/route.ts",
-      "target": "func::app/api/webhook/route.ts::POST",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/api/webhook/route.ts",
-      "target": "file::lib/stripe.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "getStripe",
-        "priceIdToRole"
-      ]
-    },
-    {
-      "source": "file::app/api/webhook/route.ts",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::app/armory/[slug]/page.tsx",
-      "target": "func::app/armory/[slug]/page.tsx::generateMetadata",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/armory/[slug]/page.tsx",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "auth"
-      ]
-    },
-    {
-      "source": "file::app/armory/[slug]/page.tsx",
-      "target": "file::app/armory/[slug]/ArmoryGenerator.tsx",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "default"
-      ]
-    },
-    {
-      "source": "file::app/armory/[slug]/page.tsx",
-      "target": "file::lib/json-ld.tsx",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "howToJsonLd",
-        "breadcrumbJsonLd",
-        "JsonLdScript"
-      ]
-    },
-    {
-      "source": "file::app/armory/page.tsx",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "auth"
-      ]
-    },
-    {
-      "source": "file::app/assessments/fate/page.tsx",
-      "target": "file::lib/dd/fate.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "FATE_QUESTIONS",
-        "scoreFateAudit",
-        "getFateLevelLabel",
-        "getWeakestDomain",
-        "type FateDomain"
-      ]
-    },
-    {
-      "source": "file::app/auth/signin/page.tsx",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "signIn"
-      ]
-    },
-    {
-      "source": "file::app/book/[slug]/page.tsx",
-      "target": "func::app/book/[slug]/page.tsx::generateMetadata",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/book/[slug]/page.tsx",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "auth"
-      ]
-    },
-    {
-      "source": "file::app/book/[slug]/page.tsx",
-      "target": "file::lib/dd/book.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "getChapterBySlug",
-        "getAdjacentChapters"
-      ]
-    },
-    {
-      "source": "file::app/book/[slug]/page.tsx",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::app/book/[slug]/page.tsx",
-      "target": "file::lib/json-ld.tsx",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "bookJsonLd",
-        "breadcrumbJsonLd",
-        "JsonLdScript"
-      ]
-    },
-    {
-      "source": "file::app/book/page.tsx",
-      "target": "file::lib/dd/book.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "DD_CHAPTERS",
-        "DD_SECTIONS"
-      ]
-    },
-    {
-      "source": "file::app/book/page.tsx",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "auth"
-      ]
-    },
-    {
-      "source": "file::app/companion/page.tsx",
-      "target": "file::lib/ai/prompts.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "ADVISORS",
-        "ARCHETYPES",
-        "type AdvisorKey"
-      ]
-    },
-    {
-      "source": "file::app/forge/page.tsx",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "auth"
-      ]
-    },
-    {
-      "source": "file::app/forge/page.tsx",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::app/forge/page.tsx",
-      "target": "file::lib/auth-helpers.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "getTierLabel",
-        "getTierBadgeColor"
-      ]
-    },
-    {
-      "source": "file::app/forge/page.tsx",
-      "target": "file::lib/dd/fate.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "getFateLevelLabel",
-        "type FateDomain"
-      ]
-    },
-    {
-      "source": "file::app/forge/page.tsx",
-      "target": "file::lib/dd/pathways.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "DD_PATHWAYS"
-      ]
-    },
-    {
-      "source": "file::app/forging-fathers/page.tsx",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "auth"
-      ]
-    },
-    {
-      "source": "file::app/forging-fathers/page.tsx",
-      "target": "file::lib/ai/prompts.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "ADVISORS"
-      ]
-    },
-    {
-      "source": "file::app/gift/[code]/page.tsx",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "auth"
-      ]
-    },
-    {
-      "source": "file::app/gift/[code]/page.tsx",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::app/gift/[code]/page.tsx",
-      "target": "file::app/gift/[code]/GiftRedemptionClient.tsx",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "default"
-      ]
-    },
-    {
-      "source": "file::app/hall/[id]/page.tsx",
-      "target": "func::app/hall/[id]/page.tsx::authorName",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/hall/[id]/page.tsx",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "auth"
-      ]
-    },
-    {
-      "source": "file::app/hall/[id]/page.tsx",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::app/hall/[id]/page.tsx",
-      "target": "file::app/hall/[id]/HallCommentForm.tsx",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "default"
-      ]
-    },
-    {
-      "source": "file::app/hall/[id]/page.tsx",
-      "target": "file::app/hall/[id]/HallLikeButton.tsx",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "default"
-      ]
-    },
-    {
-      "source": "file::app/hall/page.tsx",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "auth"
-      ]
-    },
-    {
-      "source": "file::app/hall/page.tsx",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::app/join/page.tsx",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "auth"
-      ]
-    },
-    {
-      "source": "file::app/join/page.tsx",
-      "target": "file::lib/auth-helpers.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "getTierLabel"
-      ]
-    },
-    {
-      "source": "file::app/journal/page.tsx",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "auth"
-      ]
-    },
-    {
-      "source": "file::app/journal/page.tsx",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::app/layout.tsx",
-      "target": "file::components/Providers.tsx",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "Providers"
-      ]
-    },
-    {
-      "source": "file::app/layout.tsx",
-      "target": "file::components/Navigation.tsx",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "default"
-      ]
-    },
-    {
-      "source": "file::app/layout.tsx",
-      "target": "file::components/Footer.tsx",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "default"
-      ]
-    },
-    {
-      "source": "file::app/layout.tsx",
-      "target": "file::lib/json-ld.tsx",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "personJsonLd",
-        "websiteJsonLd",
-        "JsonLdScript"
-      ]
-    },
-    {
-      "source": "file::app/long-table/page.tsx",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "auth"
-      ]
-    },
-    {
-      "source": "file::app/long-table/page.tsx",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::app/long-table/page.tsx",
-      "target": "file::app/long-table/LongTableProgressForm.tsx",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "default"
-      ]
-    },
-    {
-      "source": "file::app/pathways/[slug]/page.tsx",
-      "target": "func::app/pathways/[slug]/page.tsx::generateMetadata",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/pathways/[slug]/page.tsx",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "auth"
-      ]
-    },
-    {
-      "source": "file::app/pathways/[slug]/page.tsx",
-      "target": "file::lib/dd/pathways.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "getPathwayBySlug"
-      ]
-    },
-    {
-      "source": "file::app/pathways/[slug]/page.tsx",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::app/pathways/[slug]/page.tsx",
-      "target": "file::lib/json-ld.tsx",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "courseJsonLd",
-        "breadcrumbJsonLd",
-        "JsonLdScript"
-      ]
-    },
-    {
-      "source": "file::app/pathways/page.tsx",
-      "target": "file::lib/dd/pathways.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "DD_PATHWAYS"
-      ]
-    },
-    {
-      "source": "file::app/pathways/page.tsx",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "auth"
-      ]
-    },
-    {
-      "source": "file::app/sitemap.ts",
-      "target": "file::lib/dd/book.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "DD_CHAPTERS"
-      ]
-    },
-    {
-      "source": "file::app/sitemap.ts",
-      "target": "file::lib/dd/pathways.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "DD_PATHWAYS"
-      ]
-    },
-    {
-      "source": "file::app/the-vow/page.tsx",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "auth"
-      ]
-    },
-    {
-      "source": "file::app/the-vow/page.tsx",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::auth.ts",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::components/Footer.tsx",
-      "target": "file::lib/config.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "DD_BOOK_URL",
-        "SP_URL",
-        "FT3_URL"
-      ]
-    },
-    {
-      "source": "file::components/Navigation.tsx",
-      "target": "file::components/ThemeToggle.tsx",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "default"
-      ]
-    },
-    {
-      "source": "file::components/Providers.tsx",
-      "target": "func::components/Providers.tsx::Providers",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/ai-models.ts",
-      "target": "func::lib/ai-models.ts::callClaude",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/ai-models.ts",
-      "target": "func::lib/ai-models.ts::callGPT4o",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/ai-models.ts",
-      "target": "func::lib/ai-models.ts::callGrok",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/ai-models.ts",
-      "target": "func::lib/ai-models.ts::callModel",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/ai/prompts.ts",
-      "target": "func::lib/ai/prompts.ts::getArchetypePrompt",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/ai/prompts.ts",
-      "target": "func::lib/ai/prompts.ts::getAdvisorPrompt",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/ai/prompts.ts",
-      "target": "func::lib/ai/prompts.ts::getCouncilPrompt",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/ai/rag.ts",
-      "target": "func::lib/ai/rag.ts::embedQuery",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/ai/rag.ts",
-      "target": "func::lib/ai/rag.ts::searchDDBook",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/ai/rag.ts",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::lib/auth-helpers.ts",
-      "target": "func::lib/auth-helpers.ts::canAccessDD",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/auth-helpers.ts",
-      "target": "func::lib/auth-helpers.ts::canAccessDDPremium",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/auth-helpers.ts",
-      "target": "func::lib/auth-helpers.ts::isDDDynast",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/auth-helpers.ts",
-      "target": "func::lib/auth-helpers.ts::getTierLabel",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/auth-helpers.ts",
-      "target": "func::lib/auth-helpers.ts::getTierBadgeColor",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/cron-auth.ts",
-      "target": "func::lib/cron-auth.ts::verifyCronAuth",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/dd/book.ts",
-      "target": "func::lib/dd/book.ts::getChapterBySlug",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/dd/book.ts",
-      "target": "func::lib/dd/book.ts::getChaptersBySection",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/dd/book.ts",
-      "target": "func::lib/dd/book.ts::getAdjacentChapters",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/dd/fate.ts",
-      "target": "func::lib/dd/fate.ts::scoreFateAudit",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/dd/fate.ts",
-      "target": "func::lib/dd/fate.ts::getFateLevelLabel",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/dd/fate.ts",
-      "target": "func::lib/dd/fate.ts::getWeakestDomain",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/dd/pathways.ts",
-      "target": "func::lib/dd/pathways.ts::getPathwayBySlug",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/evergreen.ts",
-      "target": "func::lib/evergreen.ts::getOrCreateCursor",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/evergreen.ts",
-      "target": "func::lib/evergreen.ts::getNextModel",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/evergreen.ts",
-      "target": "func::lib/evergreen.ts::computePassageHash",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/evergreen.ts",
-      "target": "func::lib/evergreen.ts::isDuplicate",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/evergreen.ts",
-      "target": "func::lib/evergreen.ts::shouldRunNow",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/evergreen.ts",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::lib/evergreen.ts",
-      "target": "file::lib/ai-models.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "callModel",
-        "type ModelId"
-      ]
-    },
-    {
-      "source": "file::lib/evergreen.ts",
-      "target": "func::lib/ai-models.ts::callModel",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/evergreen.ts",
-      "target": "file::lib/social/index.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "PlatformContent"
-      ]
-    },
-    {
-      "source": "file::lib/json-ld.tsx",
-      "target": "func::lib/json-ld.tsx::websiteJsonLd",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/json-ld.tsx",
-      "target": "func::lib/json-ld.tsx::personJsonLd",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/json-ld.tsx",
-      "target": "func::lib/json-ld.tsx::breadcrumbJsonLd",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/json-ld.tsx",
-      "target": "func::lib/json-ld.tsx::faqJsonLd",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/json-ld.tsx",
-      "target": "func::lib/json-ld.tsx::JsonLdScript",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/social/facebook.ts",
-      "target": "func::lib/social/facebook.ts::postToFacebook",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/social/facebook.ts",
-      "target": "func::lib/social/facebook.ts::isFacebookEnabled",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/social/index.ts",
-      "target": "func::lib/social/index.ts::dispatchToAll",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/social/index.ts",
-      "target": "file::lib/social/facebook.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "postToFacebook",
-        "isFacebookEnabled"
-      ]
-    },
-    {
-      "source": "file::lib/social/index.ts",
-      "target": "func::lib/social/facebook.ts::postToFacebook",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/social/index.ts",
-      "target": "func::lib/social/facebook.ts::isFacebookEnabled",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/social/index.ts",
-      "target": "file::lib/social/instagram.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "postToInstagram",
-        "isInstagramEnabled"
-      ]
-    },
-    {
-      "source": "file::lib/social/index.ts",
-      "target": "file::lib/social/x.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "postToX",
-        "isXEnabled"
-      ]
-    },
-    {
-      "source": "file::lib/social/instagram.ts",
-      "target": "func::lib/social/instagram.ts::postToInstagram",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/social/instagram.ts",
-      "target": "func::lib/social/instagram.ts::isInstagramEnabled",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/social/metrics.ts",
-      "target": "func::lib/social/metrics.ts::fetchFacebookMetrics",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/social/metrics.ts",
-      "target": "func::lib/social/metrics.ts::fetchXMetrics",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/social/metrics.ts",
-      "target": "func::lib/social/metrics.ts::fetchPlatformMetrics",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/social/x.ts",
-      "target": "func::lib/social/x.ts::postToX",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/social/x.ts",
-      "target": "func::lib/social/x.ts::isXEnabled",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/story-arc.ts",
-      "target": "func::lib/story-arc.ts::detectActiveArcs",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/story-arc.ts",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::lib/story-arc.ts",
-      "target": "file::lib/ai-models.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "callModel"
-      ]
-    },
-    {
-      "source": "file::lib/story-arc.ts",
-      "target": "func::lib/ai-models.ts::callModel",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/stripe.ts",
-      "target": "func::lib/stripe.ts::getStripe",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/stripe.ts",
-      "target": "func::lib/stripe.ts::priceIdToRole",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/stripe.ts",
-      "target": "func::lib/stripe.ts::getOrCreateStripeCustomer",
-      "relation": "contains",
-      "weight": 1,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/stripe.ts",
-      "target": "file::lib/db.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "prisma"
-      ]
-    },
-    {
-      "source": "file::middleware.ts",
-      "target": "file::auth.ts",
-      "relation": "imports",
-      "weight": 0.7,
-      "direction": "forward",
-      "specifiers": [
-        "auth"
-      ]
-    },
-    {
-      "source": "file::app/account/page.tsx",
-      "target": "func::lib/auth-helpers.ts::getTierLabel",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/account/page.tsx",
-      "target": "func::lib/auth-helpers.ts::getTierBadgeColor",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/account/page.tsx",
-      "target": "func::lib/auth-helpers.ts::isDDDynast",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/api/billing/portal/route.ts",
-      "target": "func::lib/stripe.ts::getStripe",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/api/checkout/route.ts",
-      "target": "func::lib/stripe.ts::getStripe",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/api/checkout/route.ts",
-      "target": "func::lib/stripe.ts::getOrCreateStripeCustomer",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/api/companion/route.ts",
-      "target": "func::lib/ai/rag.ts::searchDDBook",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/api/cron/evergreen/route.ts",
-      "target": "func::lib/social/index.ts::dispatchToAll",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/api/cron/publish/route.ts",
-      "target": "func::lib/cron-auth.ts::verifyCronAuth",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/api/cron/social/route.ts",
-      "target": "func::lib/ai-models.ts::callModel",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/api/cron/social/route.ts",
-      "target": "func::lib/social/index.ts::dispatchToAll",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/api/cron/social/route.ts",
-      "target": "func::lib/social/metrics.ts::fetchPlatformMetrics",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/api/cron/social/route.ts",
-      "target": "func::lib/story-arc.ts::detectActiveArcs",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/api/health/route.ts",
-      "target": "func::lib/stripe.ts::getStripe",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/api/pathways/[slug]/complete/route.ts",
-      "target": "func::lib/dd/pathways.ts::getPathwayBySlug",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/api/webhook/route.ts",
-      "target": "func::lib/stripe.ts::getStripe",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/api/webhook/route.ts",
-      "target": "func::lib/stripe.ts::priceIdToRole",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/armory/[slug]/page.tsx",
-      "target": "func::lib/json-ld.tsx::breadcrumbJsonLd",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/armory/[slug]/page.tsx",
-      "target": "func::lib/json-ld.tsx::JsonLdScript",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/assessments/fate/page.tsx",
-      "target": "func::lib/dd/fate.ts::scoreFateAudit",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/assessments/fate/page.tsx",
-      "target": "func::lib/dd/fate.ts::getFateLevelLabel",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/assessments/fate/page.tsx",
-      "target": "func::lib/dd/fate.ts::getWeakestDomain",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/book/[slug]/page.tsx",
-      "target": "func::lib/dd/book.ts::getChapterBySlug",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/book/[slug]/page.tsx",
-      "target": "func::lib/dd/book.ts::getAdjacentChapters",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/book/[slug]/page.tsx",
-      "target": "func::lib/json-ld.tsx::breadcrumbJsonLd",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/book/[slug]/page.tsx",
-      "target": "func::lib/json-ld.tsx::JsonLdScript",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/forge/page.tsx",
-      "target": "func::lib/auth-helpers.ts::getTierLabel",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/forge/page.tsx",
-      "target": "func::lib/auth-helpers.ts::getTierBadgeColor",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/forge/page.tsx",
-      "target": "func::lib/dd/fate.ts::getFateLevelLabel",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/join/page.tsx",
-      "target": "func::lib/auth-helpers.ts::getTierLabel",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/layout.tsx",
-      "target": "func::components/Providers.tsx::Providers",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/layout.tsx",
-      "target": "func::lib/json-ld.tsx::personJsonLd",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/layout.tsx",
-      "target": "func::lib/json-ld.tsx::websiteJsonLd",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/layout.tsx",
-      "target": "func::lib/json-ld.tsx::JsonLdScript",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/pathways/[slug]/page.tsx",
-      "target": "func::lib/dd/pathways.ts::getPathwayBySlug",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/pathways/[slug]/page.tsx",
-      "target": "func::lib/json-ld.tsx::breadcrumbJsonLd",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::app/pathways/[slug]/page.tsx",
-      "target": "func::lib/json-ld.tsx::JsonLdScript",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/social/index.ts",
-      "target": "func::lib/social/instagram.ts::postToInstagram",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/social/index.ts",
-      "target": "func::lib/social/instagram.ts::isInstagramEnabled",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/social/index.ts",
-      "target": "func::lib/social/x.ts::postToX",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    },
-    {
-      "source": "file::lib/social/index.ts",
-      "target": "func::lib/social/x.ts::isXEnabled",
-      "relation": "calls",
-      "weight": 0.8,
-      "direction": "forward"
-    }
+    { "source": "file::app/account/page.tsx", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["auth", "signOut"] },
+    { "source": "file::app/account/page.tsx", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/account/page.tsx", "target": "file::lib/auth-helpers.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["getTierLabel", "getTierBadgeColor", "isDDDynast"] },
+    { "source": "file::app/account/page.tsx", "target": "file::app/account/AccountUsernameForm.tsx", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["default"] },
+    { "source": "file::app/account/page.tsx", "target": "file::app/account/AccountBillingButton.tsx", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["default"] },
+    { "source": "file::app/admin/blasts/page.tsx", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/admin/blasts/page.tsx", "target": "file::app/admin/blasts/EmailBlastForm.tsx", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["default"] },
+    { "source": "file::app/admin/gifts/page.tsx", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/admin/gifts/page.tsx", "target": "file::app/admin/gifts/GiftCreator.tsx", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["default"] },
+    { "source": "file::app/admin/layout.tsx", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["auth"] },
+    { "source": "file::app/admin/page.tsx", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/admin/users/page.tsx", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/admin/users/page.tsx", "target": "file::app/admin/users/UserRoleSelect.tsx", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["default"] },
+    { "source": "file::app/api/account/username/route.ts", "target": "func::app/api/account/username/route.ts::POST", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::app/api/account/username/route.ts", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["auth"] },
+    { "source": "file::app/api/account/username/route.ts", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/api/admin/blast/route.ts", "target": "func::app/api/admin/blast/route.ts::POST", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::app/api/admin/blast/route.ts", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["auth"] },
+    { "source": "file::app/api/admin/blast/route.ts", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/api/admin/gift/route.ts", "target": "func::app/api/admin/gift/route.ts::POST", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::app/api/admin/gift/route.ts", "target": "func::app/api/admin/gift/route.ts::GET", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::app/api/admin/gift/route.ts", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["auth"] },
+    { "source": "file::app/api/admin/gift/route.ts", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/api/admin/users/[id]/route.ts", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["auth"] },
+    { "source": "file::app/api/admin/users/[id]/route.ts", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/api/armory/generate/route.ts", "target": "func::app/api/armory/generate/route.ts::POST", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::app/api/armory/generate/route.ts", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["auth"] },
+    { "source": "file::app/api/armory/generate/route.ts", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/api/armory/generate/route.ts", "target": "file::lib/ai/prompts.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["DD_SYSTEM_IDENTITY"] },
+    { "source": "file::app/api/billing/portal/route.ts", "target": "func::app/api/billing/portal/route.ts::POST", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::app/api/billing/portal/route.ts", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["auth"] },
+    { "source": "file::app/api/billing/portal/route.ts", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/api/billing/portal/route.ts", "target": "file::lib/stripe.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["getStripe"] },
+    { "source": "file::app/api/billing/portal/route.ts", "target": "file::lib/config.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["SITE_URL"] },
+    { "source": "file::app/api/checkout/route.ts", "target": "func::app/api/checkout/route.ts::POST", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::app/api/checkout/route.ts", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["auth"] },
+    { "source": "file::app/api/checkout/route.ts", "target": "file::lib/stripe.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["getStripe", "getOrCreateStripeCustomer", "PRICE_IDS"] },
+    { "source": "file::app/api/companion/route.ts", "target": "func::app/api/companion/route.ts::POST", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::app/api/companion/route.ts", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["auth"] },
+    { "source": "file::app/api/companion/route.ts", "target": "file::lib/ai/prompts.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["buildDDCompanionPrompt", "type AdvisorKey"] },
+    { "source": "file::app/api/companion/route.ts", "target": "file::lib/ai/rag.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["searchDDBook"] },
+    { "source": "file::app/api/companion/route.ts", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/api/cron/content-gen/route.ts", "target": "func::app/api/cron/content-gen/route.ts::GET", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::app/api/cron/content-gen/route.ts", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/api/cron/content-gen/route.ts", "target": "file::lib/cron-auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["verifyCronAuth"] },
+    { "source": "file::app/api/cron/content-gen/route.ts", "target": "file::lib/content-pipeline.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["generateAndPublish", "notifyOwner"] },
+    { "source": "file::app/api/cron/content-gen/route.ts", "target": "func::lib/content-pipeline.ts::generateAndPublish", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/api/cron/content-gen/route.ts", "target": "func::lib/content-pipeline.ts::notifyOwner", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/api/cron/content-gen/route.ts", "target": "func::lib/cron-auth.ts::verifyCronAuth", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/api/cron/evergreen/route.ts", "target": "func::app/api/cron/evergreen/route.ts::GET", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::app/api/cron/evergreen/route.ts", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/api/cron/evergreen/route.ts", "target": "file::lib/cron-auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["verifyCronAuth"] },
+    { "source": "file::app/api/cron/evergreen/route.ts", "target": "file::lib/social/index.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["dispatchToAll", "pickImage", "type PlatformContent"] },
+    { "source": "file::app/api/cron/evergreen/route.ts", "target": "file::lib/evergreen.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["getOrCreateCursor", "getNextChunk", "getNextModel", "extractPassage", "generateSocialCopy", "computePassageHash", "isDuplicate", "shouldRunNow", "advanceCursor"] },
+    { "source": "file::app/api/cron/evergreen/route.ts", "target": "func::lib/social/index.ts::dispatchToAll", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/api/cron/evergreen/route.ts", "target": "func::lib/cron-auth.ts::verifyCronAuth", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/api/cron/publish/route.ts", "target": "func::app/api/cron/publish/route.ts::GET", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::app/api/cron/publish/route.ts", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/api/cron/publish/route.ts", "target": "file::lib/cron-auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["verifyCronAuth"] },
+    { "source": "file::app/api/cron/publish/route.ts", "target": "func::lib/cron-auth.ts::verifyCronAuth", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/api/cron/social/route.ts", "target": "func::app/api/cron/social/route.ts::GET", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::app/api/cron/social/route.ts", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/api/cron/social/route.ts", "target": "file::lib/cron-auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["verifyCronAuth"] },
+    { "source": "file::app/api/cron/social/route.ts", "target": "file::lib/ai-models.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["callModel"] },
+    { "source": "file::app/api/cron/social/route.ts", "target": "file::lib/social/index.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["dispatchToAll", "postFirstComments", "pickImage", "type PlatformContent"] },
+    { "source": "file::app/api/cron/social/route.ts", "target": "file::lib/social/metrics.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["fetchPlatformMetrics"] },
+    { "source": "file::app/api/cron/social/route.ts", "target": "file::lib/story-arc.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["detectActiveArcs", "generateArcSocialCopy"] },
+    { "source": "file::app/api/cron/social/route.ts", "target": "func::lib/ai-models.ts::callModel", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/api/cron/social/route.ts", "target": "func::lib/social/index.ts::dispatchToAll", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/api/cron/social/route.ts", "target": "func::lib/social/index.ts::postFirstComments", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/api/cron/social/route.ts", "target": "func::lib/social/metrics.ts::fetchPlatformMetrics", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/api/cron/social/route.ts", "target": "func::lib/story-arc.ts::detectActiveArcs", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/api/cron/social/route.ts", "target": "func::lib/cron-auth.ts::verifyCronAuth", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/api/fate-audit/route.ts", "target": "func::app/api/fate-audit/route.ts::POST", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::app/api/fate-audit/route.ts", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["auth"] },
+    { "source": "file::app/api/fate-audit/route.ts", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/api/gift/[code]/route.ts", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["auth"] },
+    { "source": "file::app/api/gift/[code]/route.ts", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/api/hall/comments/route.ts", "target": "func::app/api/hall/comments/route.ts::POST", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::app/api/hall/comments/route.ts", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["auth"] },
+    { "source": "file::app/api/hall/comments/route.ts", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/api/hall/likes/route.ts", "target": "func::app/api/hall/likes/route.ts::POST", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::app/api/hall/likes/route.ts", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["auth"] },
+    { "source": "file::app/api/hall/likes/route.ts", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/api/hall/posts/route.ts", "target": "func::app/api/hall/posts/route.ts::POST", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::app/api/hall/posts/route.ts", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["auth"] },
+    { "source": "file::app/api/hall/posts/route.ts", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/api/health/route.ts", "target": "func::app/api/health/route.ts::GET", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::app/api/health/route.ts", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/api/health/route.ts", "target": "file::lib/stripe.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["getStripe"] },
+    { "source": "file::app/api/health/route.ts", "target": "func::lib/stripe.ts::getStripe", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/api/long-table/advance/route.ts", "target": "func::app/api/long-table/advance/route.ts::POST", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::app/api/long-table/advance/route.ts", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["auth"] },
+    { "source": "file::app/api/long-table/advance/route.ts", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/api/pathways/[slug]/complete/route.ts", "target": "func::app/api/pathways/[slug]/complete/route.ts::POST", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::app/api/pathways/[slug]/complete/route.ts", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["auth"] },
+    { "source": "file::app/api/pathways/[slug]/complete/route.ts", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/api/pathways/[slug]/complete/route.ts", "target": "file::lib/dd/pathways.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["getPathwayBySlug"] },
+    { "source": "file::app/api/pathways/[slug]/complete/route.ts", "target": "func::lib/dd/pathways.ts::getPathwayBySlug", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/api/vow/take/route.ts", "target": "func::app/api/vow/take/route.ts::POST", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::app/api/vow/take/route.ts", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["auth"] },
+    { "source": "file::app/api/vow/take/route.ts", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/api/webhook/route.ts", "target": "func::app/api/webhook/route.ts::POST", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::app/api/webhook/route.ts", "target": "file::lib/stripe.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["getStripe", "priceIdToRole"] },
+    { "source": "file::app/api/webhook/route.ts", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/api/webhook/route.ts", "target": "func::lib/stripe.ts::getStripe", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/api/webhook/route.ts", "target": "func::lib/stripe.ts::priceIdToRole", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/armory/[slug]/page.tsx", "target": "func::app/armory/[slug]/page.tsx::generateMetadata", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::app/armory/[slug]/page.tsx", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["auth"] },
+    { "source": "file::app/armory/[slug]/page.tsx", "target": "file::app/armory/[slug]/ArmoryGenerator.tsx", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["default"] },
+    { "source": "file::app/armory/[slug]/page.tsx", "target": "file::lib/json-ld.tsx", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["howToJsonLd", "breadcrumbJsonLd", "JsonLdScript"] },
+    { "source": "file::app/armory/[slug]/page.tsx", "target": "func::lib/json-ld.tsx::breadcrumbJsonLd", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/armory/[slug]/page.tsx", "target": "func::lib/json-ld.tsx::JsonLdScript", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/armory/page.tsx", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["auth"] },
+    { "source": "file::app/assessments/fate/page.tsx", "target": "file::lib/dd/fate.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["FATE_QUESTIONS", "scoreFateAudit", "getFateLevelLabel", "getWeakestDomain", "type FateDomain"] },
+    { "source": "file::app/assessments/fate/page.tsx", "target": "func::lib/dd/fate.ts::scoreFateAudit", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/assessments/fate/page.tsx", "target": "func::lib/dd/fate.ts::getFateLevelLabel", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/assessments/fate/page.tsx", "target": "func::lib/dd/fate.ts::getWeakestDomain", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/auth/signin/page.tsx", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["signIn"] },
+    { "source": "file::app/book/[slug]/page.tsx", "target": "func::app/book/[slug]/page.tsx::generateMetadata", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::app/book/[slug]/page.tsx", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["auth"] },
+    { "source": "file::app/book/[slug]/page.tsx", "target": "file::lib/dd/book.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["getChapterBySlug", "getAdjacentChapters"] },
+    { "source": "file::app/book/[slug]/page.tsx", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/book/[slug]/page.tsx", "target": "file::lib/json-ld.tsx", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["bookJsonLd", "breadcrumbJsonLd", "JsonLdScript"] },
+    { "source": "file::app/book/[slug]/page.tsx", "target": "func::lib/dd/book.ts::getChapterBySlug", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/book/[slug]/page.tsx", "target": "func::lib/dd/book.ts::getAdjacentChapters", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/book/[slug]/page.tsx", "target": "func::lib/json-ld.tsx::breadcrumbJsonLd", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/book/[slug]/page.tsx", "target": "func::lib/json-ld.tsx::JsonLdScript", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/book/page.tsx", "target": "file::lib/dd/book.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["DD_CHAPTERS", "DD_SECTIONS"] },
+    { "source": "file::app/book/page.tsx", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["auth"] },
+    { "source": "file::app/companion/page.tsx", "target": "file::lib/ai/prompts.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["ADVISORS", "ARCHETYPES", "type AdvisorKey"] },
+    { "source": "file::app/forge/page.tsx", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["auth"] },
+    { "source": "file::app/forge/page.tsx", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/forge/page.tsx", "target": "file::lib/auth-helpers.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["getTierLabel", "getTierBadgeColor"] },
+    { "source": "file::app/forge/page.tsx", "target": "file::lib/dd/fate.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["getFateLevelLabel", "type FateDomain"] },
+    { "source": "file::app/forge/page.tsx", "target": "file::lib/dd/pathways.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["DD_PATHWAYS"] },
+    { "source": "file::app/forge/page.tsx", "target": "func::lib/auth-helpers.ts::getTierLabel", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/forge/page.tsx", "target": "func::lib/auth-helpers.ts::getTierBadgeColor", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/forge/page.tsx", "target": "func::lib/dd/fate.ts::getFateLevelLabel", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/forging-fathers/page.tsx", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["auth"] },
+    { "source": "file::app/forging-fathers/page.tsx", "target": "file::lib/ai/prompts.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["ADVISORS"] },
+    { "source": "file::app/gift/[code]/page.tsx", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["auth"] },
+    { "source": "file::app/gift/[code]/page.tsx", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/gift/[code]/page.tsx", "target": "file::app/gift/[code]/GiftRedemptionClient.tsx", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["default"] },
+    { "source": "file::app/hall/[id]/page.tsx", "target": "func::app/hall/[id]/page.tsx::authorName", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::app/hall/[id]/page.tsx", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["auth"] },
+    { "source": "file::app/hall/[id]/page.tsx", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/hall/[id]/page.tsx", "target": "file::app/hall/[id]/HallCommentForm.tsx", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["default"] },
+    { "source": "file::app/hall/[id]/page.tsx", "target": "file::app/hall/[id]/HallLikeButton.tsx", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["default"] },
+    { "source": "file::app/hall/page.tsx", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["auth"] },
+    { "source": "file::app/hall/page.tsx", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/join/page.tsx", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["auth"] },
+    { "source": "file::app/join/page.tsx", "target": "file::lib/auth-helpers.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["getTierLabel"] },
+    { "source": "file::app/join/page.tsx", "target": "func::lib/auth-helpers.ts::getTierLabel", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/journal/page.tsx", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["auth"] },
+    { "source": "file::app/journal/page.tsx", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/layout.tsx", "target": "file::components/Providers.tsx", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["Providers"] },
+    { "source": "file::app/layout.tsx", "target": "file::components/Navigation.tsx", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["default"] },
+    { "source": "file::app/layout.tsx", "target": "file::components/Footer.tsx", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["default"] },
+    { "source": "file::app/layout.tsx", "target": "file::lib/json-ld.tsx", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["personJsonLd", "websiteJsonLd", "JsonLdScript"] },
+    { "source": "file::app/layout.tsx", "target": "func::components/Providers.tsx::Providers", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/layout.tsx", "target": "func::lib/json-ld.tsx::personJsonLd", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/layout.tsx", "target": "func::lib/json-ld.tsx::websiteJsonLd", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/layout.tsx", "target": "func::lib/json-ld.tsx::JsonLdScript", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/long-table/page.tsx", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["auth"] },
+    { "source": "file::app/long-table/page.tsx", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/long-table/page.tsx", "target": "file::app/long-table/LongTableProgressForm.tsx", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["default"] },
+    { "source": "file::app/pathways/[slug]/page.tsx", "target": "func::app/pathways/[slug]/page.tsx::generateMetadata", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::app/pathways/[slug]/page.tsx", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["auth"] },
+    { "source": "file::app/pathways/[slug]/page.tsx", "target": "file::lib/dd/pathways.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["getPathwayBySlug"] },
+    { "source": "file::app/pathways/[slug]/page.tsx", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/pathways/[slug]/page.tsx", "target": "file::lib/json-ld.tsx", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["courseJsonLd", "breadcrumbJsonLd", "JsonLdScript"] },
+    { "source": "file::app/pathways/[slug]/page.tsx", "target": "func::lib/dd/pathways.ts::getPathwayBySlug", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/pathways/[slug]/page.tsx", "target": "func::lib/json-ld.tsx::breadcrumbJsonLd", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/pathways/[slug]/page.tsx", "target": "func::lib/json-ld.tsx::JsonLdScript", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/pathways/page.tsx", "target": "file::lib/dd/pathways.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["DD_PATHWAYS"] },
+    { "source": "file::app/pathways/page.tsx", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["auth"] },
+    { "source": "file::app/sitemap.ts", "target": "file::lib/dd/book.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["DD_CHAPTERS"] },
+    { "source": "file::app/sitemap.ts", "target": "file::lib/dd/pathways.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["DD_PATHWAYS"] },
+    { "source": "file::app/the-vow/page.tsx", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["auth"] },
+    { "source": "file::app/the-vow/page.tsx", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::app/account/page.tsx", "target": "func::lib/auth-helpers.ts::getTierLabel", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/account/page.tsx", "target": "func::lib/auth-helpers.ts::getTierBadgeColor", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/account/page.tsx", "target": "func::lib/auth-helpers.ts::isDDDynast", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/api/billing/portal/route.ts", "target": "func::lib/stripe.ts::getStripe", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/api/checkout/route.ts", "target": "func::lib/stripe.ts::getStripe", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/api/checkout/route.ts", "target": "func::lib/stripe.ts::getOrCreateStripeCustomer", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::app/api/companion/route.ts", "target": "func::lib/ai/rag.ts::searchDDBook", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::auth.ts", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::components/Footer.tsx", "target": "file::lib/config.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["DD_BOOK_URL", "SP_URL", "FT3_URL"] },
+    { "source": "file::components/Navigation.tsx", "target": "file::components/ThemeToggle.tsx", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["default"] },
+    { "source": "file::components/Providers.tsx", "target": "func::components/Providers.tsx::Providers", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/ai-models.ts", "target": "func::lib/ai-models.ts::callClaude", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/ai-models.ts", "target": "func::lib/ai-models.ts::callGPT4o", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/ai-models.ts", "target": "func::lib/ai-models.ts::callGrok", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/ai-models.ts", "target": "func::lib/ai-models.ts::callModel", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/ai/prompts.ts", "target": "func::lib/ai/prompts.ts::getArchetypePrompt", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/ai/prompts.ts", "target": "func::lib/ai/prompts.ts::getAdvisorPrompt", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/ai/prompts.ts", "target": "func::lib/ai/prompts.ts::getCouncilPrompt", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/ai/rag.ts", "target": "func::lib/ai/rag.ts::embedQuery", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/ai/rag.ts", "target": "func::lib/ai/rag.ts::searchDDBook", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/ai/rag.ts", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::lib/auth-helpers.ts", "target": "func::lib/auth-helpers.ts::canAccessDD", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/auth-helpers.ts", "target": "func::lib/auth-helpers.ts::canAccessDDPremium", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/auth-helpers.ts", "target": "func::lib/auth-helpers.ts::isDDDynast", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/auth-helpers.ts", "target": "func::lib/auth-helpers.ts::getTierLabel", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/auth-helpers.ts", "target": "func::lib/auth-helpers.ts::getTierBadgeColor", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/content-pipeline.ts", "target": "func::lib/content-pipeline.ts::generateAndPublish", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/content-pipeline.ts", "target": "func::lib/content-pipeline.ts::notifyOwner", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/content-pipeline.ts", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::lib/content-pipeline.ts", "target": "file::lib/ai-models.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["callModel", "type ModelId", "type ModelResponse"] },
+    { "source": "file::lib/content-pipeline.ts", "target": "func::lib/ai-models.ts::callModel", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::lib/cron-auth.ts", "target": "func::lib/cron-auth.ts::verifyCronAuth", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/dd/book.ts", "target": "func::lib/dd/book.ts::getChapterBySlug", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/dd/book.ts", "target": "func::lib/dd/book.ts::getChaptersBySection", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/dd/book.ts", "target": "func::lib/dd/book.ts::getAdjacentChapters", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/dd/fate.ts", "target": "func::lib/dd/fate.ts::scoreFateAudit", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/dd/fate.ts", "target": "func::lib/dd/fate.ts::getFateLevelLabel", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/dd/fate.ts", "target": "func::lib/dd/fate.ts::getWeakestDomain", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/dd/pathways.ts", "target": "func::lib/dd/pathways.ts::getPathwayBySlug", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/evergreen.ts", "target": "func::lib/evergreen.ts::getOrCreateCursor", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/evergreen.ts", "target": "func::lib/evergreen.ts::getNextChunk", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/evergreen.ts", "target": "func::lib/evergreen.ts::getNextModel", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/evergreen.ts", "target": "func::lib/evergreen.ts::extractPassage", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/evergreen.ts", "target": "func::lib/evergreen.ts::generateSocialCopy", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/evergreen.ts", "target": "func::lib/evergreen.ts::computePassageHash", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/evergreen.ts", "target": "func::lib/evergreen.ts::isDuplicate", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/evergreen.ts", "target": "func::lib/evergreen.ts::shouldRunNow", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/evergreen.ts", "target": "func::lib/evergreen.ts::advanceCursor", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/evergreen.ts", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::lib/evergreen.ts", "target": "file::lib/ai-models.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["callModel", "type ModelId"] },
+    { "source": "file::lib/evergreen.ts", "target": "func::lib/ai-models.ts::callModel", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::lib/evergreen.ts", "target": "file::lib/social/index.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["PlatformContent"] },
+    { "source": "file::lib/json-ld.tsx", "target": "func::lib/json-ld.tsx::websiteJsonLd", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/json-ld.tsx", "target": "func::lib/json-ld.tsx::personJsonLd", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/json-ld.tsx", "target": "func::lib/json-ld.tsx::breadcrumbJsonLd", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/json-ld.tsx", "target": "func::lib/json-ld.tsx::faqJsonLd", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/json-ld.tsx", "target": "func::lib/json-ld.tsx::JsonLdScript", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/social/facebook.ts", "target": "func::lib/social/facebook.ts::postToFacebook", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/social/facebook.ts", "target": "func::lib/social/facebook.ts::commentOnFacebook", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/social/facebook.ts", "target": "func::lib/social/facebook.ts::isFacebookEnabled", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/social/image-picker.ts", "target": "func::lib/social/image-picker.ts::pickImage", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/social/image-picker.ts", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::lib/social/index.ts", "target": "func::lib/social/index.ts::dispatchToAll", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/social/index.ts", "target": "func::lib/social/index.ts::postFirstComments", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/social/index.ts", "target": "file::lib/social/facebook.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["postToFacebook", "commentOnFacebook", "isFacebookEnabled"] },
+    { "source": "file::lib/social/index.ts", "target": "file::lib/social/instagram.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["postToInstagram", "isInstagramEnabled"] },
+    { "source": "file::lib/social/index.ts", "target": "file::lib/social/x.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["postToX", "replyOnX", "isXEnabled"] },
+    { "source": "file::lib/social/index.ts", "target": "file::lib/social/image-picker.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["pickImage"] },
+    { "source": "file::lib/social/index.ts", "target": "file::lib/ai-models.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["callModel"] },
+    { "source": "file::lib/social/index.ts", "target": "func::lib/social/facebook.ts::postToFacebook", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::lib/social/index.ts", "target": "func::lib/social/facebook.ts::commentOnFacebook", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::lib/social/index.ts", "target": "func::lib/social/facebook.ts::isFacebookEnabled", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::lib/social/index.ts", "target": "func::lib/social/instagram.ts::postToInstagram", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::lib/social/index.ts", "target": "func::lib/social/instagram.ts::isInstagramEnabled", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::lib/social/index.ts", "target": "func::lib/social/x.ts::postToX", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::lib/social/index.ts", "target": "func::lib/social/x.ts::replyOnX", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::lib/social/index.ts", "target": "func::lib/social/x.ts::isXEnabled", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::lib/social/instagram.ts", "target": "func::lib/social/instagram.ts::postToInstagram", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/social/instagram.ts", "target": "func::lib/social/instagram.ts::isInstagramEnabled", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/social/metrics.ts", "target": "func::lib/social/metrics.ts::fetchFacebookMetrics", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/social/metrics.ts", "target": "func::lib/social/metrics.ts::fetchXMetrics", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/social/metrics.ts", "target": "func::lib/social/metrics.ts::fetchPlatformMetrics", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/social/x.ts", "target": "func::lib/social/x.ts::postToX", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/social/x.ts", "target": "func::lib/social/x.ts::replyOnX", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/social/x.ts", "target": "func::lib/social/x.ts::isXEnabled", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/story-arc.ts", "target": "func::lib/story-arc.ts::detectActiveArcs", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/story-arc.ts", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::lib/story-arc.ts", "target": "file::lib/ai-models.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["callModel"] },
+    { "source": "file::lib/story-arc.ts", "target": "func::lib/ai-models.ts::callModel", "relation": "calls", "weight": 0.8, "direction": "forward" },
+    { "source": "file::lib/stripe.ts", "target": "func::lib/stripe.ts::getStripe", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/stripe.ts", "target": "func::lib/stripe.ts::priceIdToRole", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/stripe.ts", "target": "func::lib/stripe.ts::getOrCreateStripeCustomer", "relation": "contains", "weight": 1, "direction": "forward" },
+    { "source": "file::lib/stripe.ts", "target": "file::lib/db.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["prisma"] },
+    { "source": "file::middleware.ts", "target": "file::auth.ts", "relation": "imports", "weight": 0.7, "direction": "forward", "specifiers": ["auth"] }
   ],
   "layers": [
     {
       "name": "Pages & UI Components",
-      "description": "Pages & UI Components layer",
+      "description": "Next.js pages, layouts, and client components for the DD member experience",
       "nodeIds": [
-        "app/account/AccountBillingButton.tsx",
-        "app/account/AccountUsernameForm.tsx",
-        "app/account/page.tsx",
-        "app/admin/blasts/EmailBlastForm.tsx",
-        "app/admin/blasts/page.tsx",
-        "app/admin/gifts/GiftCreator.tsx",
-        "app/admin/gifts/page.tsx",
-        "app/admin/layout.tsx",
-        "app/admin/page.tsx",
-        "app/admin/users/UserRoleSelect.tsx",
-        "app/admin/users/page.tsx",
-        "app/armory/[slug]/ArmoryGenerator.tsx",
-        "app/armory/[slug]/page.tsx",
-        "app/armory/page.tsx",
-        "app/assessments/fate/page.tsx",
-        "app/auth/signin/page.tsx",
-        "app/auth/verify/page.tsx",
-        "app/book/[slug]/page.tsx",
-        "app/book/page.tsx",
-        "app/companion/page.tsx",
-        "app/forge/page.tsx",
-        "app/forging-fathers/page.tsx",
-        "app/gift/[code]/GiftRedemptionClient.tsx",
-        "app/gift/[code]/page.tsx",
-        "app/hall/[id]/HallCommentForm.tsx",
-        "app/hall/[id]/HallLikeButton.tsx",
-        "app/hall/[id]/page.tsx",
-        "app/hall/create/page.tsx",
-        "app/hall/page.tsx",
-        "app/join/page.tsx",
-        "app/journal/page.tsx",
-        "app/long-table/LongTableProgressForm.tsx",
-        "app/long-table/page.tsx",
-        "app/page.tsx",
-        "app/pathways/[slug]/page.tsx",
-        "app/pathways/page.tsx",
-        "app/robots.ts",
-        "app/sitemap.ts",
-        "app/the-vow/page.tsx",
-        "app/the-vow/take/page.tsx"
+        "file::app/account/AccountBillingButton.tsx", "file::app/account/AccountUsernameForm.tsx", "file::app/account/page.tsx",
+        "file::app/admin/blasts/EmailBlastForm.tsx", "file::app/admin/blasts/page.tsx", "file::app/admin/gifts/GiftCreator.tsx",
+        "file::app/admin/gifts/page.tsx", "file::app/admin/layout.tsx", "file::app/admin/page.tsx",
+        "file::app/admin/users/UserRoleSelect.tsx", "file::app/admin/users/page.tsx",
+        "file::app/armory/[slug]/ArmoryGenerator.tsx", "file::app/armory/[slug]/page.tsx", "file::app/armory/page.tsx",
+        "file::app/assessments/fate/page.tsx", "file::app/auth/signin/page.tsx", "file::app/auth/verify/page.tsx",
+        "file::app/book/[slug]/page.tsx", "file::app/book/page.tsx", "file::app/companion/page.tsx",
+        "file::app/forge/page.tsx", "file::app/forging-fathers/page.tsx",
+        "file::app/gift/[code]/GiftRedemptionClient.tsx", "file::app/gift/[code]/page.tsx",
+        "file::app/hall/[id]/HallCommentForm.tsx", "file::app/hall/[id]/HallLikeButton.tsx", "file::app/hall/[id]/page.tsx",
+        "file::app/hall/create/page.tsx", "file::app/hall/page.tsx", "file::app/join/page.tsx", "file::app/journal/page.tsx",
+        "file::app/long-table/LongTableProgressForm.tsx", "file::app/long-table/page.tsx", "file::app/page.tsx",
+        "file::app/pathways/[slug]/page.tsx", "file::app/pathways/page.tsx",
+        "file::app/robots.ts", "file::app/sitemap.ts", "file::app/the-vow/page.tsx", "file::app/the-vow/take/page.tsx"
       ],
       "id": "layer:pages-ui-components"
     },
     {
       "name": "API Routes",
-      "description": "API Routes layer",
+      "description": "REST API endpoints for user actions, admin, billing, AI companion, and webhook handling",
       "nodeIds": [
-        "app/api/account/username/route.ts",
-        "app/api/admin/blast/route.ts",
-        "app/api/admin/gift/route.ts",
-        "app/api/admin/users/[id]/route.ts",
-        "app/api/armory/generate/route.ts",
-        "app/api/billing/portal/route.ts",
-        "app/api/checkout/route.ts",
-        "app/api/companion/route.ts",
-        "app/api/cron/evergreen/route.ts",
-        "app/api/cron/publish/route.ts",
-        "app/api/cron/social/route.ts",
-        "app/api/fate-audit/route.ts",
-        "app/api/gift/[code]/route.ts",
-        "app/api/hall/comments/route.ts",
-        "app/api/hall/likes/route.ts",
-        "app/api/hall/posts/route.ts",
-        "app/api/health/route.ts",
-        "app/api/long-table/advance/route.ts",
-        "app/api/pathways/[slug]/complete/route.ts",
-        "app/api/vow/take/route.ts",
-        "app/api/webhook/route.ts"
+        "file::app/api/account/username/route.ts", "file::app/api/admin/blast/route.ts", "file::app/api/admin/gift/route.ts",
+        "file::app/api/admin/users/[id]/route.ts", "file::app/api/armory/generate/route.ts",
+        "file::app/api/billing/portal/route.ts", "file::app/api/checkout/route.ts", "file::app/api/companion/route.ts",
+        "file::app/api/cron/content-gen/route.ts", "file::app/api/cron/evergreen/route.ts",
+        "file::app/api/cron/publish/route.ts", "file::app/api/cron/social/route.ts",
+        "file::app/api/fate-audit/route.ts", "file::app/api/gift/[code]/route.ts",
+        "file::app/api/hall/comments/route.ts", "file::app/api/hall/likes/route.ts", "file::app/api/hall/posts/route.ts",
+        "file::app/api/health/route.ts", "file::app/api/long-table/advance/route.ts",
+        "file::app/api/pathways/[slug]/complete/route.ts", "file::app/api/vow/take/route.ts", "file::app/api/webhook/route.ts"
       ],
       "id": "layer:api-routes"
     },
     {
       "name": "App Shell & Auth",
-      "description": "App Shell & Auth layer",
+      "description": "Root layout, NextAuth configuration, and middleware for session-based route protection",
       "nodeIds": [
-        "app/layout.tsx",
-        "auth.ts",
-        "middleware.ts"
+        "file::app/layout.tsx", "file::auth.ts", "file::middleware.ts"
       ],
       "id": "layer:app-shell-auth"
     },
     {
       "name": "Shared Components",
-      "description": "Shared Components layer",
+      "description": "Layout components shared across all pages: navigation, footer, providers, theme toggle",
       "nodeIds": [
-        "components/Footer.tsx",
-        "components/Navigation.tsx",
-        "components/Providers.tsx",
-        "components/ThemeToggle.tsx"
+        "file::components/Footer.tsx", "file::components/Navigation.tsx", "file::components/Providers.tsx", "file::components/ThemeToggle.tsx"
       ],
       "id": "layer:shared-components"
     },
     {
       "name": "Domain Logic & Services",
-      "description": "Domain Logic & Services layer",
+      "description": "Business logic, AI integration, social dispatch, content pipeline, evergreen engine, and database access",
       "nodeIds": [
-        "lib/ai-models.ts",
-        "lib/ai/prompts.ts",
-        "lib/ai/rag.ts",
-        "lib/auth-helpers.ts",
-        "lib/config.ts",
-        "lib/cron-auth.ts",
-        "lib/db.ts",
-        "lib/dd/book.ts",
-        "lib/dd/fate.ts",
-        "lib/dd/pathways.ts",
-        "lib/evergreen.ts",
-        "lib/json-ld.tsx",
-        "lib/social/facebook.ts",
-        "lib/social/index.ts",
-        "lib/social/instagram.ts",
-        "lib/social/metrics.ts",
-        "lib/social/x.ts",
-        "lib/story-arc.ts",
-        "lib/stripe.ts",
-        "scripts/seed-book.ts"
+        "file::lib/ai-models.ts", "file::lib/ai/prompts.ts", "file::lib/ai/rag.ts",
+        "file::lib/auth-helpers.ts", "file::lib/config.ts", "file::lib/content-pipeline.ts",
+        "file::lib/cron-auth.ts", "file::lib/db.ts",
+        "file::lib/dd/book.ts", "file::lib/dd/fate.ts", "file::lib/dd/pathways.ts",
+        "file::lib/evergreen.ts", "file::lib/json-ld.tsx",
+        "file::lib/social/facebook.ts", "file::lib/social/image-picker.ts", "file::lib/social/index.ts",
+        "file::lib/social/instagram.ts", "file::lib/social/metrics.ts", "file::lib/social/x.ts",
+        "file::lib/story-arc.ts", "file::lib/stripe.ts",
+        "file::scripts/seed-book.ts"
       ],
       "id": "layer:domain-logic-services"
     }
@@ -4727,100 +2541,50 @@
     {
       "title": "Entry Point: Root Layout & Auth Config",
       "description": "The app shell starts at app/layout.tsx which imports Providers (SessionProvider + ThemeProvider), Navigation, Footer, and JSON-LD structured data. auth.ts configures NextAuth with Prisma adapter, Resend email, and GitHub providers.",
-      "keyFiles": [
-        "app/layout.tsx",
-        "auth.ts",
-        "components/Providers.tsx",
-        "middleware.ts"
-      ],
+      "keyFiles": ["file::app/layout.tsx", "file::auth.ts", "file::components/Providers.tsx", "file::middleware.ts"],
       "order": 1
     },
     {
       "title": "Database & Configuration Layer",
       "description": "lib/db.ts creates a singleton Prisma client over Neon Postgres. lib/config.ts exports site URLs. lib/stripe.ts manages Stripe integration with price IDs, customer creation, and role mapping for the tiered membership model.",
-      "keyFiles": [
-        "lib/db.ts",
-        "lib/config.ts",
-        "lib/stripe.ts"
-      ],
+      "keyFiles": ["file::lib/db.ts", "file::lib/config.ts", "file::lib/stripe.ts"],
       "order": 2
     },
     {
-      "title": "Membership Tiers & Access Control",
-      "description": "lib/auth-helpers.ts defines the UserRole type and tier-based access functions: canAccessDD, canAccessDDPremium, isDDDynast plus tier label/badge utilities. These gate access throughout the app for free, subscriber, and dynast tiers.",
-      "keyFiles": [
-        "lib/auth-helpers.ts",
-        "app/join/page.tsx",
-        "app/account/page.tsx"
-      ],
+      "title": "AI Multi-Model Engine",
+      "description": "lib/ai-models.ts abstracts Claude, GPT-4o, and Grok behind a unified callModel interface with model rotation. lib/ai/prompts.ts defines the DD system identity, archetypes, and advisor personas. lib/ai/rag.ts enables RAG search over book content using OpenAI embeddings.",
+      "keyFiles": ["file::lib/ai-models.ts", "file::lib/ai/prompts.ts", "file::lib/ai/rag.ts", "file::app/api/companion/route.ts"],
       "order": 3
     },
     {
-      "title": "The DD Book: Content Engine",
-      "description": "lib/dd/book.ts defines chapters, sections, and navigation helpers. The book pages render Markdown content with react-markdown, gated by membership tier. lib/ai/rag.ts enables RAG search over book content using OpenAI embeddings.",
-      "keyFiles": [
-        "lib/dd/book.ts",
-        "app/book/[slug]/page.tsx",
-        "app/book/page.tsx",
-        "lib/ai/rag.ts"
-      ],
+      "title": "Content Generation Pipeline",
+      "description": "lib/content-pipeline.ts auto-generates Hall posts and email dispatches from DDBookContent chapters, alternating content types and rotating models. The content-gen cron triggers daily, creates Dispatch records, publishes to The Hall, sends Resend emails, and notifies the owner.",
+      "keyFiles": ["file::lib/content-pipeline.ts", "file::app/api/cron/content-gen/route.ts"],
       "order": 4
     },
     {
-      "title": "AI Companion & Advisors",
-      "description": "lib/ai/prompts.ts defines the DD system identity, archetypes, and advisor personas (Machiavelli, Seneca, etc.). The companion page lets users chat with AI advisors. lib/ai-models.ts abstracts Claude, GPT-4o, and Grok behind a unified callModel interface.",
-      "keyFiles": [
-        "lib/ai/prompts.ts",
-        "lib/ai-models.ts",
-        "app/companion/page.tsx",
-        "app/api/companion/route.ts"
-      ],
+      "title": "Social Dispatch System",
+      "description": "lib/social/ implements a multi-platform dispatcher: index.ts orchestrates Facebook (no-link, collaborator tagging), Instagram (image-required), and X (Premium+ long-form). First-comment pattern posts AI-generated replies with article links. image-picker.ts matches themed images from ImagePool.",
+      "keyFiles": ["file::lib/social/index.ts", "file::lib/social/facebook.ts", "file::lib/social/x.ts", "file::lib/social/image-picker.ts", "file::app/api/cron/social/route.ts"],
       "order": 5
     },
     {
-      "title": "FATE Assessment & Pathways",
-      "description": "lib/dd/fate.ts implements the FATE audit (Financial, Alliances, Tactical, Estate domains). lib/dd/pathways.ts defines structured weekly learning pathways. These feed the Forge dashboard where users track progress.",
-      "keyFiles": [
-        "lib/dd/fate.ts",
-        "lib/dd/pathways.ts",
-        "app/assessments/fate/page.tsx",
-        "app/forge/page.tsx"
-      ],
+      "title": "Evergreen Recycling Engine",
+      "description": "lib/evergreen.ts cycles through all published Dispatches, extracting quotable passages via AI, generating social copy, deduplicating via SHA-256 hash, and dispatching to platforms. Uses EvergreenCursor for position tracking and cadence control (launch mode vs cruise mode).",
+      "keyFiles": ["file::lib/evergreen.ts", "file::app/api/cron/evergreen/route.ts"],
       "order": 6
     },
     {
-      "title": "Social Dispatch System",
-      "description": "lib/social/ implements a multi-platform dispatcher: index.ts orchestrates Facebook, Instagram, and X posting. lib/story-arc.ts detects active narrative arcs. Cron routes (social, evergreen, publish) trigger automated posting via orchestrator.",
-      "keyFiles": [
-        "lib/social/index.ts",
-        "lib/social/facebook.ts",
-        "lib/social/x.ts",
-        "app/api/cron/social/route.ts",
-        "app/api/cron/evergreen/route.ts"
-      ],
+      "title": "FATE Assessment & Pathways",
+      "description": "lib/dd/fate.ts implements the FATE audit (Food, Assurance, Tools & Skills, Energy domains). lib/dd/pathways.ts defines structured weekly learning pathways. These feed the Forge dashboard where users track progress toward dynasty-building milestones.",
+      "keyFiles": ["file::lib/dd/fate.ts", "file::lib/dd/pathways.ts", "file::app/assessments/fate/page.tsx", "file::app/forge/page.tsx"],
       "order": 7
     },
     {
-      "title": "Community Hall & Engagement",
-      "description": "The Hall is a member forum with posts, comments, and likes. The Vow system lets members take formal commitments. Gift codes enable admin-created membership gifts with Resend email delivery.",
-      "keyFiles": [
-        "app/hall/page.tsx",
-        "app/hall/[id]/page.tsx",
-        "app/the-vow/page.tsx",
-        "app/api/admin/gift/route.ts"
-      ],
+      "title": "Community & Admin",
+      "description": "The Hall is a member forum with posts, comments, and likes. The Vow system lets members take formal commitments. Admin dashboard manages users, email blasts, gifts, and the Armory. Stripe webhook (200-only pattern) handles subscription lifecycle.",
+      "keyFiles": ["file::app/hall/page.tsx", "file::app/the-vow/page.tsx", "file::app/admin/page.tsx", "file::app/api/webhook/route.ts"],
       "order": 8
-    },
-    {
-      "title": "Admin Dashboard & Billing",
-      "description": "The admin section manages users, email blasts, gifts, and the Armory (AI document generator). Stripe webhooks handle subscription lifecycle. The health endpoint reports DB and Stripe connectivity for orchestrator monitoring.",
-      "keyFiles": [
-        "app/admin/page.tsx",
-        "app/admin/layout.tsx",
-        "app/api/webhook/route.ts",
-        "app/api/health/route.ts"
-      ],
-      "order": 9
     }
   ]
 }

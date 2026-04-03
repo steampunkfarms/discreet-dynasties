@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "analyzedAt": "2026-03-23T10:46:04.936Z",
-  "gitCommitHash": "a77a7fdeb268f4c6ae0497e3bb98652eea4e3db3",
+  "lastAnalyzedAt": "2026-04-02T00:00:00.000Z",
+  "gitCommitHash": "89678f15616cd424aa4e18015d01f7181856097d",
   "analyzedFiles": [
     "app/account/AccountBillingButton.tsx",
     "app/account/AccountUsernameForm.tsx",
@@ -22,6 +22,7 @@
     "app/api/billing/portal/route.ts",
     "app/api/checkout/route.ts",
     "app/api/companion/route.ts",
+    "app/api/cron/content-gen/route.ts",
     "app/api/cron/evergreen/route.ts",
     "app/api/cron/publish/route.ts",
     "app/api/cron/social/route.ts",
@@ -75,6 +76,7 @@
     "lib/ai/rag.ts",
     "lib/auth-helpers.ts",
     "lib/config.ts",
+    "lib/content-pipeline.ts",
     "lib/cron-auth.ts",
     "lib/db.ts",
     "lib/dd/book.ts",
@@ -83,6 +85,7 @@
     "lib/evergreen.ts",
     "lib/json-ld.tsx",
     "lib/social/facebook.ts",
+    "lib/social/image-picker.ts",
     "lib/social/index.ts",
     "lib/social/instagram.ts",
     "lib/social/metrics.ts",
@@ -92,7 +95,7 @@
     "middleware.ts",
     "scripts/seed-book.ts"
   ],
-  "totalFiles": 88,
+  "totalFiles": 90,
   "languages": {
     "typescriptreact": {
       "files": 44,
@@ -100,43 +103,19 @@
       "bytes": 203207
     },
     "typescript": {
-      "files": 44,
-      "lines": 3441,
-      "bytes": 134543
+      "files": 46,
+      "lines": 4193,
+      "bytes": 168000
     }
   },
   "frameworks": [
-    {
-      "name": "Next.js",
-      "version": "^14.2.0"
-    },
-    {
-      "name": "React",
-      "version": "^18.2.0"
-    },
-    {
-      "name": "Tailwind CSS",
-      "version": "^3.4.0"
-    },
-    {
-      "name": "Prisma",
-      "version": "^7.4.2"
-    },
-    {
-      "name": "Stripe",
-      "version": "^20.4.0"
-    },
-    {
-      "name": "Resend",
-      "version": "^6.9.3"
-    },
-    {
-      "name": "NextAuth",
-      "version": "^5.0.0-beta.30"
-    },
-    {
-      "name": "shadcn/ui",
-      "version": "various"
-    }
+    { "name": "Next.js", "version": "^14.2.0" },
+    { "name": "React", "version": "^18.2.0" },
+    { "name": "Tailwind CSS", "version": "^3.4.0" },
+    { "name": "Prisma", "version": "^7.4.2" },
+    { "name": "Stripe", "version": "^20.4.0" },
+    { "name": "Resend", "version": "^6.9.3" },
+    { "name": "NextAuth", "version": "^5.0.0-beta.30" },
+    { "name": "shadcn/ui", "version": "various" }
   ]
 }
