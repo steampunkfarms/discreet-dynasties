@@ -1,6 +1,7 @@
 import { postToFacebook, commentOnFacebook, isFacebookEnabled } from './facebook'
 import { postToInstagram, isInstagramEnabled } from './instagram'
 import { postToX, replyOnX, isXEnabled } from './x'
+export { pickImage } from './image-picker'
 import { callModel } from '@/lib/ai-models'
 
 export interface SocialDispatchResult {
@@ -16,7 +17,7 @@ export interface PlatformContent {
   x?: string
 }
 
-export async function dispatchToAll(content: PlatformContent): Promise<SocialDispatchResult[]> {
+export async function dispatchToAll(content: PlatformContent, imageUrl?: string): Promise<SocialDispatchResult[]> {
   const results: SocialDispatchResult[] = []
 
   // Facebook
@@ -31,9 +32,15 @@ export async function dispatchToAll(content: PlatformContent): Promise<SocialDis
     results.push({ platform: 'facebook', status: 'skipped', error: 'Not configured' })
   }
 
-  // Instagram
-  if (content.instagram && isInstagramEnabled()) {
-    // Instagram requires an image — skip for text-only dispatches
+  // Instagram — requires image
+  if (content.instagram && isInstagramEnabled() && imageUrl) {
+    try {
+      const result = await postToInstagram(content.instagram, imageUrl)
+      results.push({ platform: 'instagram', status: 'posted', platformId: result.id })
+    } catch (err) {
+      results.push({ platform: 'instagram', status: 'failed', error: err instanceof Error ? err.message : 'Unknown error' })
+    }
+  } else if (content.instagram && isInstagramEnabled()) {
     results.push({ platform: 'instagram', status: 'skipped', error: 'Image required for IG feed posts' })
   } else if (content.instagram) {
     results.push({ platform: 'instagram', status: 'skipped', error: 'Not configured' })

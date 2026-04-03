@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/db'
 import { verifyCronAuth } from '@/lib/cron-auth'
-import { dispatchToAll, type PlatformContent } from '@/lib/social'
+import { dispatchToAll, pickImage, type PlatformContent } from '@/lib/social'
 import {
   getOrCreateCursor,
   getNextChunk,
@@ -176,7 +176,8 @@ export async function GET(request: Request) {
     // Dispatch to platforms
     let dispatched = 0
     if (social.copy) {
-      const results = await dispatchToAll(social.copy)
+      const imageUrl = await pickImage(extraction.passage, 'discreet').catch(() => null)
+      const results = await dispatchToAll(social.copy, imageUrl ?? undefined)
 
       for (const r of results) {
         const content = social.copy[r.platform as keyof PlatformContent] || ''

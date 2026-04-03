@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/db'
 import { verifyCronAuth } from '@/lib/cron-auth'
 import { callModel } from '@/lib/ai-models'
-import { dispatchToAll, postFirstComments, type PlatformContent } from '@/lib/social'
+import { dispatchToAll, postFirstComments, pickImage, type PlatformContent } from '@/lib/social'
 import { fetchPlatformMetrics } from '@/lib/social/metrics'
 import { detectActiveArcs, generateArcSocialCopy } from '@/lib/story-arc'
 
@@ -33,8 +33,8 @@ export async function GET(request: Request) {
 
   const now = new Date()
   const twentyFourHoursAgo = new Date(now.getTime() - 24 * 60 * 60 * 1000)
-  const summary: { standalone: number; arcs: number; scheduled: number; metricsFetched: number; errors: string[] } = {
-    standalone: 0, arcs: 0, scheduled: 0, metricsFetched: 0, errors: [],
+  const summary: { standalone: number; arcs: number; scheduled: number; metricsFetched: number; imagesUsed: number; errors: string[] } = {
+    standalone: 0, arcs: 0, scheduled: 0, metricsFetched: 0, imagesUsed: 0, errors: [],
   }
 
   try {
@@ -114,8 +114,12 @@ Return JSON only (no markdown fences):
           } catch { /* keep original */ }
         }
 
+        // Pick an image from the pool for photo/IG posting
+        const imageUrl = await pickImage(dispatch.content, 'discreet').catch(() => null)
+        if (imageUrl) summary.imagesUsed++
+
         // Dispatch to all platforms
-        const results = await dispatchToAll(copy)
+        const results = await dispatchToAll(copy, imageUrl ?? undefined)
 
         // Save records
         for (const r of results) {
