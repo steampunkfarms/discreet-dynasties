@@ -3,7 +3,8 @@ import { prisma } from './db'
 import { callModel, type ModelId } from './ai-models'
 import type { PlatformContent } from './social'
 
-const MODEL_ROTATION: ModelId[] = ['claude', 'gpt4o', 'grok']
+// Active rotation: Claude + Grok. GPT-4o remains available as manual fallback via callModel('gpt4o').
+const MODEL_ROTATION: ModelId[] = ['claude', 'grok']
 const CHUNK_SIZE = 25
 
 // --- Cursor Management ---

@@ -1046,6 +1046,7 @@ model EvergreenQuote {
 // Shared with stoic-preparedness (same Neon DB)
 model ContentGenCursor {
   id              String   @id @default(cuid())
+  site            String   @default("discreet-dynasties")
   lastModelIndex  Int      @default(-1)
   lastContentType String   @default("hearth_post")
   lastDoctrineIdx Int      @default(-1)
@@ -1053,6 +1054,14 @@ model ContentGenCursor {
   lastMentorIdx   Int      @default(-1)
   generationCount Int      @default(0)
   updatedAt       DateTime @updatedAt
+
+  @@unique([site, lastContentType])
+}
+
+model CronLock {
+  id        String   @id @default(cuid())
+  cronName  String   @unique
+  lockedAt  DateTime
 }
 
 // Shared models with stoic-preparedness (same Neon DB — DO NOT remove)

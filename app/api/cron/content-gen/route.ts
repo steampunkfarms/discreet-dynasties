@@ -11,9 +11,18 @@ export async function GET(req: Request) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 
-  // Kill switch
-  if (process.env.CONTENT_GEN_ENABLED?.trim() === 'false') {
-    return NextResponse.json({ status: 'disabled' })
+  // Kill switch — opt-in: must be explicitly 'true' to run
+  if (process.env.CONTENT_GEN_ENABLED?.trim() !== 'true') {
+    await prisma.cronLog.create({
+      data: {
+        cronName: 'content-gen',
+        status: 'skipped',
+        durationMs: 0,
+        errors: JSON.stringify(['Kill switch CONTENT_GEN_ENABLED is not set to true']),
+        executedAt: new Date(),
+      },
+    }).catch(() => {})
+    return NextResponse.json({ status: 'skipped', reason: 'Kill switch not enabled' })
   }
 
   const startTime = Date.now()

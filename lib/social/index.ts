@@ -1,4 +1,4 @@
-import { postToFacebook, commentOnFacebook, isFacebookEnabled } from './facebook'
+import { postToFacebook, postPhotoToFacebook, commentOnFacebook, isFacebookEnabled } from './facebook'
 import { postToInstagram, isInstagramEnabled } from './instagram'
 import { postToX, replyOnX, isXEnabled } from './x'
 export { pickImage } from './image-picker'
@@ -20,10 +20,12 @@ export interface PlatformContent {
 export async function dispatchToAll(content: PlatformContent, imageUrl?: string): Promise<SocialDispatchResult[]> {
   const results: SocialDispatchResult[] = []
 
-  // Facebook
+  // Facebook — use photo post when imageUrl is available for better reach
   if (content.facebook && isFacebookEnabled()) {
     try {
-      const result = await postToFacebook(content.facebook)
+      const result = imageUrl
+        ? await postPhotoToFacebook(content.facebook, imageUrl)
+        : await postToFacebook(content.facebook)
       results.push({ platform: 'facebook', status: 'posted', platformId: result.id })
     } catch (err) {
       results.push({ platform: 'facebook', status: 'failed', error: err instanceof Error ? err.message : 'Unknown error' })

@@ -17,14 +17,14 @@ export async function GET(request: Request) {
   const start = Date.now()
   const gitSHA = process.env.NEXT_PUBLIC_GIT_SHA?.trim() || null
 
-  // Kill switch
-  if (process.env.SOCIAL_CRON_ENABLED?.trim() === 'false') {
+  // Kill switch — opt-in: must be explicitly 'true' to run
+  if (process.env.SOCIAL_CRON_ENABLED?.trim() !== 'true') {
     await prisma.cronLog.create({
       data: {
         cronName: 'social',
         status: 'skipped',
         durationMs: Date.now() - start,
-        phases: JSON.stringify({ reason: 'SOCIAL_CRON_ENABLED is false' }),
+        phases: JSON.stringify({ reason: 'Kill switch SOCIAL_CRON_ENABLED is not set to true' }),
         gitSHA,
       },
     }).catch(() => {})

@@ -31,7 +31,7 @@ export async function postToFacebook(content: string): Promise<FacebookPostResul
     payload.tags = COLLABORATOR_PAGE_ID
   }
 
-  const res = await fetch(`https://graph.facebook.com/v19.0/${pageId}/feed`, {
+  const res = await fetch(`https://graph.facebook.com/v24.0/${pageId}/feed`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload),
@@ -41,7 +41,7 @@ export async function postToFacebook(content: string): Promise<FacebookPostResul
     const err = await res.json().catch(() => ({}))
     // If tagging fails, retry without tags (Facebook may reject tag if permissions aren't set)
     if (COLLABORATOR_PAGE_ID && JSON.stringify(err).includes('tag')) {
-      const retryRes = await fetch(`https://graph.facebook.com/v19.0/${pageId}/feed`, {
+      const retryRes = await fetch(`https://graph.facebook.com/v24.0/${pageId}/feed`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: safeContent, access_token: token }),
@@ -60,6 +60,58 @@ export async function postToFacebook(content: string): Promise<FacebookPostResul
   return { id: data.id }
 }
 
+/**
+ * Post a photo to Facebook via /{pageId}/photos endpoint.
+ * Photo posts get significantly better reach than text-only /feed posts.
+ */
+export async function postPhotoToFacebook(content: string, imageUrl: string): Promise<FacebookPostResult> {
+  const pageId = process.env.META_PAGE_ID?.trim()
+  const token = process.env.META_PAGE_ACCESS_TOKEN?.trim()
+
+  if (!pageId || !token) {
+    throw new Error('META_PAGE_ID or META_PAGE_ACCESS_TOKEN not set')
+  }
+
+  const safeContent = stripUrls(content)
+
+  const payload: Record<string, string> = {
+    message: safeContent,
+    url: imageUrl,
+    access_token: token,
+  }
+  if (COLLABORATOR_PAGE_ID) {
+    payload.tags = COLLABORATOR_PAGE_ID
+  }
+
+  const res = await fetch(`https://graph.facebook.com/v24.0/${pageId}/photos`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  })
+
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}))
+    // If tagging fails, retry without tags
+    if (COLLABORATOR_PAGE_ID && JSON.stringify(err).includes('tag')) {
+      const retryRes = await fetch(`https://graph.facebook.com/v24.0/${pageId}/photos`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: safeContent, url: imageUrl, access_token: token }),
+      })
+      if (!retryRes.ok) {
+        const retryErr = await retryRes.json().catch(() => ({}))
+        throw new Error(`Facebook photo API error: ${retryRes.status} ${JSON.stringify(retryErr)}`)
+      }
+      const retryData = await retryRes.json()
+      return { id: retryData.post_id || retryData.id }
+    }
+    throw new Error(`Facebook photo API error: ${res.status} ${JSON.stringify(err)}`)
+  }
+
+  const data = await res.json()
+  return { id: data.post_id || data.id }
+}
+
 export interface FacebookCommentResult {
   id: string
 }
@@ -68,7 +120,7 @@ export async function commentOnFacebook(postId: string, message: string): Promis
   const token = process.env.META_PAGE_ACCESS_TOKEN?.trim()
   if (!token) throw new Error('META_PAGE_ACCESS_TOKEN not set')
 
-  const res = await fetch(`https://graph.facebook.com/v19.0/${postId}/comments`, {
+  const res = await fetch(`https://graph.facebook.com/v24.0/${postId}/comments`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ message, access_token: token }),

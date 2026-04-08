@@ -25,18 +25,18 @@ export async function GET(request: Request) {
   const start = Date.now()
   const gitSHA = process.env.NEXT_PUBLIC_GIT_SHA?.trim() || null
 
-  // Kill switch
-  if (process.env.EVERGREEN_CRON_ENABLED?.trim() === 'false') {
+  // Kill switch — opt-in: must be explicitly 'true' to run
+  if (process.env.EVERGREEN_CRON_ENABLED?.trim() !== 'true') {
     await prisma.cronLog.create({
       data: {
         cronName: 'evergreen',
         status: 'skipped',
         durationMs: Date.now() - start,
-        phases: JSON.stringify({ reason: 'EVERGREEN_CRON_ENABLED is false' }),
+        phases: JSON.stringify({ reason: 'Kill switch EVERGREEN_CRON_ENABLED is not set to true' }),
         gitSHA,
       },
     }).catch(() => {})
-    return NextResponse.json({ skipped: true, reason: 'EVERGREEN_CRON_ENABLED is false' })
+    return NextResponse.json({ skipped: true, reason: 'Kill switch not enabled' })
   }
 
   // Cadence check
