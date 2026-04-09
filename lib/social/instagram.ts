@@ -11,7 +11,7 @@ export async function postToInstagram(content: string, imageUrl: string): Promis
   }
 
   // Step 1: Create media container
-  const createRes = await fetch(`https://graph.facebook.com/v19.0/${userId}/media`, {
+  const createRes = await fetch(`https://graph.facebook.com/v24.0/${userId}/media`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -29,7 +29,7 @@ export async function postToInstagram(content: string, imageUrl: string): Promis
   const { id: containerId } = await createRes.json()
 
   // Step 2: Publish
-  const publishRes = await fetch(`https://graph.facebook.com/v19.0/${userId}/media_publish`, {
+  const publishRes = await fetch(`https://graph.facebook.com/v24.0/${userId}/media_publish`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
