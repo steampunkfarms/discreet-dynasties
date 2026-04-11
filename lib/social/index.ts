@@ -48,10 +48,10 @@ export async function dispatchToAll(content: PlatformContent, imageUrl?: string)
     results.push({ platform: 'instagram', status: 'skipped', error: 'Not configured' })
   }
 
-  // X (Twitter)
+  // X (Twitter) — pass imageUrl for media attachment
   if (content.x && isXEnabled()) {
     try {
-      const result = await postToX(content.x)
+      const result = await postToX(content.x, imageUrl)
       results.push({ platform: 'x', status: 'posted', platformId: result.id })
     } catch (err) {
       results.push({ platform: 'x', status: 'failed', error: err instanceof Error ? err.message : 'Unknown error' })

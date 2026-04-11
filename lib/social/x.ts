@@ -4,7 +4,7 @@ export interface XPostResult {
   id: string
 }
 
-export async function postToX(content: string): Promise<XPostResult> {
+export async function postToX(content: string, imageUrl?: string): Promise<XPostResult> {
   const apiKey = process.env.TWITTER_API_KEY?.trim()
   const apiSecret = process.env.TWITTER_API_SECRET?.trim()
   const accessToken = process.env.TWITTER_ACCESS_TOKEN?.trim()
@@ -21,7 +21,24 @@ export async function postToX(content: string): Promise<XPostResult> {
     accessSecret,
   })
 
-  const tweet = await client.v2.tweet(content)
+  // Upload image if provided, fall back to text-only on failure
+  let mediaIds: string[] | undefined
+  if (imageUrl) {
+    try {
+      const imgResponse = await fetch(imageUrl)
+      if (imgResponse.ok) {
+        const buffer = Buffer.from(await imgResponse.arrayBuffer())
+        const contentType = imgResponse.headers.get('content-type') || 'image/jpeg'
+        const mediaId = await client.v1.uploadMedia(buffer, { mimeType: contentType })
+        mediaIds = [mediaId]
+      }
+    } catch (err) {
+      // Image upload failed — proceed with text-only tweet
+      console.warn('[X] Image upload failed, posting text-only:', err instanceof Error ? err.message : err)
+    }
+  }
+
+  const tweet = await client.v2.tweet(content, mediaIds ? { media: { media_ids: mediaIds as [string] } } : undefined)
   return { id: tweet.data.id }
 }
 

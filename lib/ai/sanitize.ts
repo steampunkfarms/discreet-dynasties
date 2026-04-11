@@ -17,9 +17,9 @@ export function sanitizePlaceholders(text: string): string {
  */
 export function enforceLength(text: string, platform: string): string {
   const limits: Record<string, number> = {
-    facebook: 5000,
-    x_twitter: 4000,
-    x: 4000,
+    facebook: 63206,   // FB post limit
+    x: 25000,          // Premium/Premium+ limit
+    x_twitter: 25000,  // alias for backward compat
     instagram: 2200,
   }
   const max = limits[platform.toLowerCase()] || 5000
