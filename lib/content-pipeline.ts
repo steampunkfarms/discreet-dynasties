@@ -1,6 +1,7 @@
 import { prisma } from './db'
 import { callModel, type ModelId, type ModelResponse } from './ai-models'
 import { Resend } from 'resend'
+import { marked } from 'marked'
 
 const MODEL_ROTATION: ModelId[] = ['claude', 'gpt4o', 'grok']
 const MODEL_NAMES: Record<ModelId, string> = {
@@ -274,15 +275,28 @@ async function sendEmailDispatch(subject: string, content: string): Promise<stri
 }
 
 function buildEmailHtml(content: string, subject: string): string {
-  const paragraphs = content.split(/\n\n+/).map(p =>
-    `<p style="font-size: 15px; line-height: 1.7; color: #c8c4a8; margin: 0 0 16px;">${p.replace(/\n/g, '<br>')}</p>`
-  ).join('')
+  // Render markdown → HTML, then inject inline styles for email client compatibility.
+  // Email clients strip <style> blocks, so every tag must carry its styles inline.
+  const rendered = marked.parse(content, { async: false, gfm: true }) as string
+
+  const styled = rendered
+    .replace(/<p>/g, '<p style="font-size: 15px; line-height: 1.7; color: #c8c4a8; margin: 0 0 16px;">')
+    .replace(/<h2>/g, '<h2 style="font-size: 18px; font-weight: 600; color: #e8e4d0; margin: 24px 0 12px;">')
+    .replace(/<h3>/g, '<h3 style="font-size: 16px; font-weight: 600; color: #e8e4d0; margin: 20px 0 10px;">')
+    .replace(/<strong>/g, '<strong style="color: #e8e4d0;">')
+    .replace(/<em>/g, '<em style="color: #d8d4b8;">')
+    .replace(/<hr\s*\/?>/g, '<hr style="border: none; border-top: 1px solid #2a2a1a; margin: 24px 0;">')
+    .replace(/<blockquote>/g, '<blockquote style="border-left: 3px solid #4a5a3a; padding-left: 16px; margin: 16px 0; color: #a8a488;">')
+    .replace(/<ul>/g, '<ul style="padding-left: 20px; margin: 0 0 16px;">')
+    .replace(/<ol>/g, '<ol style="padding-left: 20px; margin: 0 0 16px;">')
+    .replace(/<li>/g, '<li style="font-size: 15px; line-height: 1.7; color: #c8c4a8; margin: 0 0 8px;">')
+    .replace(/<a /g, '<a style="color: #8a9a6a; text-decoration: underline;" ')
 
   return `<div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; padding: 32px; background: #1a1a14; color: #c8c4a8;">
     <p style="font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: #8a8a6a; margin-bottom: 24px;">Discreet Dynasties</p>
     <h1 style="font-size: 22px; font-weight: normal; color: #e8e4d0; margin-bottom: 24px;">${subject}</h1>
 
-    ${paragraphs}
+    ${styled}
 
     <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid #2a2a1a;">
       <a href="https://discreet.tronboll.us/hall" style="display: inline-block; background: #4a5a3a; color: #e8e4d0; padding: 10px 20px; font-size: 12px; font-family: monospace; text-decoration: none; border-radius: 2px;">Join the conversation in The Hall →</a>
