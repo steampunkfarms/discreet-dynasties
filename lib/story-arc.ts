@@ -1,5 +1,6 @@
 import { prisma } from './db'
 import { callModel } from './ai-models'
+import { parseAIJson, extractGrokRefinement } from './ai/parse-json'
 
 export interface StoryArc {
   parentSlug: string
@@ -40,13 +41,16 @@ Return JSON only (no markdown fences):
     throw new Error(`Failed to generate arc copy: ${result.error}`)
   }
 
-  const copy = JSON.parse(result.text)
+  const copy = parseAIJson<{ facebook: string; instagram: string; x: string }>(result.text)
+  if (!copy || (!copy.facebook && !copy.x)) {
+    throw new Error(`Failed to parse arc copy — raw (first 200): ${result.text.slice(0, 200)}`)
+  }
 
   if (useGrokForX && copy.x) {
     try {
       const grokResult = await callModel('grok', `Take this tweet draft and make it wittier while keeping the stewardship edge. Return only the revised tweet, under 280 chars:\n\n"${copy.x}"`)
-      if (grokResult.status === 'success' && grokResult.text.length <= 280) {
-        copy.x = grokResult.text.replace(/^["']|["']$/g, '').trim()
+      if (grokResult.status === 'success' && grokResult.text.length > 0) {
+        copy.x = extractGrokRefinement(grokResult.text, copy.x)
       }
     } catch { /* keep original */ }
   }

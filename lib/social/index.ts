@@ -3,6 +3,8 @@ import { postToInstagram, isInstagramEnabled } from './instagram'
 import { postToX, replyOnX, isXEnabled } from './x'
 export { pickImage } from './image-picker'
 import { callModel } from '@/lib/ai-models'
+import { sanitizePlaceholders, enforceLength } from '@/lib/ai/sanitize'
+import { extractFromAccidentalJson, parseAIJson } from '@/lib/ai/parse-json'
 
 export interface SocialDispatchResult {
   platform: string
@@ -20,12 +22,33 @@ export interface PlatformContent {
 export async function dispatchToAll(content: PlatformContent, imageUrl?: string): Promise<SocialDispatchResult[]> {
   const results: SocialDispatchResult[] = []
 
+  // Validation chain: extractFromAccidentalJson → sanitizePlaceholders → enforceLength → min-length
+  const clean = {
+    facebook: content.facebook ? enforceLength(sanitizePlaceholders(extractFromAccidentalJson(content.facebook)), 'facebook') : undefined,
+    instagram: content.instagram ? enforceLength(sanitizePlaceholders(extractFromAccidentalJson(content.instagram)), 'instagram') : undefined,
+    x: content.x ? enforceLength(sanitizePlaceholders(extractFromAccidentalJson(content.x)), 'x') : undefined,
+  }
+
+  // Min-length guard: reject content that's too short after sanitization
+  if (clean.facebook && clean.facebook.length < 20) {
+    console.error(`[dispatch] Facebook copy too short after sanitization (${clean.facebook.length} chars). Skipping.`)
+    clean.facebook = undefined
+  }
+  if (clean.x && clean.x.length < 20) {
+    console.error(`[dispatch] X copy too short after sanitization (${clean.x.length} chars). Skipping.`)
+    clean.x = undefined
+  }
+  if (clean.instagram && clean.instagram.length < 20) {
+    console.error(`[dispatch] Instagram copy too short after sanitization (${clean.instagram.length} chars). Skipping.`)
+    clean.instagram = undefined
+  }
+
   // Facebook — use photo post when imageUrl is available for better reach
-  if (content.facebook && isFacebookEnabled()) {
+  if (clean.facebook && isFacebookEnabled()) {
     try {
       const result = imageUrl
-        ? await postPhotoToFacebook(content.facebook, imageUrl)
-        : await postToFacebook(content.facebook)
+        ? await postPhotoToFacebook(clean.facebook, imageUrl)
+        : await postToFacebook(clean.facebook)
       results.push({ platform: 'facebook', status: 'posted', platformId: result.id })
     } catch (err) {
       results.push({ platform: 'facebook', status: 'failed', error: err instanceof Error ? err.message : 'Unknown error' })
@@ -35,9 +58,9 @@ export async function dispatchToAll(content: PlatformContent, imageUrl?: string)
   }
 
   // Instagram — requires image
-  if (content.instagram && isInstagramEnabled() && imageUrl) {
+  if (clean.instagram && isInstagramEnabled() && imageUrl) {
     try {
-      const result = await postToInstagram(content.instagram, imageUrl)
+      const result = await postToInstagram(clean.instagram, imageUrl)
       results.push({ platform: 'instagram', status: 'posted', platformId: result.id })
     } catch (err) {
       results.push({ platform: 'instagram', status: 'failed', error: err instanceof Error ? err.message : 'Unknown error' })
@@ -49,9 +72,9 @@ export async function dispatchToAll(content: PlatformContent, imageUrl?: string)
   }
 
   // X (Twitter) — pass imageUrl for media attachment
-  if (content.x && isXEnabled()) {
+  if (clean.x && isXEnabled()) {
     try {
-      const result = await postToX(content.x, imageUrl)
+      const result = await postToX(clean.x, imageUrl)
       results.push({ platform: 'x', status: 'posted', platformId: result.id })
     } catch (err) {
       results.push({ platform: 'x', status: 'failed', error: err instanceof Error ? err.message : 'Unknown error' })
@@ -105,7 +128,12 @@ Return JSON only (no markdown fences):
         .filter(r => r.status === 'posted' && r.platformId)
         .map(r => ({ platform: r.platform, status: 'failed' as const, error: `AI gen failed: ${result.error}` }))
     }
-    const parsed = JSON.parse(result.text)
+    const parsed = parseAIJson<{ comment: string }>(result.text)
+    if (!parsed?.comment) {
+      return dispatchResults
+        .filter(r => r.status === 'posted' && r.platformId)
+        .map(r => ({ platform: r.platform, status: 'failed' as const, error: 'AI returned unparseable comment JSON' }))
+    }
     commentText = parsed.comment
   } catch (err) {
     return dispatchResults

@@ -3,6 +3,7 @@ import { prisma } from '@/lib/db'
 import { verifyCronAuth } from '@/lib/cron-auth'
 import { callModel } from '@/lib/ai-models'
 import { dispatchToAll, postFirstComments, pickImage, type PlatformContent } from '@/lib/social'
+import { parseAIJson, extractGrokRefinement } from '@/lib/ai/parse-json'
 import { fetchPlatformMetrics } from '@/lib/social/metrics'
 import { detectActiveArcs, generateArcSocialCopy } from '@/lib/story-arc'
 
@@ -102,14 +103,18 @@ Return JSON only (no markdown fences):
           continue
         }
 
-        const copy = JSON.parse(result.text) as PlatformContent
+        const copy = parseAIJson<PlatformContent>(result.text)
+        if (!copy || (!copy.facebook && !copy.x)) {
+          summary.errors.push(`Copy parse failed for ${dispatch.slug} — raw (first 200): ${result.text.slice(0, 200)}`)
+          continue
+        }
 
         // Optionally refine X copy through Grok (Premium+ — no 280 char limit)
         if (process.env.GROK_WIT_REFINEMENT?.trim() === 'true' && process.env.XAI_API_KEY?.trim() && copy.x) {
           try {
             const grokResult = await callModel('grok', `Refine this X post — make it wittier and sharper while keeping the stewardship edge and substance. Premium account, so length is fine. Return only the post:\n\n"${copy.x}"`)
             if (grokResult.status === 'success' && grokResult.text.length > 0) {
-              copy.x = grokResult.text.replace(/^["']|["']$/g, '').trim()
+              copy.x = extractGrokRefinement(grokResult.text, copy.x)
             }
           } catch { /* keep original */ }
         }

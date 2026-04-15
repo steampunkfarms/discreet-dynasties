@@ -2,6 +2,7 @@ import { createHash } from 'crypto'
 import { prisma } from './db'
 import { callModel, type ModelId } from './ai-models'
 import type { PlatformContent } from './social'
+import { parseAIJson } from './ai/parse-json'
 
 // Active rotation: Claude + Grok. GPT-4o remains available as manual fallback via callModel('gpt4o').
 const MODEL_ROTATION: ModelId[] = ['claude', 'grok']
@@ -236,12 +237,8 @@ Return JSON only (no markdown fences):
   const result = await callModel(model, prompt)
   if (result.status !== 'success') return { copy: null, response: result }
 
-  try {
-    const copy = JSON.parse(result.text) as PlatformContent
-    return { copy, response: result }
-  } catch {
-    return { copy: null, response: result }
-  }
+  const copy = parseAIJson<PlatformContent>(result.text)
+  return { copy: copy ?? null, response: result }
 }
 
 // --- Deduplication ---
