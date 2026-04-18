@@ -5,7 +5,7 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { auth } from '@/auth'
 import { getChapterBySlug, getAdjacentChapters } from '@/lib/dd/book'
-import { prisma } from '@/lib/db'
+import { getManuscriptChapterMarkdown } from '@/lib/dd/book-content'
 import { bookJsonLd, breadcrumbJsonLd, JsonLdScript } from '@/lib/json-ld'
 
 const BASE_URL = 'https://discreet.tronboll.us'
@@ -32,20 +32,16 @@ export default async function ChapterPage({ params }: Props) {
 
   const session = await auth()
   const userRole = (session?.user as { role?: string })?.role || 'free'
-  const isPaid = ['dd_basic', 'dd_premium', 'dd_dynast', 'forge_bundle', 'admin'].includes(userRole)
+  const isAdmin = userRole === 'admin'
+  const isPaid = isAdmin || ['dd_basic', 'dd_premium', 'dd_dynast', 'forge_bundle'].includes(userRole)
 
   if (chapter.tier !== 'free' && !isPaid) {
     redirect('/join')
   }
 
-  // Fetch content from DB using chapter number
-  const allChunks = await prisma.dDBookContent.findMany({
-    where: { chapter: chapter.number },
-    orderBy: { chunkIndex: 'asc' },
-    select: { text: true },
-  })
-
-  const fullContent = allChunks.map(c => c.text).join('\n\n')
+  const fullContent = chapter.manuscriptChapter !== undefined
+    ? (getManuscriptChapterMarkdown(chapter.manuscriptChapter) ?? '')
+    : ''
   const { prev, next } = getAdjacentChapters(chapter.slug)
 
   return (

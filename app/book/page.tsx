@@ -7,7 +7,8 @@ export const metadata = { title: 'The Living Book' }
 export default async function BookPage() {
   const session = await auth()
   const userRole = (session?.user as { role?: string })?.role || 'free'
-  const isPaid = ['dd_basic', 'dd_premium', 'dd_dynast', 'forge_bundle', 'admin'].includes(userRole)
+  const isAdmin = userRole === 'admin'
+  const isPaid = isAdmin || ['dd_basic', 'dd_premium', 'dd_dynast', 'forge_bundle'].includes(userRole)
 
   return (
     <div className="page-enter max-w-wide mx-auto px-6 py-12">
