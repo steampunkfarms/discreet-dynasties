@@ -14,7 +14,17 @@ const NAV = [
 
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {
   const session = await auth()
-  if (session?.user?.role !== 'admin') redirect('/')
+
+  // Authenticated but not admin: block
+  if (session?.user && session.user.role !== 'admin') {
+    redirect('/')
+  }
+
+  // Unauthenticated: let the login page render bare (middleware ensures
+  // only /admin/login is reachable here without a session)
+  if (!session?.user) {
+    return <>{children}</>
+  }
 
   return (
     <div className="min-h-screen bg-[var(--color-bg)]">

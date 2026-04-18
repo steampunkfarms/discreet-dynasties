@@ -14,14 +14,24 @@ export default auth((req) => {
     return NextResponse.next()
   }
 
+  // Admin login page is reachable without a session
+  if (pathname === '/admin/login') {
+    return NextResponse.next()
+  }
+
   // Must be signed in for protected routes
   if (!req.auth && AUTH_REQUIRED.some(p => pathname.startsWith(p))) {
     return NextResponse.redirect(new URL('/auth/signin', req.url))
   }
 
   // Admin only
-  if (ADMIN_ONLY.some(p => pathname.startsWith(p)) && role !== 'admin') {
-    return NextResponse.redirect(new URL('/', req.url))
+  if (ADMIN_ONLY.some(p => pathname.startsWith(p))) {
+    if (!req.auth) {
+      return NextResponse.redirect(new URL('/admin/login', req.url))
+    }
+    if (role !== 'admin') {
+      return NextResponse.redirect(new URL('/', req.url))
+    }
   }
 
   // Paid DD tier required for premium routes
