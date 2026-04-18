@@ -1,8 +1,15 @@
+# deps
+node_modules/
+
+# Next.js
+.next/
+
+# env
+.env
+.env*.local
+
+# generated
+*.tsbuildinfo
+
+# misc
 .vercel
-node_modules/
-node_modules/
-.next/
-.env
-node_modules/
-.next/
-.env
