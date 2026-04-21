@@ -47,6 +47,23 @@ function slugify(text: string): string {
     .slice(0, 100)
 }
 
+// Strip any placeholder signer the model emits and guarantee the dispatch ends
+// with the team line. Belt-and-suspenders: the prompt instructs this, but models
+// still occasionally leak `[Your Name]` or sign with a made-up name.
+function enforceTeamSignoff(text: string, teamLine: string): string {
+  const placeholderPattern = /\[\s*(?:your\s+name(?:\s+here)?|name|author|editor)\s*\]/gi
+  let cleaned = text.replace(placeholderPattern, '').replace(/[ \t]+\n/g, '\n')
+
+  const teamRegex = /—?\s*(?:The\s+)?Discreet\s+Dynasties\s+Editorial\s+Team\.?/i
+  if (teamRegex.test(cleaned)) {
+    cleaned = cleaned.replace(teamRegex, teamLine)
+  } else {
+    cleaned = cleaned.replace(/\s+$/, '') + `\n\n${teamLine}`
+  }
+
+  return cleaned.replace(/\n{3,}/g, '\n\n').trimEnd()
+}
+
 function generateExcerpt(content: string, maxLength = 300): string {
   const plain = content.replace(/[#*_~`>\[\]()!]/g, '').replace(/\n+/g, ' ').trim()
   if (plain.length <= maxLength) return plain
@@ -91,7 +108,13 @@ Voice: measured, resolute, practical, discreet. Like a trusted advisor writing a
 
 Structure: 500-1200 words. Hook (a question or scenario) → teaching (draw from the chapter) → application (what to do this week) → invitation to discuss in The Hall.
 
-Never invent doctrine the book doesn't contain. Ground claims in chapter material. Be specific and concrete.`
+Never invent doctrine the book doesn't contain. Ground claims in chapter material. Be specific and concrete.
+
+SIGNOFF: Close with exactly this, on its own line after a warm valediction:
+
+— The Discreet Dynasties Editorial Team
+
+Never sign with a personal name or a placeholder like [Your Name]. The dispatch is from the Team, not an individual.`
 
 export async function generateAndPublish(): Promise<{
   contentType: string
@@ -144,7 +167,9 @@ Write the dispatch now. Close with an invitation to continue the conversation in
     throw new Error(`Model ${modelId} failed: ${response.error}`)
   }
 
-  const content = response.text
+  const content = contentType === 'email_dispatch_dd'
+    ? enforceTeamSignoff(response.text, '— The Discreet Dynasties Editorial Team')
+    : response.text
   const title = contentType === 'hall_post'
     ? `On ${chapter.chapterTitle}`
     : `Discreet Dynasties — ${chapter.chapterTitle}`
